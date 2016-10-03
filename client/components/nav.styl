@@ -1,0 +1,75 @@
+.nav {
+  min-height: 20%;
+  padding-top: 10px;
+  padding-left: 20px;
+  padding-right: 20px;
+  border-bottom: 1px solid blue;
+  display: flex;
+  align-items: flex-start;
+  flex-direction: column;
+  justify-content: center;
+  clearfix();
+}
+
+.nav-logo
+  img
+    height 50px
+    min-width 100%
+    margin-top 10px
+    +below(800px)
+      height 100%
+      width 100%
+
+.nav-list
+  align-self flex-end
+  list-style-type none
+  margin -50px 0 0 0
+  padding 20px
+  li
+    display inline
+    padding 30px
+    color blue
+    &:hover
+      color purple-dark
+
+.nav-list-named {
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: space-around;
+  padding: 7.5px 10px;
+  li {
+    padding: 0 30px;
+    align-items: flex-end;
+  }
+}
+
+.nav-list-user-name {
+  padding: 0;
+  align-self: flex-end;
+}
+
+.nav-list-user-logo
+  padding 0
+  img
+    width 30px
+
+.nav-list-cart
+  padding 0
+  img
+    width 40px
+  a
+    color purple-dark
+
+.nav-list-login
+  a
+    color blue
+    text-decoration none
+    &:hover
+      color purple-dark
+
+.nav-list-sign-up
+  a
+    color blue
+    text-decoration none
+    &:hover
+      color purple-dark
