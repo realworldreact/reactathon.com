@@ -5,7 +5,7 @@ import { Router, browserHistory } from 'react-router';
 import { Provider } from 'react-redux';
 import { routerMiddleware, syncHistoryWithStore } from 'react-router-redux';
 
-import routes from './routes.js';
+import routes from './routes.jsx';
 import createReducer from './create-reducer';
 
 // protect against undefined when rendering static
@@ -15,7 +15,7 @@ const doc = win.doc ? win.doc : {};
 const devTools = win.devToolsExtension ? win.devToolsExtension() : f => f;
 const adjustUrlOnReplay = !!win.devToolsExtension;
 
-const store = createStore(
+export const store = createStore(
   createReducer(),
   compose(
     applyMiddleware(
@@ -25,13 +25,14 @@ const store = createStore(
   )
 );
 
-// defaults to html5 history
-// falls back to hash history if unavailable
-const history = syncHistoryWithStore(
-  browserHistory,
-  store,
-  { adjustUrlOnReplay }
-);
+let history;
+if (browserHistory) {
+  history = syncHistoryWithStore(
+    browserHistory,
+    store,
+    { adjustUrlOnReplay }
+  );
+}
 
 if (doc.getElementById) {
   render(

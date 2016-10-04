@@ -1,4 +1,1 @@
-export default {
-  childRoutes: [
-  ]
-};
+export default null;

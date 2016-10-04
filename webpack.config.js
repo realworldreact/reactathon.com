@@ -41,8 +41,9 @@ const prodPlugins = [
     compressor: { warnings: false }
   }),
   new ReactStaticPlugin({
-    routes: './client/routes.js',
-    template: './template.jsx'
+    routes: './client/routes.jsx',
+    template: './template.jsx',
+    reduxStore: './client/index.js'
   })
 ];
 
@@ -61,7 +62,7 @@ module.exports = {
 
   output: {
     filename: 'bundle.js',
-    path: path.join(__dirname, 'public', 'js'),
+    path: path.join(__dirname, 'public'),
     publicPath: '/'
   },
 
