@@ -8,8 +8,12 @@ import { routerMiddleware, syncHistoryWithStore } from 'react-router-redux';
 import routes from './routes.js';
 import createReducer from './create-reducer';
 
-const devTools = window.devToolsExtension ? window.devToolsExtension() : f => f;
-const adjustUrlOnReplay = !!window.devToolsExtension;
+// protect against undefined when rendering static
+const win = typeof window !== 'undefined' ? window : {};
+const doc = win.doc ? win.doc : {};
+
+const devTools = win.devToolsExtension ? win.devToolsExtension() : f => f;
+const adjustUrlOnReplay = !!win.devToolsExtension;
 
 const store = createStore(
   createReducer(),
@@ -29,11 +33,13 @@ const history = syncHistoryWithStore(
   { adjustUrlOnReplay }
 );
 
-render(
-  createElement(
-    Provider,
-    { store },
-    createElement(Router, { routes, history })
-  ),
-  window.document.getElementById('app')
-);
+if (doc.getElementById) {
+  render(
+    createElement(
+      Provider,
+      { store },
+      createElement(Router, { routes, history })
+    ),
+    doc.getElementById('app')
+  );
+}

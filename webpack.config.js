@@ -33,7 +33,7 @@ const devPlugins = [
 ];
 
 const prodPlugins = [
-  new ExtractTextPlugin('[name].css', { allChunks: true }),
+  // new ExtractTextPlugin('[name].css', { allChunks: true })
   new webpack.optimize.UglifyJsPlugin({
     /* eslint-disable camelcase */
     screw_ie8: true,
@@ -56,7 +56,7 @@ module.exports = {
   devtool: isDev ? 'inline-source-map' : null,
 
   entry: {
-    bundle: './client'
+    bundle: [ './client/index.js' ]
   },
 
   output: {
@@ -86,7 +86,7 @@ module.exports = {
       },
       {
         test: /\.styl$/,
-        loaders: isDev ?
+        loaders: true ?
           stylLoaders :
           [
             ExtractTextPlugin.extract({
