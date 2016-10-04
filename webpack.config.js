@@ -7,6 +7,7 @@ const ExtractTextPlugin = require('extract-text-webpack-plugin');
 const ReactStaticPlugin = require('react-static-webpack-plugin');
 
 const isDev = process.env.NODE_ENV !== 'production';
+const stylesheet = isDev ? null : 'main.css';
 const localIdentName = isDev ?
   '&localIdentName=[name]__[local]__[hash:base64:6]' :
   '';
@@ -33,7 +34,7 @@ const devPlugins = [
 ];
 
 const prodPlugins = [
-  // new ExtractTextPlugin('[name].css', { allChunks: true })
+  new ExtractTextPlugin(stylesheet, { allChunks: true }),
   new webpack.optimize.UglifyJsPlugin({
     /* eslint-disable camelcase */
     screw_ie8: true,
@@ -43,7 +44,8 @@ const prodPlugins = [
   new ReactStaticPlugin({
     routes: './client/routes.jsx',
     template: './template.jsx',
-    reduxStore: './client/index.js'
+    reduxStore: './client/index.js',
+    stylesheet
   })
 ];
 
@@ -87,14 +89,9 @@ module.exports = {
       },
       {
         test: /\.styl$/,
-        loaders: true ?
+        loader: isDev ?
           stylLoaders :
-          [
-            ExtractTextPlugin.extract({
-              fallbackLoader: stylLoaders[0],
-              loader: stylLoaders.splice(1)
-            })
-          ]
+          ExtractTextPlugin.extract(stylLoaders[0], stylLoaders.splice(1))
       },
       {
         test: /\.(ttf|eot|svg)(\?v=[0-9]\.[0-9]\.[0-9])?$/,

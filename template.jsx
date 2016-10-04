@@ -20,7 +20,7 @@ export default function HTML({
           content='width=device-width, minimum-scale=1.0'
           name='viewport'
         />
-        { !stylesheet ?
+        { stylesheet ?
           <link
             href={ stylesheet }
             rel='stylesheet'
