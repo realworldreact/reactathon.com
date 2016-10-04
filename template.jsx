@@ -5,7 +5,7 @@ const { PropTypes } = React;
 export default function HTML({
   title = 'Berkeley\'s Coin-Op palace!',
   body = '',
-  bundle = '/bundle.js',
+  bundle = 'bundle.js',
   stylesheet
 }) {
   return (
