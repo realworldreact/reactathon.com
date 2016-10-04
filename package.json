@@ -9,7 +9,7 @@
     "posttest": "npm run lint",
     "clean": "rimraf public",
     "build": "npm run clean && NODE_ENV=production webpack",
-    "predeploy": "npm run clean && npm run build",
+    "predeploy": "npm run build",
     "deploy": "node gh-pages"
   },
   "immortan": {
