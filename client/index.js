@@ -10,7 +10,7 @@ import createReducer from './create-reducer';
 
 // protect against undefined when rendering static
 const win = typeof window !== 'undefined' ? window : {};
-const doc = win.doc ? win.doc : {};
+const doc = win.document ? win.document : {};
 
 const devTools = win.devToolsExtension ? win.devToolsExtension() : f => f;
 const adjustUrlOnReplay = !!win.devToolsExtension;
