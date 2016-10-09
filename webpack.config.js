@@ -90,7 +90,7 @@ module.exports = {
       {
         test: /\.styl$/,
         loader: isDev ?
-          stylLoaders :
+          stylLoaders.join('!') :
           ExtractTextPlugin.extract(stylLoaders[0], stylLoaders.splice(1))
       },
       {
