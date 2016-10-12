@@ -107,7 +107,8 @@ module.exports = {
       rupture()
     ],
     import: [
-      '~kouto-swiss/lib/kouto-swiss/index.styl'
+      '~kouto-swiss/lib/kouto-swiss/index.styl',
+      path.join(__dirname, '/client/vars.styl')
     ]
   }
 };
