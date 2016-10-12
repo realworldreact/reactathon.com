@@ -90,13 +90,19 @@ module.exports = {
       {
         test: /\.styl$/,
         loader: isDev ?
-          stylLoaders.join('!') :
-          ExtractTextPlugin.extract(stylLoaders[0], stylLoaders.splice(1))
+        stylLoaders.join('!') :
+        ExtractTextPlugin.extract(stylLoaders[0], stylLoaders.splice(1))
       },
       {
         test: /\.(ttf|eot|svg)(\?v=[0-9]\.[0-9]\.[0-9])?$/,
         loaders: [
-          'file'
+          'file?name=[name].[ext]'
+        ]
+      },
+      {
+        test: /\.(png|jpg|gif|ico)$/,
+        loaders: [
+          'file?name=[name].[ext]'
         ]
       }
     ]
@@ -108,7 +114,7 @@ module.exports = {
     ],
     import: [
       '~kouto-swiss/lib/kouto-swiss/index.styl',
-      path.join(__dirname, '/client/vars.styl')
+      path.join(__dirname, '/client/globals.styl')
     ]
   }
 };
