@@ -1,6 +1,8 @@
 import React from 'react';
-import { Route } from 'react-router';
+import { IndexRoute, Route } from 'react-router';
+
 import App from './App.jsx';
+import Home from './routes/home/Home.jsx';
 import childRoutes from './routes/index.jsx';
 
 export default (
@@ -8,6 +10,7 @@ export default (
     component={ App }
     path='/'
     >
+    <IndexRoute component={ Home } />
     { childRoutes }
   </Route>
 );
