@@ -76,7 +76,6 @@ module.exports = {
         test: /\.jsx?$/,
         include: [
           path.join(__dirname, 'client/'),
-          path.join(__dirname, 'common/'),
           path.join(__dirname, './template.jsx')
         ],
         loaders: isDev ? ['react-hot', 'babel'] : [ 'babel' ]
@@ -86,12 +85,16 @@ module.exports = {
         loaders: [
           'json-loader'
         ]
-      },
-      {
+      }, {
+        test: /\.css/,
+        loader: isDev ?
+          stylLoaders.slice(0, 2).join('!') :
+          ExtractTextPlugin.extract(stylLoaders[0], stylLoaders.slice(1, 2))
+      }, {
         test: /\.styl$/,
         loader: isDev ?
-        stylLoaders.join('!') :
-        ExtractTextPlugin.extract(stylLoaders[0], stylLoaders.splice(1))
+          stylLoaders.join('!') :
+          ExtractTextPlugin.extract(stylLoaders[0], stylLoaders.slice(1))
       },
       {
         test: /\.(ttf|eot|svg)(\?v=[0-9]\.[0-9]\.[0-9])?$/,
