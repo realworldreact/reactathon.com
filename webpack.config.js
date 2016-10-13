@@ -55,6 +55,11 @@ const stylLoaders = [
   'stylus'
 ];
 
+const cssLoaders = [
+  'style',
+  'css'
+];
+
 module.exports = {
   devtool: isDev ? 'inline-source-map' : null,
 
@@ -88,8 +93,8 @@ module.exports = {
       }, {
         test: /\.css/,
         loader: isDev ?
-          stylLoaders.slice(0, 2).join('!') :
-          ExtractTextPlugin.extract(stylLoaders[0], stylLoaders.slice(1, 2))
+          cssLoaders.join('!') :
+          ExtractTextPlugin.extract(cssLoaders[0], cssLoaders.slice(1))
       }, {
         test: /\.styl$/,
         loader: isDev ?
