@@ -1,7 +1,7 @@
 import React from 'react';
 import { IndexRoute, Route } from 'react-router';
 
-import App from './App.jsx';
+import App from './components/App.jsx';
 import Home from './routes/home/Home.jsx';
 import childRoutes from './routes/index.jsx';
 

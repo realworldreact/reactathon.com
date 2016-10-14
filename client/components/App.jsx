@@ -2,8 +2,8 @@ import React, { PropTypes, Component } from 'react';
 import classnames from 'classnames/bind';
 import 'flexboxgrid/dist/flexboxgrid.css';
 
-import style from './index.styl';
-import Nav from './components/Nav.jsx';
+import style from './app.styl';
+import Nav from './Nav.jsx';
 
 const cx = classnames.bind(style);
 
