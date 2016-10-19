@@ -14,6 +14,7 @@ const swiss = require('kouto-swiss');
 const webpack = require('webpack');
 const webpackDevMiddleware = require('webpack-dev-middleware');
 const webpackHotMiddleware = require('webpack-hot-middleware');
+const history = require('connect-history-api-fallback');
 const browserSync = require('browser-sync');
 const render = require('gulp-render-react');
 
@@ -103,7 +104,8 @@ gulp.task('serve', syncDependents, function() {
         publicPath: webpackConfig.output.publicPath,
         stats: 'errors-only'
       }),
-      webpackHotMiddleware(bundler)
+      webpackHotMiddleware(bundler),
+      history()
     ]
   });
 });
