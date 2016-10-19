@@ -1,9 +1,10 @@
 const React = require('react');
+const { config: { immortan } = {} } = require('./package.json');
 
 const { PropTypes } = React;
 
 export default function HTML({
-  title = 'Berkeley\'s Coin-Op palace!',
+  title = immortan.title,
   body = '',
   bundle = 'bundle.js',
   stylesheet

@@ -13,13 +13,13 @@
     "deploy": "node gh-pages",
     "cname": "[[ -e CNAME ]] && cp CNAME public/CNAME || echo 'no CNAME found'"
   },
-  "immortan": {
-    "title": "Berkeley's Immortan Boilerplate",
-    "prefix": "immortan-boilerplate"
-  },
   "config": {
     "ghooks": {
       "pre-push": "npm run lint"
+    },
+    "immortan": {
+      "title": "Berks' Immortan Boilerplate | You will ride eternal, shiny and chrome.",
+      "prefix": "immortan-boilerplate"
     }
   },
   "dependencies": {

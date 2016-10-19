@@ -20,11 +20,8 @@ const render = require('gulp-render-react');
 
 const yargs = require('yargs');
 
-const pkg = require('./package.json');
 const webpackConfig = require('./webpack.config');
-
 // const debug = debugFactory('immortan:gulp');
-
 const sync = browserSync.create('ar-sync-server');
 const reload = sync.reload.bind(sync);
 
@@ -75,8 +72,7 @@ const syncDependents = [
 gulp.task('create-html', function() {
   return gulp.src(paths.template)
     .pipe(render({
-      type: 'markup',
-      props: pkg.immortan
+      type: 'markup'
     }))
     .pipe(rename('index.html'))
     .pipe(gulp.dest(paths.public))
