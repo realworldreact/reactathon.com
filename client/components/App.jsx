@@ -4,6 +4,8 @@ import 'flexboxgrid/dist/flexboxgrid.css';
 
 import style from './app.styl';
 import Nav from './Nav.jsx';
+import Footer from './Footer.jsx';
+
 
 const cx = classnames.bind(style);
 
@@ -15,6 +17,7 @@ export default class App extends Component {
         <div className={ cx('app-child', 'container-fluid') }>
           { this.props.children }
         </div>
+        <Footer />
       </div>
     );
   }

@@ -1,39 +1,31 @@
-.navbar
-  align-items: flex-start
-  border-bottom: 1px solid $primary
-  background-color: analogous($primary)[1]
-  clearfix()
-  display: flex
-  flex-flow: row wrap
-  justify-content: space-between
-  min-height: 50px
-  padding-top: 10px
-  padding-left: 20px
-  padding-right: 20px
-
-.brand
-  flex 1
-  height 10%
+nav
+  border-bottom 1px solid $tertiary
+  background-color $primary
+  margin 0 !important
+  width 100vw
+  +below($xs-min)
+    flex-direction: column !important
   img
-    position relative
-    width 20%
-    +below(800px)
-      height 100%
-      width 100%
-
-.links
-  flex 1
-  list-style-type none
-  a
-    text-decoration none
+    height 100px
+    padding .6em
+    +below($sm-min)
+      height 75px
   ul
-    display flex
-    flex-flow row wrap
-    justify-content: flex-end
-    align-items: flex-end
-    li
-      color $primary
-      display inline
-      padding 0 30px
+    list-style-type none
+    margin 0
+    padding-right 0
+    +below(30em)
+      flex-flow column nowrap !important
+    a
+      text-decoration none
+      padding 1em
+      height 100px
+      +below($sm-min)
+        height 75px
+      display table
       &:hover
         background-color $secondary
+  li
+    height 100%
+    display table-cell
+    vertical-align middle

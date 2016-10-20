@@ -1,19 +1,17 @@
 import React, { Component } from 'react';
 import { Link } from 'react-router';
-import classnames from 'classnames/bind';
 
-import style from './nav.styl';
+import './nav.styl';
 import logo from '../../images/logo.gif';
 
-const cx = classnames.bind(style);
 const propTypes = { };
 
 export default class Nav extends Component {
 
   render() {
     return (
-      <nav className={ cx('navbar') }>
-        <div className={ cx('brand') }>
+      <nav className='row start-sm between-sm'>
+        <div className='col-xs col-md-2'>
           <Link to='/'>
             <img
               alt='logo'
@@ -21,20 +19,18 @@ export default class Nav extends Component {
             />
           </Link>
         </div>
-        <nav className={ cx('links') }>
-          <ul>
+        <ul className='col-xs row end-xs'>
+          <Link to='/about'>
             <li>
-              <Link to='/about'>
-                About
-              </Link>
+              About
             </li>
+          </Link>
+          <Link to='/other-link'>
             <li>
-              <Link to='/other-link'>
-                Other Link
-              </Link>
+              Other Link
             </li>
-          </ul>
-        </nav>
+          </Link>
+        </ul>
       </nav>
     );
   }
