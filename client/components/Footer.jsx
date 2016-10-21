@@ -9,11 +9,11 @@ const propTypes = {};
 export default class Footer extends PureComponent {
   render() {
     return (
-      <footer className={ cx('footer', 'row center-xs middle-xs') }>
-        <div className='col-xs'>
+      <footer className={ cx('footer') }>
+        <div>
             info
         </div>
-        <div className='col-xs'>
+        <div>
             Contacts
         </div>
       </footer>
