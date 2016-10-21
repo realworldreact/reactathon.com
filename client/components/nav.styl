@@ -1,31 +1,42 @@
+$nav-height-lg = 100px;
+$nav-height-sm = 75px;
 nav.navbar
-  grid(,,, between)
+  $grid(,,, between)
   border-bottom 1px solid $tertiary
   background-color $primary
   width 100vw
   +ks-media-query(all, max-width $bps.xs)
-    grid(column)
+    $grid(column)
+  +ks-media-query(all, max-width $bps.sm)
+    .brand
+      $cell(0,center, 0)
   img
-    height 100px
+    height $nav-height-lg
     padding .6em
     +ks-media-query(all, max-width $bps.sm)
-        height 75px
+      height $nav-height-sm
   ul
-    grid(,,, end)
+    $grid(,,, end)
     list-style-type none
     margin 0
     padding-right 0
-    +ks-media-query(all, max-width $bps.sm)
-      flex-flow column nowrap !important
+    +ks-media-query(all, max-width $bps.xs)
+      $grid(column)
+      padding-left 0
+      a
+        $center(100%)
+        text-align center
     a
-      text-decoration none
-      padding 1em
-      height 100px
+      color $secondary
       display table
+      height $nav-height-lg
+      padding 1em
+      text-decoration none
       +ks-media-query(all, max-width $bps.sm)
-        height 75px
+        height $nav-height-sm
       &:hover
         background-color $secondary
+        color $primary
   li
     height 100%
     display table-cell

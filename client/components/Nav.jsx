@@ -6,14 +6,14 @@ import style from './nav.styl';
 import logo from '../../images/logo.gif';
 
 const cx = classnames.bind(style);
-const propTypes = { };
+const propTypes = {};
 
 export default class Nav extends Component {
 
   render() {
     return (
-      <nav className={ cx('navbar')}>
-        <div className=''>
+      <nav className={ cx('navbar') }>
+        <div className={ cx('brand') }>
           <Link to='/'>
             <img
               alt='logo'
@@ -21,7 +21,7 @@ export default class Nav extends Component {
             />
           </Link>
         </div>
-        <ul className=''>
+        <ul>
           <Link to='/about'>
             <li>
               About
