@@ -13,7 +13,7 @@ export default class App extends Component {
     return (
       <div className={ cx('app') }>
         <Nav />
-        <div className={ cx('app-child', 'container-fluid') }>
+        <div className={ cx('app-child') }>
           { this.props.children }
         </div>
         <Footer />
