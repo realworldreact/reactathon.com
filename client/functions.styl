@@ -90,3 +90,48 @@ $center(value, pad = null)
 
 $stack()
   cell(1, 1)
+
+-is-string(val)
+  if typeof(val) is not 'unit'
+    if val is a 'string' or val is a 'ident'
+      true
+    else
+      false
+  else
+    false
+
+-get-scale-number($name)
+  for scale-name, value in $scale
+    if scale-name is $name
+      return value
+  return false
+
+$between(min = 0, max = '')
+  selected = selector()
+
+  if -is-string(min)
+    min = -get-scale-number(min)
+  if -is-string(max)
+    max = -get-scale-number(max)
+
+  condition = 'only screen'
+  unless min is 0
+    min = ks-rem(min)
+    condition = condition + ' and (min-width: %s)' % (min)
+
+  unless !max
+    max = ks-rem(max)
+    condition = condition + ' and (max-width: %s)' % (max)
+
+  if condition == 'only screen'
+    {block}
+  else
+    @media condition
+      {block}
+
+$below(max)
+  +$between(0, max)
+    {block}
+$above(min)
+  +$between(min)
+    {block}

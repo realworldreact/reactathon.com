@@ -5,22 +5,22 @@ nav.navbar
   border-bottom 1px solid $tertiary
   background-color $primary
   width 100vw
-  +ks-media-query(all, max-width $bps.xs)
+  +$below('xs')
     $grid(column)
-  +ks-media-query(all, max-width $bps.sm)
+  +$below('sm')
     .brand
-      $cell(0,center, 0)
+      $cell(0, center, 0)
   img
     height $nav-height-lg
     padding .6em
-    +ks-media-query(all, max-width $bps.sm)
+    +$below('sm')
       height $nav-height-sm
   ul
     $grid(,,, end)
     list-style-type none
     margin 0
     padding-right 0
-    +ks-media-query(all, max-width $bps.xs)
+    +$below('xs')
       $grid(column)
       padding-left 0
       a
@@ -32,7 +32,7 @@ nav.navbar
       height $nav-height-lg
       padding 1em
       text-decoration none
-      +ks-media-query(all, max-width $bps.sm)
+      +$below('sm')
         height $nav-height-sm
       &:hover
         background-color $secondary
