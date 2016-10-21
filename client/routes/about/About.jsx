@@ -9,11 +9,11 @@ const propTypes = {};
 export default class About extends PureComponent {
   render() {
     return (
-      <div className={ cx('about', 'col-sm-6 col-sm-offset-3') }>
+      <div className={ cx('about') }>
         <header>
-          <h3>
-            About Us.
-          </h3>
+          <h1>
+            About Us
+          </h1>
         </header>
         <article>
           We are the immortan!
