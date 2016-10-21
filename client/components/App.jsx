@@ -1,6 +1,5 @@
 import React, { PropTypes, Component } from 'react';
 import classnames from 'classnames/bind';
-import 'flexboxgrid/dist/flexboxgrid.css';
 
 import style from './app.styl';
 import Nav from './Nav.jsx';

@@ -1,0 +1,91 @@
+$directions = {
+  row: row,
+  row-reverse: row-reverse,
+  column: column,
+  column-reverse: column-reverse
+}
+
+$items = {
+  top: flex-start,
+  bottom: flex-end,
+  center: center,
+  stretch: stretch,
+  baseline: baseline
+}
+
+$contents = {
+  top: flex-start,
+  bottom: flex-end,
+  center: center,
+  around: space-around,
+  between: space-between
+}
+
+$justifies = {
+  start: flex-start,
+  end: flex-end,
+  center: center,
+  around: space-around,
+  between: space-between
+}
+
+// greats a grid system
+grid(direction='row', item='', content='', justify='')
+  unless $directions[direction]
+    error('expected a valid flexbox direction but got ' + direction)
+
+  unless !item || $items[item]
+    error('expected a valid align-items value but got '+ item)
+
+  unless !content || $contents[content]
+    error('expected a valid align-content value but got '+ content)
+
+  unless !justify || $justifies[justify]
+    error('expected a valid justify value but got ' + justify)
+
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: $directions[direction];
+
+  if $items[item]
+    align-items: $items[item];
+  if $contents[content]
+    align-contents: $contents[content];
+  if $justifies[justify]
+    justify-content: $justifies[justify];
+
+
+cell(i = 1, cols = $columns, align = '', g = $gutter)
+  unless $aligns[align] || align is not 'stretch'
+    error('expected a valid value for align but got ' + align)
+  flex-basis: s('calc(100% * %s - %s)', i / cols, rem(g));
+  min-width: 0; // FF adjustment for responsive images
+  align-self: $aligns[align];
+  if g is not 0
+    margin: rem-calc(g / 2)
+
+cell-offset(i = 1, cols = $columns, g = $gutter)
+  margin-left: s('calc(100% * %s + (%s / 2))', i / cols, rem-calc(g)) !important
+
+center(value, pad = null)
+  margin-left auto
+  margin-right auto
+  width 100%
+  u = unit(value)
+  if (u is 'rem' or u is '%')
+    max-width unit(value, u)
+  else
+    max-width rem-calc(value)
+  if (pad is null)
+    return
+  else
+    p = unit(pad)
+    if (p is 'rem' or p is '%')
+      padding-left  unit(pad, p)
+      padding-right  unit(pad, p)
+    else
+      padding-left rem-calc(pad)
+      padding-right rem-calc(pad)
+
+stack()
+  cell(1, 1)

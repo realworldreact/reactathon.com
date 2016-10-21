@@ -1,28 +1,29 @@
-nav
+nav.navbar
+  grid(,,, between)
   border-bottom 1px solid $tertiary
   background-color $primary
-  margin 0 !important
   width 100vw
-  +below($xs-min)
-    flex-direction: column !important
+  +ks-media-query(all, max-width $bps.xs)
+    grid(column)
   img
     height 100px
     padding .6em
-    +below($sm-min)
-      height 75px
+    +ks-media-query(all, max-width $bps.sm)
+        height 75px
   ul
+    grid(,,, end)
     list-style-type none
     margin 0
     padding-right 0
-    +below(30em)
+    +ks-media-query(all, max-width $bps.sm)
       flex-flow column nowrap !important
     a
       text-decoration none
       padding 1em
       height 100px
-      +below($sm-min)
-        height 75px
       display table
+      +ks-media-query(all, max-width $bps.sm)
+        height 75px
       &:hover
         background-color $secondary
   li

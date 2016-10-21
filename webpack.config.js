@@ -2,7 +2,6 @@ require('babel-register');
 const path = require('path');
 const webpack = require('webpack');
 const swiss = require('kouto-swiss');
-const rupture = require('rupture');
 const ExtractTextPlugin = require('extract-text-webpack-plugin');
 const ReactStaticPlugin = require('react-static-webpack-plugin');
 
@@ -117,8 +116,7 @@ module.exports = {
   },
   stylus: {
     use: [
-      swiss(),
-      rupture()
+      swiss()
     ],
     import: [
       '~kouto-swiss/lib/kouto-swiss/index.styl',
