@@ -56,7 +56,7 @@ const stylLoaders = [
 
 const cssLoaders = [
   'style',
-  'css'
+  `css?modules${localIdentName}`
 ];
 
 module.exports = {
