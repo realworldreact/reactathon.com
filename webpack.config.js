@@ -101,13 +101,13 @@ module.exports = {
           ExtractTextPlugin.extract(stylLoaders[0], stylLoaders.slice(1))
       },
       {
-        test: /\.(ttf|eot|svg)(\?v=[0-9]\.[0-9]\.[0-9])?$/,
+        test: /\.(ttf|eot|woff2?)(\?v=[0-9]\.[0-9]\.[0-9])?$/,
         loaders: [
           'file?name=[name].[ext]'
         ]
       },
       {
-        test: /\.(png|jpg|gif|ico)$/,
+        test: /\.(png|jpg|gif|ico|svg)(\?v=[0-9]\.[0-9]\.[0-9])?$/,
         loaders: [
           'file?name=[name].[ext]'
         ]
