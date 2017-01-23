@@ -1,7 +1,7 @@
 import React, { PureComponent } from 'react';
 import classnames from 'classnames/bind';
 
-import styles from './about.styl';
+import styles from './index.styl';
 
 const cx = classnames.bind(styles);
 const propTypes = {};
@@ -9,7 +9,7 @@ const propTypes = {};
 export default class About extends PureComponent {
   render() {
     return (
-      <div className={ cx('about') }>
+      <div className={ cx('mixer') }>
         <header>
           <h1>
             About Us

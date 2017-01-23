@@ -1,0 +1,75 @@
+$nav-height-lg = 100px;
+$nav-height-sm = 75px;
+.header
+  $grid('column')
+  height 100vh
+  .title-sponser
+    flex-grow 1
+  .logo
+    $center(45vw)
+    flex-grow 1
+    img
+      width 100%
+  .date
+    $center(25vw)
+    flex-grow .3
+    text-align center
+  .rwr-logo
+    $center(25vw)
+    $grid('column')
+    text-align center
+    span
+      padding 20px
+    img
+      padding-bottom 20px
+      width 70px
+
+.nav
+  background-color $header-blue
+  width 100vw
+  +$below('xs')
+    $grid(column)
+  +$below('sm')
+    .brand
+      $cell(0, center, 0)
+  img
+    height $nav-height-lg
+    padding .6em
+    +$below('sm')
+      height $nav-height-sm
+  ul
+    $grid()
+    list-style-type none
+    margin 0
+    padding-right 0
+    +$below('xs')
+      $grid(column)
+      padding-left 0
+      a
+        $center(100%)
+        text-align center
+    a
+      color $secondary
+      display inline-block
+      flex-grow 1
+      height $nav-height-lg
+      padding 1em
+      text-decoration none
+      text-align center
+      width 100%
+      +$below('sm')
+        height $nav-height-sm
+      &:hover
+        background-color $secondary
+        color $primary
+      div
+        $center(65%)
+        background-color white
+        border 3px solid $action-pink
+        border-radius 20%
+        color $action-pink
+        height 50%
+
+  li
+    flex-grow 1
+    vertical-align middle

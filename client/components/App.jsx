@@ -2,7 +2,7 @@ import React, { PropTypes, Component } from 'react';
 import classnames from 'classnames/bind';
 
 import style from './app.styl';
-import Nav from './Nav.jsx';
+import Header from './header/Header.jsx';
 import Footer from './Footer.jsx';
 
 
@@ -12,10 +12,8 @@ export default class App extends Component {
   render() {
     return (
       <div className={ cx('app') }>
-        <Nav />
-        <div className={ cx('app-child') }>
-          { this.props.children }
-        </div>
+        <Header />
+        <div className={ cx('app-child') } />
         <Footer />
       </div>
     );

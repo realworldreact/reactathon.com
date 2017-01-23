@@ -61,7 +61,7 @@
     "react-redux": "^4.4.5",
     "react-router": "^2.7.0",
     "react-router-redux": "^4.0.5",
-    "react-static-webpack-plugin": "https://github.com/BerkeleyTrue/react-static-webpack-plugin.git#immortan",
+    "react-static-webpack-plugin": "^2.1.0",
     "redux": "^3.6.0",
     "redux-actions": "^0.12.0",
     "redux-observable": "^0.12.0",
