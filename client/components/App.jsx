@@ -3,8 +3,7 @@ import classnames from 'classnames/bind';
 
 import style from './app.styl';
 import Header from './header/Header.jsx';
-import Footer from './Footer.jsx';
-
+import General from './general/General.jsx';
 
 const cx = classnames.bind(style);
 
@@ -13,8 +12,7 @@ export default class App extends Component {
     return (
       <div className={ cx('app') }>
         <Header />
-        <div className={ cx('app-child') } />
-        <Footer />
+        <General />
       </div>
     );
   }
