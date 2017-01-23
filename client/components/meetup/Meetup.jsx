@@ -1,6 +1,7 @@
 import React, { PureComponent } from 'react';
 import classnames from 'classnames/bind';
 
+import ActionButton from '../Action-Button.jsx';
 import styles from './meetup.styl';
 import imad from '../../peeps/imad.png';
 import justin from '../../peeps/justin.png';
@@ -63,6 +64,9 @@ export default class Meetup extends PureComponent {
           { speakers }
         </section>
         <section>
+          <ActionButton>
+            Register Free
+          </ActionButton>
           food & Drink Provided
           Presented By
           <img src={ pinterest }/>

@@ -4,6 +4,7 @@ import classnames from 'classnames/bind';
 import style from './header.styl';
 import reactathonLogo from './reactathon-logo.png';
 import rwrLogo from './rwr-logo.png';
+import ActionButton from '../Action-Button.jsx';
 
 const routes = [
   'Meetup',
@@ -18,6 +19,7 @@ const propTypes = {};
 const links = routes.map(content => (
   <li key={ content }>
     <a
+      className={ cx('link') }
       href={ `/#${content}` }
       >
       { content }
@@ -26,11 +28,11 @@ const links = routes.map(content => (
 ));
 links[2] = (
   <li key='register'>
-    <a href='/#Register'>
-      <div>
+    <div className={ cx('register') }>
+      <ActionButton href='/#Register'>
         Register
-      </div>
-    </a>
+      </ActionButton>
+    </div>
   </li>
 );
 
