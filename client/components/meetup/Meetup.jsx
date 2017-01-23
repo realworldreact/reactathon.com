@@ -63,12 +63,12 @@ export default class Meetup extends PureComponent {
         <section className={ cx('speakers') }>
           { speakers }
         </section>
-        <section>
+        <section className={ cx('sponsor') }>
           <ActionButton>
             Register Free
           </ActionButton>
-          food & Drink Provided
-          Presented By
+          <div>Food & Drink Provided</div>
+          <div>Presented By</div>
           <img src={ pinterest }/>
         </section>
       </div>
