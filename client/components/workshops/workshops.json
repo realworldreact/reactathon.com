@@ -9,7 +9,7 @@
     "title": "Senior Engineer",
     "company": "Eventbrite",
     "bio": "Ben is a Christian, a husband and a father of 2 with 10+ years of experience developing user interfaces for the Web. He currently leads and manages Eventbrite’s Frontend Platform team. On the side, Ben also enjoys playing basketball, DIY, watching movies, and blogging (benmvp.com) / tweeting (@benmvp) about his experiences with new web technologies.",
-    "date": "2017-03-07",
+    "date": "March 7",
     "length": 3,
     "difficulty": "BEGINNER",
     "location": ""
@@ -24,7 +24,7 @@
     "title": "Senior Engineer",
     "company": "Netlify",
     "bio": "Brian is a developer at Netlify, where he was first hired to convert their Angular app to React. Since then he has been working heavily on multiple React apps using Redux, GraphQL/Relay, and a variety of solutions for styling. In his spare time, he mentors new programmers towards contributing in open source as well as JavaScript and React tools.",
-    "date": "2017-03-07",
+    "date": "March 7",
     "length": 5,
     "difficulty": "BEGINNER",
     "location": ""
@@ -39,7 +39,7 @@
     "title": "CTO",
     "company": "freeCodeCamp",
     "bio": "Berkeley is the CTO of freecodecamp.com, a free online community for learning full-stack web development where students garner real-world experience by engineering solutions for nonprofit companies. He has been programming with React for over three years, and is the author of Redux-Epic, a library built to do better async and server-side rendering in React with RxJS Observables. He is also a partner at Real World React, where he consults individuals and businesses looking to become experts in the React ecosystem.",
-    "date": "2017-03-08",
+    "date": "March 8",
     "length": 8,
     "difficulty": "INTERMEDIATE",
     "location": ""
@@ -54,7 +54,7 @@
     "title": "Front-end Engineer",
     "company": "Esurance",
     "bio": "Muhsin \"Moose\" is a Front End Engineer at Esurance Working in React and Node. He has a passion for tooling, workflows, awesome build pipelines, and learning/teaching new technologies.",
-    "date": "2017-03-09",
+    "date": "March 9",
     "length": 4,
     "difficulty": "INTERMEDIATE",
     "location": ""
@@ -69,7 +69,7 @@
     "title": "Software Engineer",
     "company": "Serverless",
     "bio": "David is a full stack developer at Serverless, Inc. in San Francisco. He is passionate about developer experience and creating products that are powerful and easy to use. His previous roles include lead UI/UX developer at Mulesoft and founder of Inbound Now, an open source marketing software platform. He specialized in JavaScript, HTML, CSS, Marketing, and UI/UX",
-    "date": "2017-03-09",
+    "date": "March 9",
     "length": 4,
     "difficulty": "INTERMEDIATE",
     "location": ""
@@ -84,7 +84,7 @@
     "title": "CTO",
     "company": "Callstack.io",
     "bio": "Mike is the CTO and head of open source at Callstack.io, where they build professional native apps for clients utilizing React and React Native. He is a React Native core-contributor.",
-    "date": "2017-03-10",
+    "date": "March 10",
     "length": 8,
     "difficulty": "INTERMEDIATE",
     "location": ""
@@ -99,7 +99,7 @@
     "title": "CTO",
     "company": "freeCodeCamp",
     "bio": "Berkeley is the CTO of freecodecamp.com, a free online community for learning full-stack web development where students garner real-world experience by engineering solutions for nonprofit companies. He has been programming with React for over three years, and is the author of Redux-Epic, a library built to do better async and server-side rendering in React with RxJS Observables. He is also a partner at Real World React, where he consults individuals and businesses looking to become experts in the React ecosystem.",
-    "date": "2017-03-10",
+    "date": "March 10",
     "length": 8,
     "difficulty": "ADVANCED",
     "location": ""
