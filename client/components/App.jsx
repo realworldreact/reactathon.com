@@ -5,7 +5,7 @@ import style from './app.styl';
 import Header from './header/Header.jsx';
 import General from './general/General.jsx';
 import Meetup from './meetup/Meetup.jsx';
-
+import Workshops from './workshops/Workshops.jsx';
 
 const cx = classnames.bind(style);
 
@@ -16,6 +16,7 @@ export default class App extends Component {
         <Header />
         <General />
         <Meetup />
+        <Workshops />
       </div>
     );
   }
