@@ -3,6 +3,7 @@ import classnames from 'classnames/bind';
 
 import styles from './meetup.styl';
 import pinterest from './pinterest.png';
+import meetupBg from './bg-meetup.png';
 
 import ActionButton from '../Action-Button.jsx';
 import TitleCard from '../Title-Card.jsx';
@@ -50,7 +51,7 @@ export default class Meetup extends PureComponent {
     return (
       <div className={ cx('meetup') }>
         <header>
-          <TitleCard img='meetup'>
+          <TitleCard img={ meetupBg }>
             Meetup
           </TitleCard>
           <h5>

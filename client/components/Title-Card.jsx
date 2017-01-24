@@ -16,7 +16,10 @@ export default class TitleCard extends PureComponent {
       img
     } = this.props;
     return (
-      <div className={ cx('title-card', `img-${img}`) }>
+      <div
+        className={ cx('title-card') }
+        style={{ backgroundImage: `url(${img})` }}
+        >
         <h1>{ children }</h1>
       </div>
     );
