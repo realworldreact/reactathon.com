@@ -35,17 +35,53 @@ const instructors = workshopsInfo
     }
   })
   .map(({ title, instructor, company, img }) => (
+    <div
+      className={ cx('instructor-container') }
+      key={ instructor }
+      >
+      <img src={ images[img] }/>
+      <h3 className={ cx('instructor') }>
+        { instructor }
+      </h3>
+      <div className={ cx('instructor-info') }>
+        <h4>{ title }</h4>
+        <h4>{ company }</h4>
+      </div>
+    </div>
+  ));
+const workshops = workshopsInfo.map(({
+  name,
+  date,
+  title,
+  company,
+  instructor,
+  difficulty
+}) => (
   <div
-    className={ cx('instructor-container') }
-    key={ instructor }
+    className={ cx('workshop-container') }
+    key={ name }
     >
-    <img src={ images[img] }/>
-    <h4>{ instructor }</h4>
-    <h5>{ title }</h5>
-    <p>{ company }</p>
+    <div className={ cx('workshop-info') }>
+      <header className={ cx('title-container') }>
+        <h4 className={ cx('title') }>
+          { difficulty }
+        </h4>
+      </header>
+      <h2 className={ cx('name') }>
+        { name }
+      </h2>
+      <h3>
+        { instructor }
+      </h3>
+      <h3>
+        { title }, { company }
+      </h3>
+    </div>
+    <div className={ cx('date') }>
+      { date }
+    </div>
   </div>
 ));
-
 export default class Workshops extends PureComponent {
   render() {
     return (
@@ -53,8 +89,23 @@ export default class Workshops extends PureComponent {
         <TitleCard img={ workshopsBg }>
           Workshops
         </TitleCard>
+        <div className={ cx('info') }>
+          <h1>March 7 - 10</h1>
+          <h2>Learn from Leaders in the Field</h2>
+          <h3>
+            Choose your workshops a la carte,
+            or select tracks for multi-day instruction and discounts.
+          </h3>
+          <h3>
+            Please note: ALL of our workshops assume that you are
+            comfortable using JavaScript.
+          </h3>
+        </div>
         <div className={ cx('instructors-list') }>
           { instructors }
+        </div>
+        <div className={ cx('workshops-list') }>
+          { workshops }
         </div>
       </div>
     );
