@@ -1,12 +1,15 @@
 import React, { PureComponent } from 'react';
 import classnames from 'classnames/bind';
 
-import ActionButton from '../Action-Button.jsx';
 import styles from './meetup.styl';
-import imad from '../../peeps/imad.png';
-import justin from '../../peeps/justin.png';
-import david from '../../peeps/david.png';
 import pinterest from './pinterest.png';
+
+import ActionButton from '../Action-Button.jsx';
+import TitleCard from '../Title-Card.jsx';
+
+import imad from '../../images/peeps/imad.png';
+import justin from '../../images/peeps/justin.png';
+import david from '../../images/peeps/david.png';
 
 const cx = classnames.bind(styles);
 const propTypes = {};
@@ -47,11 +50,9 @@ export default class Meetup extends PureComponent {
     return (
       <div className={ cx('meetup') }>
         <header>
-          <div>
-            <div className={ cx('title') }>
-              <h1>Meetup</h1>
-            </div>
-          </div>
+          <TitleCard img='meetup'>
+            Meetup
+          </TitleCard>
           <h5>
             Tuesday, March 7
           </h5>
