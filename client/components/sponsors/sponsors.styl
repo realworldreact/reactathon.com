@@ -1,57 +1,106 @@
 .sponsors
-  min-height 100vh
-  border-top 6px solid $primary
   background-color $secondary
+  border-top 6px solid $primary
+  min-height 100vh
+  padding-bottom 60px
 
 .container
   $grid('column', 'center', , 'between')
+  text-align center
   min-height 100%
   padding 20px
 
 .tier-1
-  $grid('row', , , 'center')
   width 100%
-  div
-    $cell(3, , 60px)
-    img
-      width 90%
-  .reddit
-    margin-top -32px
+  +$below('sm')
+    $grid('column', , , 'center')
+    div
+      cell()
+      padding-bottom 60px
+      img
+        width 80%
+  +$above('sm')
+    $grid('row', , , 'center')
+    div
+      $cell(3, , 60px)
+      img
+        width 90%
+    .reddit
+      margin-top -32px
 
 .tier-2
-  $grid('row', , , 'center')
   width 100%
-  div
-    $cell(3, , 60px)
-    img
-      width 80%
+  +$below('sm')
+    $grid('column', , , 'center')
+    padding-bottom 60px
+    div
+      $cell()
+      padding-bottom 40px
+      img
+        width 70%
+  +$above('sm')
+    $grid('row', , , 'center')
+    div
+      $cell(3, , 60px)
+      img
+        width 80%
 
 .tier-3
-  $grid('row', , , 'center')
-  width 60%
-  div
-    $cell(5, , 60px)
-    img
-      width 80%
+  +$below('sm')
+    $grid('row', , , 'around')
+    width 100%
+    padding-bottom 60px
+    div
+      $cell(5)
+      width 50%
+      img
+        width 100%
+  +$above('sm')
+    $grid('row', , , 'center')
+    width 60%
+    div
+      $cell(5, , 60px)
+      img
+        width 80%
 
 .tier-4
-  $grid('row', , , 'center')
-  width 40%
-  div
-    $cell(5, , 60px)
-    img
-      width 80%
-div
-  h2
-    margin-top 50px
-    margin-bottom 0
+  +$below('sm')
+    $grid('row', , , 'around')
+    width 100%
+    div
+      $cell(5)
+      width 40%
+      img
+        width 100%
+  +$above('sm')
+    $grid('row', , , 'center')
+    width 40%
+    div
+      $cell(5, , 60px)
+      img
+        width 80%
+
+.sponsors-title
+  margin-top 50px
+  margin-bottom 0
 
 .supporters
-  $grid('row', , , 'center')
-  width 60%
-  div
-    $cell(5, , 60px)
-    img
-      width 60%
-  .nyentek
-    margin-top 57px
+  +$below('sm')
+    $grid('row', , , 'around')
+    width 100%
+    div
+      $cell(5)
+      width 40%
+      img
+        width 100%
+    .nyentek
+      margin-top 30px
+  +$above('sm')
+    $grid('row', , , 'between')
+    width 60%
+    div
+      $cell(5, , 60px)
+      img
+        width 60%
+    .nyentek
+      margin-top 57px

@@ -3,7 +3,7 @@
   border-top 6px solid $primary
   min-height 100vh
   text-align center
-  width 100vw
+  width 100%
 
 .content
   $grid('column', 'center')
@@ -32,6 +32,8 @@
     margin-top 50px
     a
       color $primary
+  +$below('sm')
+    width 100%
 
   h1
     color $gray-text
@@ -50,6 +52,9 @@
       &:focus
         border-bottom 4px solid $action-pink
         outline-width 0
+      +$below('sm')
+        margin-top 20px
+        width 80%
     .button
       background-color white
       border 4px solid $action-pink
@@ -65,5 +70,6 @@
         box-shadow none
         cursor pointer
       +$below('sm')
+        margin-left 0
         margin-top 20px
         width 80%

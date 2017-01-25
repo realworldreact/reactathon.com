@@ -6,18 +6,20 @@ import styles from './action-button.styl';
 const cx = classnames.bind(styles);
 const propTypes = {
   children: PropTypes.string,
-  href: PropTypes.string
+  href: PropTypes.string,
+  target: PropTypes.string
 };
 
 export default class ActionButton extends PureComponent {
   render() {
-    const { href } = this.props;
+    const { href, target } = this.props;
     const Wrap = href ? 'a' : 'button';
     const props = {
       className: cx('action-button')
     };
     if (href) {
       props.href = href;
+      props.target = target;
     }
     return (
       <Wrap { ...props }>

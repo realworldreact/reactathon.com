@@ -33,53 +33,87 @@ export default class Sponsors extends PureComponent {
         <div className={ cx('container') }>
           <div className={ cx('tier-1') }>
             <div>
-              <img src={ pinterest } />
+              <img
+                alt="Pinterest's logo"
+                src={ pinterest }
+              />
             </div>
             <div>
               <img
+                alt="Reddit's logo"
                 className={ cx('reddit') }
                 src={ reddit }
               />
             </div>
             <div>
-              <img src={ microsoft } />
+              <img
+                alt="Microsoft's logo"
+                src={ microsoft }
+              />
             </div>
           </div>
           <div className={ cx('tier-2') }>
             <div>
-              <img src={ netlify } />
+              <img
+                alt="Netlify's logo"
+                src={ netlify }
+              />
             </div>
             <div>
-              <img src={ serverless } />
+              <img
+                alt="Severless' logo"
+                src={ serverless }
+              />
             </div>
             <div>
-              <img src={ eventbrite } />
+              <img
+                alt="EventBrite's logo"
+                src={ eventbrite }
+              />
             </div>
           </div>
           <div className={ cx('tier-3') }>
             <div>
-              <img src={ openTable } />
+              <img
+                alt="OpenTable's logo"
+                src={ openTable }
+              />
             </div>
             <div>
-              <img src={ coursera } />
+              <img
+                alt="Coursera's logo"
+                src={ coursera }
+              />
             </div>
           </div>
           <div className={ cx('tier-4') }>
             <div>
-              <img src={ npr } />
+              <img
+                alt="NPR's logo"
+                src={ npr }
+              />
             </div>
           </div>
-          <div>
+          <div className={ cx('sponsor-title') }>
             <h2>
               Supporters
             </h2>
           </div>
           <div className={ cx('supporters') }>
             <div>
-              <img src={ accelebrate } />
+              <img
+                alt="Accelebrate's logo"
+                src={ accelebrate }
+              />
             </div>
             <div className={ cx('nyentek') }>
-              <a href="http://nyentek.com" target="_blank"><img src={ nyentek } /></a>
+              <a
+                alt="Nyentek's logo"
+                href='http://nyentek.com'
+                target='_blank'
+                >
+                <img src={ nyentek } />
+              </a>
             </div>
           </div>
         </div>
