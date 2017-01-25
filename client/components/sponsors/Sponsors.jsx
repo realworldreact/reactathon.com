@@ -15,7 +15,7 @@ import openTable from '../../images/sponsors/opentable.png';
 import coursera from '../../images/sponsors/coursera.png';
 import accelebrate from '../../images/sponsors/accelebrate.png';
 import nyentek from '../../images/sponsors/nyentek.png';
-import npr from '../../images/sponsors/npr.jpg';
+import npr from '../../images/sponsors/npr-2.jpg';
 import eventbrite from '../../images/sponsors/eventbrite.png';
 
 const cx = classnames.bind(styles);
