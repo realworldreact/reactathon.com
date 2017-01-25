@@ -86,7 +86,8 @@ export default class Workshops extends PureComponent {
   render() {
     return (
       <div className={ cx('workshops') }
-      id="Workshops">
+        id="Workshops"
+      >
         <TitleCard img={ workshopsBg }>
           Workshops
         </TitleCard>

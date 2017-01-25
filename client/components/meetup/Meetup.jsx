@@ -79,7 +79,9 @@ export default class Meetup extends PureComponent {
           { speakers }
         </section>
         <section className={ cx('sponsor') }>
-          <ActionButton href="#Register">
+          <ActionButton
+            href="#Register"
+          >
             Register Free
           </ActionButton>
           <div>Food & Drink Provided</div>

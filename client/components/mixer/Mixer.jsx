@@ -43,7 +43,9 @@ export default class Mixer extends PureComponent {
           </div>
           <div className={ cx('presented') }>
             <div>
-              <ActionButton href="#Register">
+              <ActionButton
+                href="#Register"
+              >
                 Register Free
               </ActionButton>
             </div>
