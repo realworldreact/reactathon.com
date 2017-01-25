@@ -73,9 +73,9 @@ const workshops = workshopsInfo.map(({
       <h3>
         { instructor }
       </h3>
-      <h3>
+      <h4>
         { title }, { company }
-      </h3>
+      </h4>
     </div>
     <div className={ cx('date') }>
       { date }

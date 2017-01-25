@@ -44,10 +44,10 @@ $workshop-width = 400px
   padding 20px 100px
 
 .workshop-container
-  $cell(6, , 60px)
+  $cell(6, , 100px)
   $grid('column')
   background-color $primary
-  box-shadow 0px 1px 20px 0px black
+  box-shadow 0px 2px 8px 0px #525252
   color $secondary
   margin-bottom 60px
   min-height 350px
@@ -60,10 +60,17 @@ $workshop-width = 400px
   $grid('column', 'bottom')
   padding 20px
   flex-grow 1
+  height 200px
   .name
     flex-grow 1
+    font-size 32px
   h3
     margin 0
+    font-size 24px
+  h4
+    margin 0
+    font-size 20px
+    font-weight 100
 
 .title-container
   text-align center
@@ -72,7 +79,7 @@ $workshop-width = 400px
 
 .title
   background-color $quartinary
-  box-shadow 0px 1px 20px 0px black
+  box-shadow 0px 0px 5px 0px #717171
   display inline-block
   min-width 150px
   padding 14px 24px
