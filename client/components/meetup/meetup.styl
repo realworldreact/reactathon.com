@@ -4,22 +4,58 @@
   header
     background-color $secondary
     padding-bottom 20px
+    h2
+      font-size $headerDate
+      margin-top -20px
+      margin-bottom 0
+    h3
+      font-size 1.17em
+      color $light-gray
+    h4
+      margin-top 50px
+      font-size 2em
+      color $gray-text
   .speakers
     $grid('row', 'center', 'center', 'center')
-    padding 20px
     background-color $tertiary
+    padding-top 50px
+    padding-bottom 40px
+    .speaker-container
+      margin 0
+      padding 0
+      width 250px
+
     img
-      width 50%
+      width 70%
+    h3
+      color black
+      margin-top 0
+      margin-bottom 0
+      max-width 200px
+      margin-left auto
+      margin-right auto
+    h4
+      color #929292
+      margin-top 0
+      margin-bottom 0
+      max-width 200px
+      margin-left auto
+      margin-right auto
+    p
+      max-width 200px
+      margin-left auto
+      margin-right auto
+      color #02AEEF
   .sponsor
     $grid('column', 'center', 'center')
     background-color $secondary
     padding 60px
     padding-bottom 200px
+    div
+      color $light-gray
     img
       width 25%
     :nth-child(2)
       padding 20px
     :nth-child(3)
       padding-top 40px
-
-

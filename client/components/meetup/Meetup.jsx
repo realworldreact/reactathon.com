@@ -11,6 +11,7 @@ import TitleCard from '../Title-Card.jsx';
 import imad from '../../images/peeps/imad.png';
 import justin from '../../images/peeps/justin.png';
 import david from '../../images/peeps/david.png';
+import harry from '../../images/peeps/harry.png'
 
 const cx = classnames.bind(styles);
 const propTypes = {};
@@ -26,6 +27,12 @@ const speakers = [{
   company: 'NPR',
   image: justin,
   talkTitle: 'Modernizing Legacy Codebases'
+}, {
+  name: 'Harry Tormey',
+  title: 'Software Engineer',
+  company: 'Independent',
+  image: harry,
+  talkTitle: 'When To Go Native Over Javascript'
 }, {
   name: 'David Wells',
   title: 'Software Engineer',
@@ -54,13 +61,18 @@ export default class Meetup extends PureComponent {
           <TitleCard img={ meetupBg }>
             Meetup
           </TitleCard>
-          <h5>
+          <h2>
             Tuesday, March 7
-          </h5>
-            <h6>6:00 PM - 10:00 PM</h6>
-            <h6>
+          </h2>
+            <h3>
+              6:00 PM - 10:00 PM
+            </h3>
+            <h3>
               An evening of socializing, networking, and technical presentations
-            </h6>
+            </h3>
+            <h4>
+              Featuring
+            </h4>
         </header>
         <section className={ cx('speakers') }>
           { speakers }
