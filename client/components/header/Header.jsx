@@ -10,7 +10,7 @@ const routes = [
   'Meetup',
   'Workshops',
   null,
-  'HiringMixer',
+  'Hiring Mixer',
   'Hackathon'
 ];
 
@@ -30,7 +30,7 @@ links[2] = (
   <li key='register'>
     <div className={ cx('register') }>
       <ActionButton href='/#Register'>
-        Register
+        Register Now
       </ActionButton>
     </div>
   </li>
