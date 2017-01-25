@@ -13,8 +13,12 @@ $workshop-width = 400px
   h1, h3, h4
     color $gray-text
     margin 0
+  h1
+    font-size 38px
+    margin-top -30px
   h2
     color $secondary
+    font-size 38px
   h3
     margin-bottom 30px
 
@@ -22,7 +26,7 @@ $workshop-width = 400px
 .instructors-list
   +$above('sm')
     $grid('row', 'center', 'center')
-    padding 20px 100px
+    padding 20px 200px
   +$below('sm')
     display none
 
@@ -31,9 +35,12 @@ $workshop-width = 400px
   text-align center
   .instructor
     color $secondary
+    margin-bottom 0
+    margin-top 0
   img
     min-width 150px
     width 50%
+    margin-top 20px
 .instructor-info
   h4
     margin 0
@@ -41,13 +48,14 @@ $workshop-width = 400px
 
 .workshops-list
   $grid('row', 'center', 'center', 'center')
-  padding 20px 100px
+  padding 20px 20px
+  max-width 1500px
 
 .workshop-container
-  $cell(6, , 60px)
+  $cell(6, , 100px)
   $grid('column')
-  background-color $primary
-  box-shadow 0px 1px 20px 0px black
+  background-color #02AEEF
+  box-shadow 0px 2px 8px 0px #525252
   color $secondary
   margin-bottom 60px
   min-height 350px
@@ -58,12 +66,19 @@ $workshop-width = 400px
 
 .workshop-info
   $grid('column', 'bottom')
-  padding 20px
+  padding 36px
   flex-grow 1
+  height 200px
   .name
-    flex-grow 1
+    font-size 32px
+    flex-grow 0.5
   h3
     margin 0
+    font-size 24px
+  h4
+    margin 0
+    font-size 20px
+    font-weight 100
 
 .title-container
   text-align center
@@ -72,7 +87,7 @@ $workshop-width = 400px
 
 .title
   background-color $quartinary
-  box-shadow 0px 1px 20px 0px black
+  box-shadow 0px 0px 5px 0px #717171
   display inline-block
   min-width 150px
   padding 14px 24px

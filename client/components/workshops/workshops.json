@@ -6,7 +6,7 @@
     "description": "JavaScript is evolving quickly. The mega ES6 specification was released in 2015 and is quickly being implemented by modern JS interpreters. New versions of ECMAScript will now be released on a yearly basis with new features going through a 4-stage proposal process. We can leverage features in ES6, ES2016, and those slated for future versions right now to write even clearer and more concise React code. Experience with JavaScript will help you get the most out of this hands-on workshop, but you don’t have to have a JavaScript black belt to leave feeling confident in 'ES.next.' Learn how to write cleaner code using arrow functions, destructuring, rest parameters, and other ES.next features you’re likely to use and benefit from on a daily basis while developing with React. Oh, and don’t worry if you didn’t understand any of those terms — you soon will after this workshop.",
     "instructor": "Ben Ilegbodu",
     "img": "ben",
-    "title": "Senior Engineer",
+    "title": "Lead Front-end Engineer",
     "company": "Eventbrite",
     "bio": "Ben is a Christian, a husband and a father of 2 with 10+ years of experience developing user interfaces for the Web. He currently leads and manages Eventbrite’s Frontend Platform team. On the side, Ben also enjoys playing basketball, DIY, watching movies, and blogging (benmvp.com) / tweeting (@benmvp) about his experiences with new web technologies.",
     "date": "March 7",
@@ -61,7 +61,7 @@
   },
   {
     "id": "5",
-    "name": "Serverless Applications with AWS Lambda & React",
+    "name": "Serverless Apps with AWS Lambda & React",
     "brief": "git push heroku master was a great leap forward in web development. But serverless apps take it a whole step further. Learn how to deploy full-stack apps with AWS Lambda and React from a lead software engineer at Serverless.",
     "description": "git push heroku master was a great leap forward in web development. But serverless apps take it a whole step further. Learn how to deploy full-stack apps with AWS Lambda and React from a lead software engineer at Serverless.",
     "instructor": "David Wells",
