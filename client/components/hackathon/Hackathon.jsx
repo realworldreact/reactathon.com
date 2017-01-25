@@ -15,6 +15,8 @@ import {
 import { trackEvent } from '../../redux/index.js';
 
 const cx = classnames.bind(styles);
+const volunteerUrl = 'https://docs.google.com/forms/d/e/' +
+  '1FAIpQLSdkgVtFTUggBhnXZwK6RYhXUJhB0ainAxR31XEwkFVO8bBu3Q/viewform';
 const propTypes = {
   fields: PropTypes.object,
   invalid: PropTypes.bool,
@@ -71,7 +73,9 @@ export class Hackathon extends PureComponent {
           </div>
           <div className={ cx('register') }>
             <h1>Hackathon registration opens soon</h1>
-            <h3>Sign up here to get notified first</h3>
+            <h3>
+              Be the first to know when registration opens
+            </h3>
             <div>
               <form
                 action={
@@ -128,7 +132,16 @@ export class Hackathon extends PureComponent {
                   />
                 </div>
               </form>
-              <p className={ cx('volunteers') }>Intersted in volunteering? <a href="https://docs.google.com/forms/d/e/1FAIpQLSdkgVtFTUggBhnXZwK6RYhXUJhB0ainAxR31XEwkFVO8bBu3Q/viewform" target="_blank">Go here</a></p>
+              <p className={ cx('volunteers') }>
+                Intersted in volunteering?
+                <span>{ ' ' }</span>
+                <a
+                  href={ volunteerUrl }
+                  target='_blank'
+                  >
+                  Go here
+                </a>
+              </p>
             </div>
           </div>
         </div>
