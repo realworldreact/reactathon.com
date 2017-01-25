@@ -20,6 +20,7 @@ export default class General extends PureComponent {
           </h3>
         </div>
         <div className={ cx('about') }>
+          <h2>About</h2>
           <p>
             Developers from around the world will descend on Silicon Valley for
             Facebook’s React Conf on March 13-14.
@@ -30,6 +31,7 @@ export default class General extends PureComponent {
           </p>
         </div>
         <div className={ cx('goals') }>
+          <h2>Goals</h2>
           <ul>
             <li>
               <img src={ checkMark }/>
