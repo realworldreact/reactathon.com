@@ -30,7 +30,7 @@ const speakers = [{
 }, {
   name: 'Harry Tormey',
   title: 'Software Engineer',
-  company: 'Independent',
+  company: 'Mobile',
   image: harry,
   talkTitle: 'When To Go Native Over Javascript'
 }, {
