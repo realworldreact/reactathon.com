@@ -8,7 +8,7 @@ import Meetup from './meetup/Meetup.jsx';
 import Workshops from './workshops/Workshops.jsx';
 import Mixer from './mixer/Mixer.jsx';
 import Hackathon from './hackathon/Hackathon.jsx';
-
+import Sponsors from './sponsors/Sponsors.jsx';
 
 const cx = classnames.bind(style);
 
@@ -22,6 +22,7 @@ export default class App extends Component {
         <Workshops />
         <Mixer />
         <Hackathon />
+        <Sponsors />
       </div>
     );
   }
