@@ -6,6 +6,7 @@ import workshopsInfo from './workshops.json';
 import workshopsBg from './bg-workshops.png';
 
 import TitleCard from '../Title-Card.jsx';
+import ActionButton from '../Action-Button.jsx';
 
 import ben from '../../images/peeps/ben.png';
 import berks from '../../images/peeps/berks.png';
@@ -13,6 +14,8 @@ import brian from '../../images/peeps/brian.png';
 import david from '../../images/peeps/david.png';
 import mike from '../../images/peeps/mike.png';
 import moose from '../../images/peeps/moose.png';
+import microsoft from '../../images/sponsors/microsoft.png';
+import reddit from '../../images/sponsors/reddit.png';
 
 const images = {
   ben,
@@ -104,6 +107,33 @@ export default class Workshops extends PureComponent {
         </div>
         <div className={ cx('workshops-list') }>
           { workshops }
+        </div>
+        <div className={ cx('action') }>
+          <ActionButton
+            href='https://ti.to/real-world-react/reactathon-2017'
+            target='_blank'
+            >
+            Buy Tickets
+          </ActionButton>
+        </div>
+        <div>
+          <h2>
+            Workshops are made possible thanks in part to our venue sponsors:
+          </h2>
+        </div>
+        <div className={ cx('sponsors') }>
+          <div>
+            <img
+              alt="Reddit's logo"
+              src={ reddit }
+            />
+          </div>
+          <div className={ cx('microsoft') }>
+            <img
+              alt="Microsoft's log"
+              src={ microsoft }
+            />
+          </div>
         </div>
       </div>
     );

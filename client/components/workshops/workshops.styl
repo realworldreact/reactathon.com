@@ -120,3 +120,26 @@ $workshop-width = 400px
   padding 20px 40px 10px
   color black
   background-color $secondary
+
+.action
+  text-align center
+
+.sponsors
+  text-align center
+  +$below('sm')
+    $grid('column', , , 'center')
+    width 100%
+    div
+      $cell()
+      $center(75%)
+      img
+        width 100%
+  +$above('sm')
+    $grid('row', , , 'around')
+    $center(50%)
+    div
+      $cell(5)
+      img
+        width 100%
+    .microsoft
+      padding-top 40px
