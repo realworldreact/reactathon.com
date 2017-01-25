@@ -53,7 +53,8 @@ export class Hackathon extends PureComponent {
       submitToUpdates
     } = this.props;
     return (
-      <div className={ cx('hackathon') }>
+      <div className={ cx('hackathon') }
+        id="Hackathon">
         <TitleCard img={ hackathonBg } >
           Hackathon
         </TitleCard>

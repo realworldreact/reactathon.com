@@ -16,7 +16,8 @@ const propTypes = {};
 export default class Mixer extends PureComponent {
   render() {
     return (
-      <div className={ cx('mixer') }>
+      <div className={ cx('mixer') }
+      id="Hiring-Mixer">
         <TitleCard img={ mixerBg }>
           Hiring Mixer
         </TitleCard>
@@ -42,7 +43,7 @@ export default class Mixer extends PureComponent {
           </div>
           <div className={ cx('presented') }>
             <div>
-              <ActionButton>
+              <ActionButton href="#Register">
                 Register Free
               </ActionButton>
             </div>

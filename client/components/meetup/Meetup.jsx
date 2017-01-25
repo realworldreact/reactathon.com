@@ -56,7 +56,8 @@ const speakers = [{
 export default class Meetup extends PureComponent {
   render() {
     return (
-      <div className={ cx('meetup') }>
+      <div className={ cx('meetup') }
+      id="Meetup">
         <header>
           <TitleCard img={ meetupBg }>
             Meetup
@@ -78,7 +79,7 @@ export default class Meetup extends PureComponent {
           { speakers }
         </section>
         <section className={ cx('sponsor') }>
-          <ActionButton>
+          <ActionButton href="#Register">
             Register Free
           </ActionButton>
           <div>Food & Drink Provided</div>

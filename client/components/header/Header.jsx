@@ -10,7 +10,7 @@ const routes = [
   'Meetup',
   'Workshops',
   null,
-  'Hiring Mixer',
+  'Hiring-Mixer',
   'Hackathon'
 ];
 
