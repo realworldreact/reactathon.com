@@ -1,12 +1,18 @@
+$about-goals-height = 9rem
 .general
-  $grid('row')
+  +$above('sm')
+    $grid('row')
+  +$below('sm')
+    $grid('column')
+    width 100vw
   text-align center
-  height 100vh
+  min-height 100vh
   background-image url('./gradientGenerator.png'), linear-gradient(#25d7f7, #7190c1)
   .quote
-    height 50%
+    min-height 50%
     flex-grow 1
     border-bottom 2px solid $secondary
+    padding-bottom 20px
     h2, h3
       display block
     h2
@@ -21,18 +27,22 @@
       color $secondary
       font-weight 500
   .about
-    $center(50%)
     background-image url('./bg-about.png')
-    border-bottom 4px solid $primary
-    border-right 2px solid $secondary
     display inline-block
-    height 50%
+    min-height $about-goals-height
     text-align left
     padding 100px 80px
-    width 50%
     font-size 1.3em
     color $secondary
-    +$below('ab')
+    +$below('sm')
+      border-bottom 2px solid $secondary
+      font-size .9em
+      width 100%
+    +$above('sm')
+      $center(50%)
+      border-right 2px solid $secondary
+      width 50%
+    +$between('sm', 'ab')
       font-size 1.1em
     h2
       margin-top -50px
@@ -41,15 +51,21 @@
   .goals
     background url('./bg-goals.png') no-repeat center
     background-size cover
-    border-bottom 4px solid $primary
     display inline-block
-    height 50%
-    padding 100px 80px
+    min-height $about-goals-height
     width 50%
     font-size 1.3em
     font-weight 100
     color $secondary
-    +$below('ab')
+    +$below('sm')
+      font-size .9rem
+      padding 100px 10px
+      width 100%
+    +$above('sm')
+      $center(50%)
+      padding 100px 80px
+      width 50%
+    +$between('sm', 'ab')
       font-size 1.1em
     h2
       margin-top -50px
