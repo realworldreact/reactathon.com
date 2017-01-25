@@ -70,10 +70,10 @@ const workshops = workshopsInfo.map(({
       <h2 className={ cx('name') }>
         { name }
       </h2>
-      <h3>
+      <h3 className={ cx('instructor') }>
         { instructor }
       </h3>
-      <h4>
+      <h4 className={ cx('inst-title') }>
         { title }, { company }
       </h4>
     </div>
@@ -94,11 +94,9 @@ export default class Workshops extends PureComponent {
           <h2>Learn from Leaders in the Field</h2>
           <h3>
             Choose your workshops a la carte,
-            or select tracks for multi-day instruction and discounts.<br />Please note: ALL of our workshops assume that you are
+            or select tracks for multi-day instruction and discounts.
+            <br />Please note: ALL of our workshops assume that you are
             comfortable using JavaScript.
-          </h3>
-          <h3>
-
           </h3>
         </div>
         <div className={ cx('instructors-list') }>
