@@ -45,7 +45,7 @@ export default class Footer extends PureComponent {
         </div>
         <div className={ cx('social') }>
           <div>
-            <a href='https://www.facebook.com/RealWorldReact/'>
+            <a href='https://www.facebook.com/RealWorldReact/' target="_blank">
               <img
                 alt="Facebook's icon"
                 src={ facebook }
@@ -61,7 +61,7 @@ export default class Footer extends PureComponent {
             </a>
           </div>
           <div>
-            <a href='https://twitter.com/reactathon'>
+            <a href='https://twitter.com/reactathon' target="_blank">
               <img
                 alt="Twitter's icon"
                 src={ twitter }
@@ -69,7 +69,7 @@ export default class Footer extends PureComponent {
             </a>
           </div>
           <div>
-            <a href='https://www.meetup.com/Real-World-React/'>
+            <a href='https://www.meetup.com/Real-World-React/' target="_blank">
               <img
                 alt="Meetup's icon"
                 src={ meetup }
