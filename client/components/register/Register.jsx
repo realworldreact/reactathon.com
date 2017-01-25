@@ -49,7 +49,9 @@ const events = [{
 export default class Register extends PureComponent {
   render() {
     return (
-      <div className={ cx('register') }>
+      <div className={ cx('register') }
+        id="Register"
+      >
         <TitleCard img={ registerBg }>
           Registration
         </TitleCard>

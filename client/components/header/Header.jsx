@@ -10,7 +10,7 @@ const routes = [
   'Meetup',
   'Workshops',
   null,
-  'Hiring Mixer',
+  'Hiring-Mixer',
   'Hackathon'
 ];
 
@@ -20,7 +20,7 @@ const links = routes.map(content => (
   <li key={ content }>
     <a
       className={ cx('link') }
-      href={ `/#${content}` }
+        href={ `/#${content}` }
       >
       { content }
     </a>
@@ -29,7 +29,9 @@ const links = routes.map(content => (
 links[2] = (
   <li key='register'>
     <div className={ cx('register') }>
-      <ActionButton href='/#Register'>
+      <ActionButton
+        href='/#Register'
+      >
         Register Now
       </ActionButton>
     </div>

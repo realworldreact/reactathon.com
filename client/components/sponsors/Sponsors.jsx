@@ -24,7 +24,9 @@ const propTypes = {};
 export default class Sponsors extends PureComponent {
   render() {
     return (
-      <div className={ cx('sponsors') }>
+      <div className={ cx('sponsors') }
+        id="Sponsors"
+      >
         <TitleCard img={ sponsorsBg }>
           Sponsors
         </TitleCard>
