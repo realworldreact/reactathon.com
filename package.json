@@ -1,5 +1,5 @@
 {
-  "name": "immortan-boilerplate",
+  "name": "reactathon-com",
   "description": "A static site boilerplate",
   "version": "0.0.1",
   "main": "server/server.js",
@@ -19,7 +19,7 @@
     },
     "immortan": {
       "title": "Reactathon",
-      "prefix": "immortan-boilerplate"
+      "prefix": ""
     }
   },
   "dependencies": {
@@ -64,12 +64,15 @@
     "react-static-webpack-plugin": "^1.6.0",
     "redux": "^3.6.0",
     "redux-actions": "^0.12.0",
+    "redux-create-types": "0.0.1",
+    "redux-form": "^5.3.4",
     "redux-observable": "^0.12.0",
     "rimraf": "^2.5.4",
     "rxjs": "^5.0.0-beta.12",
     "style-loader": "^0.13.1",
     "stylus-loader": "^2.3.1",
     "url-loader": "^0.5.7",
+    "validator": "^6.2.1",
     "webpack": "^1.13.2",
     "webpack-dev-middleware": "^1.6.1",
     "webpack-hot-middleware": "^2.12.2",
