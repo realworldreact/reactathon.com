@@ -1,0 +1,52 @@
+.register
+  background-color $gray-bg
+  border-top 6px solid $primary
+  min-height 100vh
+  padding 20px
+  +$below('sm')
+    padding 20px 0
+
+.content
+  padding-bottom 20px
+  +$below('sm')
+    width 100%
+  +$above('sm')
+    $center(75vw)
+
+.banner
+  background-color #0A4979
+  text-align center
+  +$below('sm')
+    padding 20px 10px
+    img
+      height 40px
+  +$above('sm')
+    padding 20px 90px
+    img
+      height 60px
+
+.table-container
+  $grid('row', , , 'center')
+  background-color $secondary
+  width 100%
+  padding-top 40px
+  padding-bottom 60px
+
+.table
+  +$below('sm')
+    font-size .9rem
+    width 100%
+  +$above('sm')
+    $center(80%)
+
+.row
+  $grid('row', , , 'between')
+  padding 20px
+  text-align left
+  border-bottom 1px solid $gray-text
+  img
+    height 1.2rem
+  a
+    text-decoration none
+  &:last-child
+    border-bottom 0px

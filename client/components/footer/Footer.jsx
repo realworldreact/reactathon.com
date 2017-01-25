@@ -7,7 +7,7 @@ import facebook from './facebook.png';
 import email from './email.png';
 import meetup from './meetup.png';
 import twitter from './twitter.png';
-import banner from './banner.png';
+import banner from '../../images/banner.png';
 
 const cx = classnames.bind(styles);
 const propTypes = {};

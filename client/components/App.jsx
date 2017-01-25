@@ -9,6 +9,7 @@ import Workshops from './workshops/Workshops.jsx';
 import Mixer from './mixer/Mixer.jsx';
 import Hackathon from './hackathon/Hackathon.jsx';
 import Sponsors from './sponsors/Sponsors.jsx';
+import Register from './register/Register.jsx';
 import Footer from './footer/Footer.jsx';
 
 const cx = classnames.bind(style);
@@ -24,6 +25,7 @@ export default class App extends Component {
         <Mixer />
         <Hackathon />
         <Sponsors />
+        <Register />
         <Footer />
       </div>
     );
