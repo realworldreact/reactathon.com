@@ -1,0 +1,55 @@
+.footer
+  +$below('sm')
+    $grid('column',,, 'center')
+  +$above('sm')
+    $grid(,,, around)
+  background: $quartinary
+  color $secondary
+  padding: 40px 20px
+  min-height 50vh
+  width 100vw
+  +$below('sm')
+    text-align center
+
+.banner
+  order 1
+  text-align center
+  flex-grow 1
+  width 100%
+  img
+    +$below('sm')
+      width 80%
+    +$above('sm')
+      width 20%
+  +$above('sm')
+    padding-bottom 80px
+  +$below('sm')
+    padding-bottom 10px
+
+.links
+  order 2
+  div
+    margin-bottom 20px
+  a
+    color $secondary
+    text-decoration none
+
+.social
+  $grid('row', , , 'center')
+  order 3
+  img
+    height 40px
+    padding 5px
+  +$below('sm')
+    order: 1
+    padding-bottom 20px
+  +$above('sm')
+    padding-left 40px
+
+.rwr
+  order 4
+  img
+    margin-bottom 20px
+    width 80px
+  +$above('sm')
+    text-align right
