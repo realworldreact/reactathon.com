@@ -13,11 +13,52 @@
   width 100vw
   h1
     color $gray-text
-    font-size 3rem
+    font-size $date-text
+    margin-top -30px
+  h3
+    color $light-gray
+    margin-bottom 0
 
 .register
   background-color $secondary
   flex-grow 1
   width 100vw
+  margin-top 50px
+  .volunteers
+    font-size 16px
+    color $text-gray
+    margin-top 50px
+    a
+      color $primary
+
+  h1
+    color $gray-text
+    margin-top 30px
   h3
     color $action-pink
+  form
+    input.email
+      border-left none
+      border-right none
+      border-top none
+      border-bottom 4px solid $primary
+      width 300px
+      font-size 18px
+      color $gray-text
+      &:focus
+        border-bottom 4px solid $action-pink
+        outline-width 0
+    input.button
+      margin-left 20px
+      padding 5px 10px
+      border 4px solid $action-pink
+      background-color white
+      border-radius 8px
+      color $action-pink
+      font-size 18px
+      box-shadow 0px 3px 10px #888
+      &:hover
+        background-color $action-pink-dark
+        color white
+        box-shadow none
+        cursor pointer
