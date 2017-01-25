@@ -15,6 +15,8 @@ import openTable from '../../images/sponsors/opentable.png';
 import coursera from '../../images/sponsors/coursera.png';
 import accelebrate from '../../images/sponsors/accelebrate.png';
 import nyentek from '../../images/sponsors/nyentek.png';
+import npr from '../../images/sponsors/npr.jpg';
+import eventbrite from '../../images/sponsors/eventbrite.png';
 
 const cx = classnames.bind(styles);
 const propTypes = {};
@@ -48,6 +50,9 @@ export default class Sponsors extends PureComponent {
             <div>
               <img src={ serverless } />
             </div>
+            <div>
+              <img src={ eventbrite } />
+            </div>
           </div>
           <div className={ cx('tier-3') }>
             <div>
@@ -55,6 +60,11 @@ export default class Sponsors extends PureComponent {
             </div>
             <div>
               <img src={ coursera } />
+            </div>
+          </div>
+          <div className={ cx('tier-4') }>
+            <div>
+              <img src={ npr } />
             </div>
           </div>
           <div>
@@ -67,7 +77,7 @@ export default class Sponsors extends PureComponent {
               <img src={ accelebrate } />
             </div>
             <div className={ cx('nyentek') }>
-              <img src={ nyentek } />
+              <a href="http://nyentek.com" target="_blank"><img src={ nyentek } /></a>
             </div>
           </div>
         </div>
