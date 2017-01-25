@@ -57,21 +57,21 @@ export class Hackathon extends PureComponent {
         </TitleCard>
         <div className={ cx('content') }>
           <div className={ cx('info') }>
-            <h1>Saturday, March 11-Sunday, March 12</h1>
+            <h1>Saturday, March 11 - Sunday, March 12</h1>
             <h3>9:00AM-8:00PM</h3>
-            <h2>
+            <h3>
               Come hack with some incredible APIs,
               build a startup,
               or join a team to improve your skills.
-            </h2>
-            <h2>
+            </h3>
+            <h3>
               The goal of this hackathon is to foster collaboration
               and learning as much as competition.
-            </h2>
+            </h3>
           </div>
           <div className={ cx('register') }>
-            <h1>Hackathon registration opens soon.</h1>
-            <h3>Sign up here to get notified when it opens</h3>
+            <h1>Hackathon registration opens soon</h1>
+            <h3>Sign up here to get notified first</h3>
             <div>
               <form
                 action={
@@ -128,6 +128,7 @@ export class Hackathon extends PureComponent {
                   />
                 </div>
               </form>
+              <p className={ cx('volunteers') }>Intersted in volunteering? <a href="https://docs.google.com/forms/d/e/1FAIpQLSdkgVtFTUggBhnXZwK6RYhXUJhB0ainAxR31XEwkFVO8bBu3Q/viewform" target="_blank">Go here</a></p>
             </div>
           </div>
         </div>
