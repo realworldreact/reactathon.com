@@ -41,7 +41,7 @@ const prodPlugins = [
     compressor: { warnings: false }
   }),
   new ReactStaticPlugin({
-    routes: './client/routes.jsx',
+    component: './client/components/App.jsx',
     template: './template.jsx',
     reduxStore: './client/index.js',
     stylesheet
