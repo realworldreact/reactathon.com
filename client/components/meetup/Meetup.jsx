@@ -57,7 +57,8 @@ export default class Meetup extends PureComponent {
   render() {
     return (
       <div className={ cx('meetup') }
-      id="Meetup">
+        id="Meetup"
+      >
         <header>
           <TitleCard img={ meetupBg }>
             Meetup

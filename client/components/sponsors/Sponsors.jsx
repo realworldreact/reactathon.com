@@ -25,7 +25,8 @@ export default class Sponsors extends PureComponent {
   render() {
     return (
       <div className={ cx('sponsors') }
-      id="Sponsors">
+        id="Sponsors"
+      >
         <TitleCard img={ sponsorsBg }>
           Sponsors
         </TitleCard>

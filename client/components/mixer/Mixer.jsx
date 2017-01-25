@@ -17,7 +17,8 @@ export default class Mixer extends PureComponent {
   render() {
     return (
       <div className={ cx('mixer') }
-      id="Hiring-Mixer">
+        id="Hiring-Mixer"
+      >
         <TitleCard img={ mixerBg }>
           Hiring Mixer
         </TitleCard>

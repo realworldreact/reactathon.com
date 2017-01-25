@@ -50,7 +50,8 @@ export default class Register extends PureComponent {
   render() {
     return (
       <div className={ cx('register') }
-      id="Register">
+        id="Register"
+      >
         <TitleCard img={ registerBg }>
           Registration
         </TitleCard>
