@@ -50,12 +50,16 @@
   .sponsor
     $grid('column', 'center', 'center')
     background-color $secondary
-    padding 60px
+    padding-top 60px
     padding-bottom 200px
+    width 100%
     div
       color $light-gray
     img
-      width 25%
+      +$above('sm')
+          width 25%
+      +$below('sm')
+          width 75%
     :nth-child(2)
       padding 20px
     :nth-child(3)
