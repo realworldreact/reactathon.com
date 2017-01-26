@@ -26,7 +26,9 @@ export default class Footer extends PureComponent {
         </div>
         <div className={ cx('links') }>
           <div>
-            <a href='#'>
+            <a href='http://jsconf.com/codeofconduct.html'
+              target="_blank"
+              >
               Code of Conduct
             </a>
           </div>
