@@ -3,7 +3,6 @@ import classnames from 'classnames/bind';
 
 import styles from './workshops.styl';
 import workshopsInfo from './workshops.json';
-import workshopsBg from './bg-workshops.png';
 
 import TitleCard from '../Title-Card.jsx';
 import ActionButton from '../Action-Button.jsx';
@@ -14,7 +13,7 @@ import brian from '../../images/peeps/brian.png';
 import david from '../../images/peeps/david.png';
 import mike from '../../images/peeps/mike.png';
 import moose from '../../images/peeps/moose.png';
-import microsoft from '../../images/sponsors/microsoft.png';
+import eventbriteWhite from '../../images/sponsors/eventbrite-white.png';
 import reddit from '../../images/sponsors/reddit.png';
 
 const images = {
@@ -91,7 +90,6 @@ export default class Workshops extends PureComponent {
       <div className={ cx('workshops') }>
         <TitleCard
           id='Workshops'
-          img={ workshopsBg }
           >
           Workshops
         </TitleCard>
@@ -119,10 +117,10 @@ export default class Workshops extends PureComponent {
             Buy Tickets
           </ActionButton>
         </div>
-        <div>
-          <h2>
+        <div className={ cx('sponsor-thanks') }>
+          <p>
             Workshops are made possible thanks in part to our venue sponsors:
-          </h2>
+          </p>
         </div>
         <div className={ cx('sponsors') }>
           <div>
@@ -131,10 +129,10 @@ export default class Workshops extends PureComponent {
               src={ reddit }
             />
           </div>
-          <div className={ cx('microsoft') }>
+          <div className={ cx('eventbrite') }>
             <img
-              alt="Microsoft's log"
-              src={ microsoft }
+              alt="Eventbrite's logo"
+              src={ eventbriteWhite }
             />
           </div>
         </div>

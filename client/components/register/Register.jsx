@@ -4,7 +4,6 @@ import classnames from 'classnames/bind';
 import styles from './register.styl';
 
 import TitleCard from '../Title-Card.jsx';
-import registerBg from '../../images/backgrounds/bg-sponsors-register.png';
 import banner from '../../images/banner.png';
 import goToIcon from '../../images/goTo.png';
 
@@ -52,7 +51,6 @@ export default class Register extends PureComponent {
       <div className={ cx('register') }>
         <TitleCard
           id='Register'
-          img={ registerBg }
           >
           Registration
         </TitleCard>

@@ -2,7 +2,6 @@ import React, { PureComponent } from 'react';
 import classnames from 'classnames/bind';
 
 import styles from './mixer.styl';
-import mixerBg from './bg-mixer.png';
 import sponsorsBg from './bg-sponsors.png';
 
 import TitleCard from '../Title-Card.jsx';
@@ -19,7 +18,6 @@ export default class Mixer extends PureComponent {
       <div className={ cx('mixer') }>
         <TitleCard
           id='Hiring-Mixer'
-          img={ mixerBg }
           >
           Hiring Mixer
         </TitleCard>
