@@ -19,7 +19,6 @@ export default class Mixer extends PureComponent {
       <div className={ cx('mixer') }>
         <TitleCard
           id='Hiring-Mixer'
-          img={ mixerBg }
           >
           Hiring Mixer
         </TitleCard>

@@ -52,7 +52,6 @@ export default class Register extends PureComponent {
       <div className={ cx('register') }>
         <TitleCard
           id='Register'
-          img={ registerBg }
           >
           Registration
         </TitleCard>

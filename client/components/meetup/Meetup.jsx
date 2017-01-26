@@ -60,7 +60,6 @@ export default class Meetup extends PureComponent {
         <header>
           <TitleCard
             id='Meetup'
-            img={ meetupBg }
             >
             Meetup
           </TitleCard>
