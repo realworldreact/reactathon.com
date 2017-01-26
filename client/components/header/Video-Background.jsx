@@ -33,9 +33,7 @@ class BackgroundVideo extends Component {
           autoPlay={ true }
           className={ cx('video-background') }
           id={ videoId }
-          loop={ true }
           muted={ true }
-          playsInline={ true }
           poster={ poster }
           >
           <source
