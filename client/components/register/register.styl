@@ -43,10 +43,19 @@
   $grid('row', , , 'between')
   padding 20px
   text-align left
-  border-bottom 1px solid $gray-text
+  border-bottom 1px solid $lightest-gray
+  &:hover
+    background-color rgba(234, 234, 245, 0.5)
   img
     height 1.2rem
   a
     text-decoration none
+    color $workshop-blue
+    &:hover
+      text-decoration underline
+  &:first-child
+    font-weight bold
+  &:nth-child(n+2)
+    color $gray-text
   &:last-child
     border-bottom 0px
