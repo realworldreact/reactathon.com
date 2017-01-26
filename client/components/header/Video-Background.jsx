@@ -28,10 +28,10 @@ class BackgroundVideo extends Component {
 
   render() {
     return (
-      <div className={ cx('video-background-container') }>
+      <div>
         <video
           autoPlay={ true }
-          className={ cx('video-background') }
+          className={ cx('background-video') }
           id={ videoId }
           muted={ true }
           poster={ poster }
@@ -45,6 +45,7 @@ class BackgroundVideo extends Component {
             type='video/mp4'
           />
         </video>
+        <div className={ cx('background-video-overlay') } />
       </div>
     );
   }
