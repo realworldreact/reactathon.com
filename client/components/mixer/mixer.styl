@@ -23,10 +23,10 @@
     margin-bottom 0
 
 .sponsors
-  max-height 500px
   +$below('sm')
     width 100%
   +$above('sm')
+    max-height 500px
     width 50%
   img
     width 100%
@@ -35,13 +35,14 @@
   $grid('column', , , 'center')
   background url('./bg-you.png') no-repeat center
   color $action-pink
-  max-height 500px
   padding 60px
   +$below('sm')
     background-size cover
+    min-height 100vh
     width 100%
   +$above('sm')
     min-height 100%
+    max-height 500px
     background-size auto 100%
     width 50%
   h2
