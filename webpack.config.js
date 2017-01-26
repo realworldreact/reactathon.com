@@ -107,7 +107,7 @@ module.exports = {
         ]
       },
       {
-        test: /\.(png|jpg|gif|ico|svg)(\?v=[0-9]\.[0-9]\.[0-9])?$/,
+        test: /\.(png|jpg|gif|ico|svg|mp4|webm)(\?v=[0-9]\.[0-9]\.[0-9])?$/,
         loaders: [
           'file?name=[name].[ext]'
         ]
