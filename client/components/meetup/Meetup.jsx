@@ -11,7 +11,7 @@ import TitleCard from '../Title-Card.jsx';
 import imad from '../../images/peeps/imad.png';
 import justin from '../../images/peeps/justin.png';
 import david from '../../images/peeps/david.png';
-import harry from '../../images/peeps/harry.png'
+import harry from '../../images/peeps/harry.png';
 
 const cx = classnames.bind(styles);
 const propTypes = {};
@@ -58,7 +58,10 @@ export default class Meetup extends PureComponent {
     return (
       <div className={ cx('meetup') }>
         <header>
-          <TitleCard img={ meetupBg }>
+          <TitleCard
+            id='Meetup'
+            img={ meetupBg }
+            >
             Meetup
           </TitleCard>
           <h2>
@@ -78,9 +81,7 @@ export default class Meetup extends PureComponent {
           { speakers }
         </section>
         <section className={ cx('sponsor') }>
-          <ActionButton
-            href="#/Register"
-            >
+          <ActionButton href='#Register'>
             Register Free
           </ActionButton>
           <div>Food & Drink Provided</div>

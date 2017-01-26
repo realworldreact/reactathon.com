@@ -88,10 +88,11 @@ const workshops = workshopsInfo.map(({
 export default class Workshops extends PureComponent {
   render() {
     return (
-      <div className={ cx('workshops') }
-        id="Workshops"
-        >
-        <TitleCard img={ workshopsBg }>
+      <div className={ cx('workshops') }>
+        <TitleCard
+          id='Workshops'
+          img={ workshopsBg }
+          >
           Workshops
         </TitleCard>
         <div className={ cx('info') }>

@@ -24,10 +24,11 @@ const propTypes = {};
 export default class Sponsors extends PureComponent {
   render() {
     return (
-      <div className={ cx('sponsors') }
-        id="Sponsors"
-        >
-        <TitleCard img={ sponsorsBg }>
+      <div className={ cx('sponsors') }>
+        <TitleCard
+          id='sponsors'
+          img={ sponsorsBg }
+          >
           Sponsors
         </TitleCard>
         <div className={ cx('container') }>
