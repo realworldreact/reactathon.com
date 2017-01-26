@@ -43,8 +43,8 @@ const speakers = [{
   .map(({ name, title, company, image, talkTitle }) => (
     <div
       className={ cx('speaker-container') }
-      key={ name }
-      >
+        key={ name }
+        >
       <img src={ image }/>
       <h3>{ name }</h3>
       <h4>{ title }</h4>
@@ -56,9 +56,7 @@ const speakers = [{
 export default class Meetup extends PureComponent {
   render() {
     return (
-      <div className={ cx('meetup') }
-        id="Meetup"
-      >
+      <div className={ cx('meetup') }>
         <header>
           <TitleCard img={ meetupBg }>
             Meetup
@@ -81,8 +79,8 @@ export default class Meetup extends PureComponent {
         </section>
         <section className={ cx('sponsor') }>
           <ActionButton
-            href="#Register"
-          >
+            href="#/Register"
+            >
             Register Free
           </ActionButton>
           <div>Food & Drink Provided</div>

@@ -55,7 +55,7 @@ export class Hackathon extends PureComponent {
     return (
       <div className={ cx('hackathon') }
         id="Hackathon"
-      >
+        >
         <TitleCard img={ hackathonBg } >
           Hackathon
         </TitleCard>

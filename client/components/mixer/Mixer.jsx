@@ -18,7 +18,7 @@ export default class Mixer extends PureComponent {
     return (
       <div className={ cx('mixer') }
         id="Hiring-Mixer"
-      >
+        >
         <TitleCard img={ mixerBg }>
           Hiring Mixer
         </TitleCard>
@@ -46,7 +46,7 @@ export default class Mixer extends PureComponent {
             <div>
               <ActionButton
                 href="#Register"
-              >
+                >
                 Register Free
               </ActionButton>
             </div>

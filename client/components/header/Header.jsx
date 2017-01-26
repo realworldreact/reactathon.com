@@ -21,7 +21,7 @@ const links = routes.map(content => (
     <a
       className={ cx('link') }
         href={ `/#${content}` }
-      >
+        >
       { content }
     </a>
   </li>
@@ -31,7 +31,7 @@ links[2] = (
     <div className={ cx('register') }>
       <ActionButton
         href='/#Register'
-      >
+        >
         Register Now
       </ActionButton>
     </div>

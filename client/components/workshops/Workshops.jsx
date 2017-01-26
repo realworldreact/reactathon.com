@@ -90,7 +90,7 @@ export default class Workshops extends PureComponent {
     return (
       <div className={ cx('workshops') }
         id="Workshops"
-      >
+        >
         <TitleCard img={ workshopsBg }>
           Workshops
         </TitleCard>
