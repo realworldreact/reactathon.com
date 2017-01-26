@@ -71,8 +71,6 @@ export default class Sponsors extends PureComponent {
                 src={ eventbrite }
               />
             </div>
-          </div>
-          <div className={ cx('tier-3') }>
             <div>
               <img
                 alt="OpenTable's logo"

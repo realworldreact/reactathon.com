@@ -44,7 +44,7 @@ export default class Nav extends Component {
     return (
       <div className={ cx('header') }>
         <VideoBackground />
-        <div className={ cx('title-sponser') } />
+        <div className={ cx('title-sponsor') } />
         <div className={ cx('logo') }>
           <img src={ reactathonLogo } />
         </div>
