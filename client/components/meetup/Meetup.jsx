@@ -3,7 +3,6 @@ import classnames from 'classnames/bind';
 
 import styles from './meetup.styl';
 import pinterest from './pinterest.png';
-import meetupBg from './bg-meetup.png';
 
 import ActionButton from '../Action-Button.jsx';
 import TitleCard from '../Title-Card.jsx';

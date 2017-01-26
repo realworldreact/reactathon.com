@@ -5,7 +5,6 @@ import styles from './sponsors.styl';
 
 import TitleCard from '../Title-Card.jsx';
 
-import sponsorsBg from '../../images/backgrounds/bg-sponsors-register.png';
 import pinterest from '../../images/sponsors/pinterest.png';
 import reddit from '../../images/sponsors/reddit.png';
 import microsoft from '../../images/sponsors/microsoft.png';

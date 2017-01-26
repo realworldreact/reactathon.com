@@ -4,7 +4,6 @@ import isEmail from 'validator/lib/isEmail';
 import { reduxForm } from 'redux-form';
 
 import styles from './hackathon.styl';
-import hackathonBg from './bg-hackathon.png';
 
 import TitleCard from '../Title-Card.jsx';
 import {

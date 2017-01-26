@@ -3,7 +3,6 @@ import classnames from 'classnames/bind';
 
 import styles from './workshops.styl';
 import workshopsInfo from './workshops.json';
-import workshopsBg from './bg-workshops.png';
 
 import TitleCard from '../Title-Card.jsx';
 import ActionButton from '../Action-Button.jsx';
@@ -132,7 +131,7 @@ export default class Workshops extends PureComponent {
           </div>
           <div className={ cx('eventbrite') }>
             <img
-              alt="Eventbrite's log"
+              alt="Eventbrite's logo"
               src={ eventbriteWhite }
             />
           </div>
