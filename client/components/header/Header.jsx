@@ -5,6 +5,7 @@ import style from './header.styl';
 import reactathonLogo from './reactathon-logo.png';
 import rwrLogo from './rwr-logo.png';
 import ActionButton from '../Action-Button.jsx';
+import VideoBackground from './Video-Background.jsx';
 
 const routes = [
   'Meetup',
@@ -39,10 +40,10 @@ links[2] = (
 );
 
 export default class Nav extends Component {
-
   render() {
     return (
       <div className={ cx('header') }>
+        <VideoBackground />
         <div className={ cx('title-sponsor') } />
         <div className={ cx('logo') }>
           <img src={ reactathonLogo } />
