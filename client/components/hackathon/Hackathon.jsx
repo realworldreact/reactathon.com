@@ -62,15 +62,15 @@ export class Hackathon extends PureComponent {
           <div className={ cx('info') }>
             <h1>Saturday, March 11 - Sunday, March 12</h1>
             <h3>9:00AM-8:00PM</h3>
-            <h3>
+            <h4>
               Come hack with some incredible APIs,
               build a startup,
               or join a team to improve your skills.
-            </h3>
-            <h3>
+            </h4>
+            <h5>
               The goal of this hackathon is to foster collaboration
               and learning as much as competition.
-            </h3>
+            </h5>
           </div>
           <div className={ cx('register') }>
             <h1>Hackathon registration opens soon</h1>
