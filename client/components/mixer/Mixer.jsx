@@ -8,6 +8,8 @@ import TitleCard from '../Title-Card.jsx';
 import ActionButton from '../Action-Button.jsx';
 import reddit from '../../images/sponsors/reddit.png';
 import plus from '../../images/sponsors/plus.png';
+import companiesTop from '../../images/sponsors/hiring-companies-top.png';
+import companiesBottom from '../../images/sponsors/hiring-companies-bottom.png';
 
 const cx = classnames.bind(styles);
 const propTypes = {};
@@ -25,9 +27,9 @@ export default class Mixer extends PureComponent {
           <div className={ cx('info') }>
             <h2>Friday, March 10</h2>
             <h3>6:30PM - 9:30PM</h3>
-            <h4>
-              Join us for an evening of food, drinks, and networking.
-            </h4>
+          </div>
+          <div className={ cx('logos')}>
+            <img src={ companiesTop } />
           </div>
           <div className={ cx('you') }>
             <div>
@@ -38,9 +40,12 @@ export default class Mixer extends PureComponent {
               <h2>You</h2>
             </div>
           </div>
-          <div className={ cx('sponsors') }>
-            <img src={ sponsorsBg } />
+          <div className={ cx('logos')}>
+            <img src={ companiesBottom } />
           </div>
+          {/* <div className={ cx('sponsors') }>
+            <img src={ sponsorsBg } />
+          </div> */}
           <div className={ cx('presented') }>
             <div>
               <ActionButton href='#Register'>
@@ -48,8 +53,11 @@ export default class Mixer extends PureComponent {
               </ActionButton>
             </div>
             <p>
-              Presented by
+              Food & Drink Provided
             </p>
+            <h3>
+              Presented by
+            </h3>
             <div>
               <img src={ reddit } />
             </div>

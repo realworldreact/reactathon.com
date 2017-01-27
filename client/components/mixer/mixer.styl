@@ -5,14 +5,13 @@
   text-align center
 
 .cards
-  +$above('sm')
-    $grid('row', 'center')
-  +$below('sm')
-    $grid('column')
+  // +$above('sm')
+  //   $grid('row', 'center')
+  // +$below('sm')
+  //   $grid('column')
 
 .info
-  border-bottom 2px solid $lightest-gray
-  padding-bottom 50px
+  padding-bottom 80px
   width 100%
   h2
     font-size $header-date
@@ -29,6 +28,18 @@
     font-weight 300
     font-size 1.17em
 
+.logos
+
+  img
+    $grid('row', 'center')
+    width 600px
+    max-width 80%
+    margin-left auto
+    margin-right auto
+    +$below('sm')
+      max-width 100%
+
+
 .sponsors
   +$below('sm')
     width 100%
@@ -39,28 +50,21 @@
     width 100%
 
 .you
-  $grid('column', , , 'center')
-  background url('./bg-you.png') no-repeat center
+  margin 50px 0
   color $action-pink
-  padding 60px
-  +$below('sm')
-    background-size cover
-    min-height 100vh
-    width 100%
-  +$above('sm')
-    min-height 100%
-    max-height 500px
-    background-size auto 100%
-    width 50%
   h2
-    font-size 2.3rem
+    font-size 2.1rem
     margin 30px 0
+    +$below('sm')
+      font-size 1.5rem
+      max-width 70%
+      margin-left auto
+      margin-right auto
   img
-    max-width 40px
+    max-width 20px
 
 .presented
   background-image linear-gradient($secondary, #91eeff)
-  border-top 2px solid $lightest-gray
   padding 100px 0 175px 0
   width 100%
   img
@@ -71,4 +75,13 @@
     margin-bottom 0
   p
     color $light-gray
-    margin-top 100px
+    padding 10px
+    font-size 1rem
+
+  h3
+    color $light-gray
+    padding-top 25px
+    padding-bottom 0
+    margin-bottom 0
+    font-size 1rem
+    font-weight 400
