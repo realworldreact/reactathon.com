@@ -90,8 +90,8 @@ export default class Sponsors extends PureComponent {
             <div>
               <a
                 alt="NPR's logo"
-                href="https://npr.codes"
-                target="_blank"
+                href='https://npr.codes'
+                target='_blank'
                 >
                 <img
                   alt="NPR's logo"

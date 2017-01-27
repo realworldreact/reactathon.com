@@ -101,7 +101,8 @@ export default class Workshops extends PureComponent {
             or select tracks for multi-day instruction and discounts.
           </h3>
           <h5>
-            Please note: ALL of our workshops assume that you are comfortable using JavaScript.
+            Please note: ALL of our workshops assume that you
+            are comfortable using JavaScript.
           </h5>
         </div>
         <div className={ cx('instructors-list') }>
