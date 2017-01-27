@@ -68,9 +68,9 @@ export default class Meetup extends PureComponent {
             <h3>
               6:00 PM - 10:00 PM
             </h3>
-            <h3>
+            <h5>
               An evening of socializing, networking, and technical presentations
-            </h3>
+            </h5>
             <h4>
               Featuring
             </h4>

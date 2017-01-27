@@ -85,10 +85,16 @@ export default class Sponsors extends PureComponent {
           </div>
           <div className={ cx('tier-4') }>
             <div>
-              <img
+              <a
                 alt="NPR's logo"
-                src={ npr }
-              />
+                href="https://npr.codes"
+                target="_blank"
+                >
+                <img
+                  alt="NPR's logo"
+                  src={ npr }
+                />
+              </a>
             </div>
           </div>
           <div className={ cx('sponsor-title') }>
@@ -98,10 +104,13 @@ export default class Sponsors extends PureComponent {
           </div>
           <div className={ cx('supporters') }>
             <div>
-              <img
+              <a
                 alt="Accelebrate's logo"
-                src={ accelebrate }
-              />
+                href='https://www.accelebrate.com/training/react'
+                target='_blank'
+                >
+                <img src={ accelebrate } />
+              </a>
             </div>
             <div className={ cx('nyentek') }>
               <a

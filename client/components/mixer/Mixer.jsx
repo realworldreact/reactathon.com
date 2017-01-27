@@ -25,9 +25,9 @@ export default class Mixer extends PureComponent {
           <div className={ cx('info') }>
             <h2>Friday, March 10</h2>
             <h3>6:30PM - 9:30PM</h3>
-            <h3>
+            <h4>
               Join us for an evening of food, drinks, and networking.
-            </h3>
+            </h4>
           </div>
           <div className={ cx('you') }>
             <div>
