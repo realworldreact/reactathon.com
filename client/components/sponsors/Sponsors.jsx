@@ -16,6 +16,9 @@ import accelebrate from '../../images/sponsors/accelebrate.png';
 import nyentek from '../../images/sponsors/nyentek.png';
 import npr from '../../images/sponsors/npr-2.jpg';
 import eventbrite from '../../images/sponsors/eventbrite.png';
+import techqueria from '../../images/sponsors/techqueria.png';
+
+
 
 const cx = classnames.bind(styles);
 const propTypes = {};
@@ -119,6 +122,15 @@ export default class Sponsors extends PureComponent {
                 target='_blank'
                 >
                 <img src={ nyentek } />
+              </a>
+            </div>
+            <div className={ cx('techqueria') }>
+              <a
+                alt="Techqueria's logo"
+                href='https://techqueria.org/'
+                target='_blank'
+                >
+                <img src={ techqueria } />
               </a>
             </div>
           </div>
