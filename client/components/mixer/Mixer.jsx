@@ -55,7 +55,7 @@ export default class Mixer extends PureComponent {
               Food & Drink Provided
             </p>
             <h3>
-              Presented by
+              Hosted by
             </h3>
             <div>
               <img src={ reddit } />

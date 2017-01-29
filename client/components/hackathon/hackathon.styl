@@ -34,11 +34,13 @@
     margin-bottom 0
     font-weight 300
     font-size 1em
+  +$below('sm')
+    max-width 94%
 
 .register
   background-color $secondary
   margin-top 50px
-  padding 20px 20px
+  padding 20px 40px
   .volunteers
     font-size 16px
     color $text-gray
@@ -47,7 +49,11 @@
       color $primary
   +$below('sm')
     width 100%
-
+    padding 20px 20px
+  p
+    color $light-gray
+    padding 10px
+    font-size 1rem
   h1
     color $gray-text
     margin-top 30px

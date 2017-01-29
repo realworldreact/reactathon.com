@@ -2,6 +2,7 @@ import React, { PropTypes, PureComponent } from 'react';
 import classnames from 'classnames/bind';
 import isEmail from 'validator/lib/isEmail';
 import { reduxForm } from 'redux-form';
+import ActionButton from '../Action-Button.jsx';
 
 import styles from './hackathon.styl';
 
@@ -73,66 +74,17 @@ export class Hackathon extends PureComponent {
             </h5>
           </div>
           <div className={ cx('register') }>
-            <h1>Hackathon registration opens soon</h1>
+            <h1>Hackathon Registration Now Open</h1>
             <h3>
-              Be the first to know when registration opens
+              Developers, Designers, and Entrepreneurs Welcome
             </h3>
             <div>
-              <form
-                action={
-                  '//reactathon.us12.list-manage.com/subscribe/post?' +
-                  'u=61b17cbde66a062a953c16339&amp;id=c14aaf8666'
-                }
-                method='post'
-                name='mail-chimp'
-                noValidate={ true }
-                onSubmit={ submitToUpdates }
-                target='_blank'
-                >
-                <input
-                  { ...DOMOnlyProps(email) }
-                  className={
-                    cx(
-                      'email',
-                      { error: email.error && email.value.length > 3 }
-                    )
-                  }
-                  name='EMAIL'
-                  placeholder='your email'
-                  type='email'
-                />
-                <input
-                  className={
-                    cx(
-                      'button',
-                      { active: !invalid || !isSubmitting }
-                    )
-                  }
-                  disabled={ invalid || isSubmitting }
-                  name='subscribe'
-                  type='submit'
-                  value='Subscribe'
-                />
-                {
-                  email.value.length >= 3 && email.error ?
-                    <p>Email is invalid</p> :
-                    null
-                }
-                <div
-                  aria-hidden='true'
-                  style={{
-                    position: 'absolute',
-                    left: '-5000px'
-                  }}
-                  >
-                  <input
-                    { ...DOMOnlyProps(hidden) }
-                    name={ hiddenName }
-                    tabIndex='-1'
-                    type='text'
-                  />
-                </div>
-              </form>
+              <ActionButton href='#Register'>
+                Register Free
+              </ActionButton>
+              <p>
+                Food & Drink Provided
+              </p>
               <p className={ cx('volunteers') }>
                 Intersted in volunteering?
                 <span>{ ' ' }</span>
