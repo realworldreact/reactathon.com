@@ -37,7 +37,7 @@ const events = [{
               href={ link }
               target='_blank'
               >
-              Go To Page <img alt='Go To Icon' src={ goToIcon } />
+              Go To Page<img alt='Go To Icon' src={ goToIcon } />
             </a>
           )
       }
