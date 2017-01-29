@@ -20,8 +20,7 @@ const events = [{
   link: 'https://www.meetup.com/Real-World-React/events/236140965/'
 }, {
   event: 'Hackathon',
-  link: '',
-  isComingSoon: true
+  link: 'https://react-hackathon.eventbrite.com'
 }].map(({ event, link, isComingSoon }) => (
   <div
     className={ cx('row') }
