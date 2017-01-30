@@ -1,6 +1,7 @@
 import React, { PureComponent } from 'react';
 import classnames from 'classnames/bind';
 
+import Workshop from './Workshop.jsx';
 import styles from './workshops.styl';
 import workshopsInfo from './workshops.json';
 
@@ -51,41 +52,18 @@ const instructors = workshopsInfo
       </div>
     </div>
   ));
-const workshops = workshopsInfo.map(({
-  name,
-  date,
-  title,
-  company,
-  instructor,
-  difficulty
-}) => (
-  <div
-    className={ cx('workshop-container') }
-    key={ name }
-    >
-    <div className={ cx('workshop-info') }>
-      <header className={ cx('title-container') }>
-        <h4 className={ cx('title') }>
-          { difficulty }
-        </h4>
-      </header>
-      <h2 className={ cx('name') }>
-        { name }
-      </h2>
-      <h3 className={ cx('instructor') }>
-        { instructor }
-      </h3>
-      <h4 className={ cx('inst-title') }>
-        { title }, { company }
-      </h4>
-    </div>
-    <div className={ cx('date') }>
-      { date }
-    </div>
-  </div>
-));
 export default class Workshops extends PureComponent {
   render() {
+    const workshops = workshopsInfo.map(info => (
+      <Workshop
+        { ...info }
+        className={ cx('workshop-container') }
+        key={ info.name }
+        onMouseLeave={ () => console.log('leave') }
+        onMouseOver={ () => console.log('over') }
+        showBio={ false }
+      />
+    ));
     return (
       <div className={ cx('workshops') }>
         <TitleCard
