@@ -81,7 +81,7 @@ export default class Workshop extends PureComponent {
                   { getBrief(bio) }
                   <br />
                   <a onClick={ openModal }>
-                    See Full bio
+                    See full bio
                   </a>
                 </div>
               </div>
