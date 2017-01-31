@@ -1,53 +1,59 @@
 import React, { PropTypes, PureComponent } from 'react';
+import Modal from 'react-modal';
 import classnames from 'classnames/bind';
 
 import styles from './workshops.styl';
 
+const descriptionLength = 300;
 const cx = classnames.bind(styles);
 const propTypes = {
   bio: PropTypes.string,
   brief: PropTypes.string,
   company: PropTypes.string,
   date: PropTypes.string,
+  description: PropTypes.string,
   difficulty: PropTypes.string,
   instructor: PropTypes.string,
   name: PropTypes.string,
-  onMouseLeave: PropTypes.func.isRequired,
-  onMouseOver: PropTypes.func.isRequired,
-  showExtra: PropTypes.bool,
+  openModal: PropTypes.func.isRequired,
+  closeModal: PropTypes.func.isRequired,
+  showModal: PropTypes.bool,
   title: PropTypes.string
 };
 
+// sentance is sliced to number of characters
+// trimmed to the nearest whole sentance
+function getBrief(src) {
+  const briefSentances = (src.slice(0, descriptionLength) + '   ').split('.');
+  // drap last sentance
+  briefSentances.pop();
+  return briefSentances.join('.') + '.';
+}
 export default class Workshop extends PureComponent {
   render() {
     const {
       bio,
       brief,
+      closeModal,
       company,
       date,
+      description,
       difficulty,
       instructor,
       name,
-      onMouseLeave,
-      onMouseOver,
-      showExtra,
+      openModal,
+      showModal,
       title
     } = this.props;
     return (
-      <div
-        className={ cx('workshop-container') }
-        onMouseLeave={ onMouseLeave }
-        onMouseOver={ onMouseOver }
-        >
+      <div className={ cx('workshop-container') }>
         <header className={ cx('title-container') }>
           <h4 className={ cx('title') }>
             { difficulty }
           </h4>
         </header>
         <div className={ cx('content-window') }>
-          <div className={
-            cx('content-container', { 'show-extra': showExtra })
-            }>
+          <div className={ cx('content-container') }>
             <section className={ cx('workshop-info') }>
               <h2 className={ cx('name') }>
                 { name }
@@ -66,14 +72,38 @@ export default class Workshop extends PureComponent {
               <div className={ cx('extra-info') }>
                 <div className={ cx('brief') }>
                   { brief }
-                  <a>See Full description</a>
+                  <br />
+                  <a onClick={ openModal }>
+                    See full description
+                  </a>
                 </div>
                 <div className={ cx('bio') }>
-                  { bio }
+                  { getBrief(bio) }
+                  <br />
+                  <a onClick={ openModal }>
+                    See Full bio
+                  </a>
                 </div>
               </div>
             </footer>
           </div>
+          <Modal
+            className={ cx('modal') }
+            contentLabel={ `${name}'s instructor bio and description` }
+            isOpen={ showModal }
+            onRequestClose={ closeModal }
+            overlayClassName={ cx('overlay') }
+            >
+            <div className={ cx('brief') }>
+              { description }
+            </div>
+            <div className={ cx('bio') }>
+              { bio }
+            </div>
+            <button onClick={ closeModal }>
+              Close
+            </button>
+          </Modal>
         </div>
       </div>
     );

@@ -1,9 +1,16 @@
-import React, { PureComponent } from 'react';
+import React, { PropTypes, PureComponent } from 'react';
 import classnames from 'classnames/bind';
+import { connect } from 'react-redux';
 
 import Workshop from './Workshop.jsx';
 import styles from './workshops.styl';
 import workshopsInfo from './workshops.json';
+import {
+  hideWorkshopModal,
+  showWorkshopModal,
+  workshopUiName,
+  workshopsSelector
+} from './redux.js';
 
 import TitleCard from '../Title-Card.jsx';
 import ActionButton from '../Action-Button.jsx';
@@ -27,6 +34,24 @@ const images = {
 };
 const cx = classnames.bind(styles);
 const propTypes = {};
+workshopsInfo.forEach(({ name }) => {
+  propTypes[name] = PropTypes.shape({
+    show: PropTypes.func.isRequired,
+    hide: PropTypes.func.isRequired
+  });
+  propTypes[workshopUiName(name)] = PropTypes.bool;
+});
+const mapStateToProps = workshopsSelector;
+function mapDispatchToProps(dispatch) {
+  const dispatchers = workshopsInfo.reduce((dispatchers, { name } = {}) => {
+    dispatchers[name] = {
+      show: () => dispatch(showWorkshopModal(name)),
+      hide: () => dispatch(hideWorkshopModal(name))
+    };
+    return dispatchers;
+  }, {});
+  return () => dispatchers;
+}
 const seen = {};
 const instructors = workshopsInfo
   .filter(workshop => {
@@ -52,23 +77,21 @@ const instructors = workshopsInfo
       </div>
     </div>
   ));
-export default class Workshops extends PureComponent {
+export class Workshops extends PureComponent {
   render() {
     const workshops = workshopsInfo.map(info => (
       <Workshop
         { ...info }
         className={ cx('workshop-container') }
+        closeModal={ this.props[info.name]['hide'] }
         key={ info.name }
-        onMouseLeave={ () => console.log('leave') }
-        onMouseOver={ () => console.log('over') }
-        showBio={ false }
+        openModal={ this.props[info.name]['show'] }
+        showModal={ this.props[workshopUiName(info.name)] }
       />
     ));
     return (
       <div className={ cx('workshops') }>
-        <TitleCard
-          id='Workshops'
-          >
+        <TitleCard id='Workshops'>
           Workshops
         </TitleCard>
         <div className={ cx('info') }>
@@ -120,5 +143,11 @@ export default class Workshops extends PureComponent {
     );
   }
 }
+
 Workshops.displayName = 'Workshops';
 Workshops.propTypes = propTypes;
+
+export default connect(
+  mapStateToProps,
+  mapDispatchToProps
+)(Workshops);

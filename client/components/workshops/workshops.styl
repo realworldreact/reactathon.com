@@ -112,7 +112,7 @@ $workshop-width = 400px
   top 50%
   vertical-align middle
   white-space nowrap
-  z-index 100000
+  z-index 1
 
 .content-window
   min-height $workshop-card-min
@@ -120,15 +120,18 @@ $workshop-width = 400px
   height 100%
   overflow hidden
 
+$info-ratio-num = 20%
+$info-ratio-den = 80%
 .content-container
   min-height $workshop-card-min
   max-height $workshop-card-max
   height 100%
-  &.show-extra
-    transform translateY(-80%) translateZ(0)
+  transition transform .75s cubic-bezier(0.645, 0.045, 0.355, 1)
+  &:hover
+    transform translateY(-($info-ratio-den)) translateZ(0)
 
 .workshop-info
-  height 80%
+  height $info-ratio-den
   .name
     font-size 32px
     flex-grow 0.5
@@ -157,11 +160,33 @@ $workshop-width = 400px
   height 100%
 
 .date
-  height 20%
+  height $info-ratio-num
   padding 20px 40px 10px
 
 .extra-info
-  height 80%
+  height $info-ratio-den
+  padding-left 20px
+  padding-right 20px
+  .brief, .bio
+    padding-bottom 20px
+
+.modal
+  background-color $secondary
+  bottom 40px
+  left 40px
+  position absolute
+  right 40px
+  top 40px
+  z-index 2
+
+.overlay
+  background-color $gray-bg
+  bottom 0
+  left 0
+  position fixed
+  right 0
+  top 0
+  z-index 3
 
 .action
   text-align center
