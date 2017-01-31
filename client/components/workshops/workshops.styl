@@ -77,14 +77,14 @@ $workshop-width = 400px
   box-shadow 0px 2px 8px 0px #525252
   color $secondary
   margin-bottom 60px
-  min-height $workshop-card-min
-  max-height $workshop-card-max
   +$below('sm')
+    height $workshop-card-min
     flex-grow
     text-align center
     width 100%
   +$above('sm')
     $cell(6, , 100px)
+    height $workshop-card-max
     text-align right
     min-width $workshop-width
     max-width $workshop-width
