@@ -13,7 +13,7 @@ export default class General extends PureComponent {
       <div className={ cx('general') }>
         <div className={ cx('quote') }>
           <h2>
-            <span>“</span><em>React has challenged the way we build user interfaces. Fundamentally.</em><span>”</span>
+            <span>“</span><em>React has fundamentally changed the way we think about and build user interfaces.</em><span>”</span>
           </h2>
           <h3>
             -Tom Occhino, Manager of the React Team at Facebook
