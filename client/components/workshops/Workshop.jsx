@@ -13,7 +13,9 @@ const propTypes = {
   date: PropTypes.string,
   description: PropTypes.string,
   difficulty: PropTypes.string,
+  header: PropTypes.string,
   instructor: PropTypes.string,
+  length: PropTypes.number,
   name: PropTypes.string,
   openModal: PropTypes.func.isRequired,
   closeModal: PropTypes.func.isRequired,
@@ -39,7 +41,9 @@ export default class Workshop extends PureComponent {
       date,
       description,
       difficulty,
+      header,
       instructor,
+      length,
       name,
       openModal,
       showModal,
@@ -94,12 +98,19 @@ export default class Workshop extends PureComponent {
             onRequestClose={ closeModal }
             overlayClassName={ cx('overlay') }
             >
+            <div className={ cx('header') }>
+              <img src={ header } />
+            </div>
             <div className={ cx('brief') }>
               { description }
             </div>
             <div className={ cx('bio') }>
               { bio }
             </div>
+            <div className={ cx('length') }>
+              Length: { length } hours
+            </div>
+
             <button onClick={ closeModal }>
               Close
             </button>

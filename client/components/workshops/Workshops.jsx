@@ -24,6 +24,14 @@ import moose from '../../images/peeps/moose.png';
 import eventbriteWhite from '../../images/sponsors/eventbrite-white.png';
 import reddit from '../../images/sponsors/reddit.png';
 
+import esnext from './esnext.png';
+import introReact from './intro-react.png';
+import reactNative from './react-native.png';
+import redux from './redux.png';
+import rxjs from './rxjs.png';
+import serverlessWorkshop from './serverless-workshop.png';
+import webpacking from './webpacking.png'
+
 const images = {
   ben,
   berks,
@@ -31,6 +39,15 @@ const images = {
   david,
   mike,
   moose
+};
+const headers = {
+  'ES.next Fundamentals': esnext,
+  'React.js Fundamentals': introReact,
+  'Integrate Redux into your React App': redux,
+  'RxJS & Redux-Observable': rxjs,
+  'Webpacking': webpacking,
+  'Going Native with React': reactNative,
+  'Serverless Apps with AWS Lambda & React': serverlessWorkshop
 };
 const cx = classnames.bind(styles);
 const propTypes = {};
@@ -84,6 +101,7 @@ export class Workshops extends PureComponent {
         { ...info }
         className={ cx('workshop-container') }
         closeModal={ this.props[info.name]['hide'] }
+        header={ headers[info.name] }
         key={ info.name }
         openModal={ this.props[info.name]['show'] }
         showModal={ this.props[workshopUiName(info.name)] }
@@ -114,7 +132,7 @@ export class Workshops extends PureComponent {
         </div>
         <div className={ cx('action') }>
           <ActionButton
-            href='https://ti.to/real-world-react/reactathon-2017'
+            href='https://realworldreact.eventbrite.com'
             target='_blank'
             >
             Buy Tickets
