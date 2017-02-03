@@ -15,6 +15,7 @@ const propTypes = {
   difficulty: PropTypes.string,
   header: PropTypes.string,
   instructor: PropTypes.string,
+  length: PropTypes.number,
   name: PropTypes.string,
   openModal: PropTypes.func.isRequired,
   closeModal: PropTypes.func.isRequired,
@@ -42,6 +43,7 @@ export default class Workshop extends PureComponent {
       difficulty,
       header,
       instructor,
+      length,
       name,
       openModal,
       showModal,
@@ -105,6 +107,10 @@ export default class Workshop extends PureComponent {
             <div className={ cx('bio') }>
               { bio }
             </div>
+            <div className={ cx('length') }>
+              Length: { length } hours
+            </div>
+
             <button onClick={ closeModal }>
               Close
             </button>

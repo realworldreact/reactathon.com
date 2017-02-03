@@ -29,7 +29,8 @@ import introReact from './intro-react.png';
 import reactNative from './react-native.png';
 import redux from './redux.png';
 import rxjs from './rxjs.png';
-import serverless from './serverless.png';
+import serverlessWorkshop from './serverless-workshop.png';
+import webpacking from './webpacking.png'
 
 const images = {
   ben,
@@ -41,12 +42,12 @@ const images = {
 };
 const headers = {
   'ES.next Fundamentals': esnext,
-  'Intro to React': introReact,
+  'React.js Fundamentals': introReact,
   'Integrate Redux into your React App': redux,
   'RxJS & Redux-Observable': rxjs,
-  Webpacking: null,
+  'Webpacking': webpacking,
   'Going Native with React': reactNative,
-  'Serverless Apps with AWS Lambda & React': serverless
+  'Serverless Apps with AWS Lambda & React': serverlessWorkshop
 };
 const cx = classnames.bind(styles);
 const propTypes = {};
