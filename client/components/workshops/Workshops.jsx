@@ -132,7 +132,7 @@ export class Workshops extends PureComponent {
         </div>
         <div className={ cx('action') }>
           <ActionButton
-            href='https://ti.to/real-world-react/reactathon-2017'
+            href='https://realworldreact.eventbrite.com'
             target='_blank'
             >
             Buy Tickets

@@ -33,7 +33,7 @@
     "id": "3",
     "name": "Integrate Redux into your React App",
     "brief": "Simplify your state management and application scalability with the most popular implementation of the Flux architecture, Redux. Learn Redux as we integrate it into a full-stack application boilerplate.",
-    "description": "For those who are already comfortable with React, this workshop aims to help you take your application development to the next level. Redux helps you to simplify your state management, perform asychronous actions, and to assist with scalability. In this workshop, we'll learn Redux by implementing it into a full-stack e-commerce app built with React.",
+    "description": "For those who are already comfortable with React, this workshop helps you take your application development to the next level. Redux helps you to simplify your state management, perform asychronous actions, and to assist with scalability, among other benefits. In this workshop, we'll learn Redux by implementing it into a full-stack e-commerce app built with React.",
     "instructor": "Berkeley Martinez",
     "img": "berks",
     "title": "CTO",

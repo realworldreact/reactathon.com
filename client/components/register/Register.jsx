@@ -11,7 +11,7 @@ const cx = classnames.bind(styles);
 const propTypes = {};
 const events = [{
   event: 'All Workshops',
-  link: 'https://ti.to/real-world-react/reactathon-2017'
+  link: 'https://realworldreact.eventbrite.com'
 }, {
   event: 'Hiring Mixer',
   link: 'https://react-hiring-mixer.eventbrite.com'
