@@ -13,6 +13,7 @@ const propTypes = {
   date: PropTypes.string,
   description: PropTypes.string,
   difficulty: PropTypes.string,
+  header: PropTypes.string,
   instructor: PropTypes.string,
   name: PropTypes.string,
   openModal: PropTypes.func.isRequired,
@@ -39,6 +40,7 @@ export default class Workshop extends PureComponent {
       date,
       description,
       difficulty,
+      header,
       instructor,
       name,
       openModal,
@@ -94,6 +96,9 @@ export default class Workshop extends PureComponent {
             onRequestClose={ closeModal }
             overlayClassName={ cx('overlay') }
             >
+            <div className={ cx('header') }>
+              <img src={ header } />
+            </div>
             <div className={ cx('brief') }>
               { description }
             </div>

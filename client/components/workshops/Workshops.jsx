@@ -24,6 +24,13 @@ import moose from '../../images/peeps/moose.png';
 import eventbriteWhite from '../../images/sponsors/eventbrite-white.png';
 import reddit from '../../images/sponsors/reddit.png';
 
+import esnext from './esnext.png';
+import introReact from './intro-react.png';
+import reactNative from './react-native.png';
+import redux from './redux.png';
+import rxjs from './rxjs.png';
+import serverless from './serverless.png';
+
 const images = {
   ben,
   berks,
@@ -31,6 +38,15 @@ const images = {
   david,
   mike,
   moose
+};
+const headers = {
+  'ES.next Fundamentals': esnext,
+  'Intro to React': introReact,
+  'Integrate Redux into your React App': redux,
+  'RxJS & Redux-Observable': rxjs,
+  Webpacking: null,
+  'Going Native with React': reactNative,
+  'Serverless Apps with AWS Lambda & React': serverless
 };
 const cx = classnames.bind(styles);
 const propTypes = {};
@@ -84,6 +100,7 @@ export class Workshops extends PureComponent {
         { ...info }
         className={ cx('workshop-container') }
         closeModal={ this.props[info.name]['hide'] }
+        header={ headers[info.name] }
         key={ info.name }
         openModal={ this.props[info.name]['show'] }
         showModal={ this.props[workshopUiName(info.name)] }
