@@ -21,6 +21,82 @@ export default function HTML({
           content='width=device-width, minimum-scale=1.0'
           name='viewport'
         />
+        <link
+          rel='canonical'
+          href='https://www.reactathon.com'
+        />
+        <meta
+          name='keywords'
+          content='react, reactjs, react.js, react conf, workshop, netlify, serverless, rxjs, webpack, redux, aws lambda, learn to code, learn to program, learn react, san francisco, reactathon, learn programming, learn javascript, learn coding, code, coding, programming, software engineer, software developer, mean stack, web development, development, engineering, coding bootcamp, javascript, open source'
+        />
+        <meta
+          property='og:title'
+          content='Celebrating the React Ecosystem'
+        />
+        <meta
+          property='og:site_name'
+          content='Reactathon'
+        />
+        <meta
+          name='twitter:widgets:csp'
+          content='on'
+        />
+        <meta
+          property='og:url'
+          content='https://www.reactathon.com'
+        />
+        <meta
+          property='og:description'
+          content='One week of community-run events leading up to Facebooks React Conf in March 2017. Including a meetup, workshops, hiring mixer, hackathon.'
+        />
+        <meta
+          property='og:image'
+          content='http://i.imgur.com/t4HdrRj.png'
+        />
+        <meta
+          property='og:type'
+          content='article'
+        />
+        <meta
+          property='article:publisher'
+          content='https://www.facebook.com/realworldreact'
+        />
+        <meta
+          property='article:section'
+          content='Responsive'
+        />
+        <meta
+          name='description'
+          content='One week of community-run events leading up to Facebooks React Conf in March 2017. Including a meetup, 7 workshops, hiring mixer, hackathon.'
+        />
+        <meta
+          name='twitter:creator'
+          content='@reactathon'
+        />
+        <meta
+          name='twitter:url'
+          content='https://www.reactathon.com'
+        />
+        <meta
+          name='twitter:site'
+          content='@reactathon'
+        />
+        <meta
+          name='twitter:card'
+          content='summary_large_image'
+        />
+        <meta
+          name='twitter:image:src'
+          content='http://i.imgur.com/3p2B8pv.png'
+        />
+        <meta
+          name='twitter:title'
+          content='Reactathon: March 7-12, 2017'
+        />
+        <meta
+          name='twitter:description'
+          content='Workshops, Meetup, Hiring Mixer, & Hackathon Celebrating React'
+        />
         { stylesheet ?
           <link
             href={ stylesheet }
