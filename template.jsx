@@ -51,7 +51,7 @@ export default function HTML({
         />
         <meta
           property='og:image'
-          content='/client/images/meta/reactathon-og-image.png'
+          content='https://s3-us-west-1.amazonaws.com/reactathon/reactathon-og-image.png'
         />
         <meta
           property='og:type'
@@ -87,7 +87,7 @@ export default function HTML({
         />
         <meta
           name='twitter:image:src'
-          content='/client/images/meta/reactathon-twitter-card.png'
+          content='https://s3-us-west-1.amazonaws.com/reactathon/reactathon-twitter-card.png'
         />
         <meta
           name='twitter:title'
