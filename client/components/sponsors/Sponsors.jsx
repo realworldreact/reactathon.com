@@ -16,6 +16,7 @@ import accelebrate from '../../images/sponsors/accelebrate.png';
 import nyentek from '../../images/sponsors/nyentek.png';
 import npr from '../../images/sponsors/npr-2.jpg';
 import eventbrite from '../../images/sponsors/eventbrite.png';
+import nerdwallet from '../../images/sponsors/nerdwallet.png';
 import techqueria from '../../images/sponsors/techqueria.png';
 
 
@@ -83,6 +84,12 @@ export default class Sponsors extends PureComponent {
               <img
                 alt="Coursera's logo"
                 src={ coursera }
+              />
+            </div>
+            <div>
+              <img
+                alt="Nerdwallet's logo"
+                src={ nerdwallet }
               />
             </div>
           </div>
