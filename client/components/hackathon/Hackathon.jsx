@@ -3,6 +3,7 @@ import classnames from 'classnames/bind';
 import isEmail from 'validator/lib/isEmail';
 import { reduxForm } from 'redux-form';
 import ActionButton from '../Action-Button.jsx';
+import github from '../../images/sponsors/github-sponsor.png';
 
 import styles from './hackathon.styl';
 
@@ -95,6 +96,14 @@ export class Hackathon extends PureComponent {
                   Go here
                 </a>
               </p>
+            </div>
+          </div>
+          <div className={ cx('hosted-by') }>
+            <h3>
+              Hosted by
+            </h3>
+            <div>
+              <img src={ github } />
             </div>
           </div>
         </div>

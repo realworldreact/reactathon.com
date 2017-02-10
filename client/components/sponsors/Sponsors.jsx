@@ -18,6 +18,7 @@ import npr from '../../images/sponsors/npr-2.jpg';
 import eventbrite from '../../images/sponsors/eventbrite.png';
 import nerdwallet from '../../images/sponsors/nerdwallet.png';
 import techqueria from '../../images/sponsors/techqueria.png';
+import github from '../../images/sponsors/github-sponsor.png';
 
 
 
@@ -43,15 +44,8 @@ export default class Sponsors extends PureComponent {
             </div>
             <div>
               <img
-                alt="Reddit's logo"
-                className={ cx('reddit') }
-                src={ reddit }
-              />
-            </div>
-            <div>
-              <img
-                alt="Microsoft's logo"
-                src={ microsoft }
+                alt="Github's logo"
+                src={ github }
               />
             </div>
           </div>
@@ -81,15 +75,28 @@ export default class Sponsors extends PureComponent {
               />
             </div>
             <div>
-              <img
+              <a
                 alt="Coursera's logo"
-                src={ coursera }
-              />
+                href='https://www.coursera.org/'
+                target='_blank'
+                >
+                <img
+                  alt="Coursera's logo"
+                  src={ coursera }
+                />
+              </a>
             </div>
             <div>
               <img
                 alt="Nerdwallet's logo"
                 src={ nerdwallet }
+              />
+            </div>
+            <div>
+              <img
+                alt="Reddit's logo"
+                className={ cx('reddit') }
+                src={ reddit }
               />
             </div>
           </div>
