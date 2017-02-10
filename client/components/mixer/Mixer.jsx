@@ -42,9 +42,6 @@ export default class Mixer extends PureComponent {
           <div className={ cx('logos')}>
             <img src={ companiesBottom } />
           </div>
-          {/* <div className={ cx('sponsors') }>
-            <img src={ sponsorsBg } />
-          </div> */}
           <div className={ cx('presented') }>
             <div>
               <ActionButton href='#Register'>
@@ -54,12 +51,6 @@ export default class Mixer extends PureComponent {
             <p>
               Food & Drink Provided
             </p>
-            <h3>
-              Hosted by
-            </h3>
-            <div>
-              <img src={ reddit } />
-            </div>
           </div>
         </div>
       </div>
