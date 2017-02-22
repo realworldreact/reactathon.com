@@ -6,6 +6,7 @@ import reactathonLogo from './reactathon-logo.png';
 import rwrLogo from './rwr-logo.png';
 import ActionButton from '../Action-Button.jsx';
 import VideoBackground from './Video-Background.jsx';
+import openTable from '../../images/sponsors/opentable.png';
 
 const routes = [
   'Meetup',
@@ -44,7 +45,13 @@ export default class Nav extends Component {
     return (
       <div className={ cx('header') }>
         <VideoBackground />
-        <div className={ cx('title-sponsor') } />
+        <div className={ cx('title-sponsor') }>
+          <img
+            alt="OpenTables's logo"
+            src={ openTable }
+          />
+          <p>Presents</p>
+        </div>
         <div className={ cx('logo') }>
           <img src={ reactathonLogo } />
         </div>
