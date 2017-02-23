@@ -5,7 +5,10 @@ $nav-height-sm = 75px;
   min-height 100vh
   width 100%
   .title-sponsor
-    $center(15%)
+    +$below('sm')
+      $center(100%)
+    +$above('sm')
+      $center(15%)
     color white
     flex-grow 0.5
     max-height 15%
@@ -33,7 +36,10 @@ $nav-height-sm = 75px;
     +$above('sm')
       font-size 2em
   .rwr-logo
-    $center(25vw)
+    +$below('sm')
+      $center(100%)
+    +$above('sm')
+      $center(25%)
     $grid('column')
     text-align center
     span
