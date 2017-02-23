@@ -1,13 +1,15 @@
-import React, { PureComponent } from 'react';
+import React, { PureComponent, PropTypes } from 'react';
+import { connect } from 'react-redux';
 import classnames from 'classnames/bind';
 
 import styles from './sponsors.styl';
 
 import TitleCard from '../Title-Card.jsx';
 
+import { trackEvent } from '../../redux/index.js';
+
 import pinterest from '../../images/sponsors/pinterest.png';
 import reddit from '../../images/sponsors/reddit.png';
-import microsoft from '../../images/sponsors/microsoft.png';
 import netlify from '../../images/sponsors/netlify.png';
 import serverless from '../../images/sponsors/serverless.png';
 import openTable from '../../images/sponsors/opentable.png';
@@ -20,22 +22,66 @@ import nerdwallet from '../../images/sponsors/nerdwallet.png';
 import techqueria from '../../images/sponsors/techqueria.png';
 import github from '../../images/sponsors/github-sponsor.png';
 
-
-
 const cx = classnames.bind(styles);
-const propTypes = {};
 
-export default class Sponsors extends PureComponent {
+
+const clickEvents = [
+  'OpenTable',
+  'Coursera',
+  'NPR',
+  'Nyentek',
+  'Techqueria',
+  'Accelebrate'
+];
+const propTypes = clickEvents.reduce((propTypes, sponsor) => {
+  propTypes[`clickOn${sponsor}`] = PropTypes.func.isRequired;
+  return propTypes;
+}, {});
+
+function mapDispatchToProps(dispatch) {
+  const dispatchers = clickEvents.reduce((dispatchers, sponsor) => {
+    dispatchers[`clickOn${sponsor}`] = () => dispatch(trackEvent({
+      category: 'Sponsors',
+      action: 'click',
+      label: `user clicks on ${sponsor}'s logo`
+    }));
+    return dispatchers;
+  }, {});
+
+  return () => dispatchers;
+}
+
+export class Sponsors extends PureComponent {
   render() {
+    const {
+      clickOnOpenTable,
+      clickOnCoursera,
+      clickOnNPR,
+      clickOnNyentek,
+      clickOnTechqueria,
+      clickOnAccelebrate
+    } = this.props;
     return (
       <div className={ cx('sponsors') }>
-        <TitleCard
-          id='sponsors'
-          >
+        <TitleCard id='sponsors'>
           Sponsors
         </TitleCard>
         <div className={ cx('container') }>
-          <div className={ cx('tier-1') }>
+          <div className={ cx('title-sponsor', 'tiers') }>
+            <div>
+              <a
+                href='https://www.opentable.com/careers/technology'
+                onClick={ clickOnOpenTable }
+                target='_blank'
+                >
+                <img
+                  alt="OpenTable's logo"
+                  src={ openTable }
+                />
+              </a>
+            </div>
+          </div>
+          <div className={ cx('tier-1', 'tiers') }>
             <div>
               <img
                 alt="Pinterest's logo"
@@ -49,7 +95,7 @@ export default class Sponsors extends PureComponent {
               />
             </div>
           </div>
-          <div className={ cx('tier-2') }>
+          <div className={ cx('tier-2', 'tiers') }>
             <div>
               <img
                 alt="Netlify's logo"
@@ -69,15 +115,10 @@ export default class Sponsors extends PureComponent {
               />
             </div>
             <div>
-              <img
-                alt="OpenTable's logo"
-                src={ openTable }
-              />
-            </div>
-            <div>
               <a
                 alt="Coursera's logo"
                 href='https://www.coursera.org/'
+                onClick={ clickOnCoursera }
                 target='_blank'
                 >
                 <img
@@ -95,16 +136,16 @@ export default class Sponsors extends PureComponent {
             <div>
               <img
                 alt="Reddit's logo"
-                className={ cx('reddit') }
                 src={ reddit }
               />
             </div>
           </div>
-          <div className={ cx('tier-4') }>
+          <div className={ cx('tier-4', 'tiers') }>
             <div>
               <a
                 alt="NPR's logo"
                 href='https://npr.codes'
+                onClick={ clickOnNPR }
                 target='_blank'
                 >
                 <img
@@ -119,11 +160,12 @@ export default class Sponsors extends PureComponent {
               Supporters
             </h2>
           </div>
-          <div className={ cx('supporters') }>
+          <div className={ cx('supporters', 'tiers') }>
             <div>
               <a
                 alt="Accelebrate's logo"
                 href='https://www.accelebrate.com/training/react'
+                onClick={ clickOnAccelebrate }
                 target='_blank'
                 >
                 <img src={ accelebrate } />
@@ -133,6 +175,7 @@ export default class Sponsors extends PureComponent {
               <a
                 alt="Nyentek's logo"
                 href='http://nyentek.com'
+                onClick={ clickOnNyentek }
                 target='_blank'
                 >
                 <img src={ nyentek } />
@@ -142,6 +185,7 @@ export default class Sponsors extends PureComponent {
               <a
                 alt="Techqueria's logo"
                 href='https://techqueria.org/'
+                onClick={ clickOnTechqueria }
                 target='_blank'
                 >
                 <img src={ techqueria } />
@@ -155,3 +199,8 @@ export default class Sponsors extends PureComponent {
 }
 Sponsors.displayName = 'Sponsors';
 Sponsors.propTypes = propTypes;
+
+export default connect(
+  null,
+  mapDispatchToProps
+)(Sponsors);

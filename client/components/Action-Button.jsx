@@ -7,15 +7,17 @@ const cx = classnames.bind(styles);
 const propTypes = {
   children: PropTypes.string,
   href: PropTypes.string,
+  onClick: PropTypes.func,
   target: PropTypes.string
 };
 
 export default class ActionButton extends PureComponent {
   render() {
-    const { href, target } = this.props;
+    const { href, target, onClick } = this.props;
     const Wrap = href ? 'a' : 'button';
     const props = {
-      className: cx('action-button')
+      className: cx('action-button'),
+      onClick
     };
     if (href) {
       props.href = href;

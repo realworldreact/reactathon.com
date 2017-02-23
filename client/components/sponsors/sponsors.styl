@@ -10,15 +10,36 @@
   min-height 100%
   padding 20px
 
-.tier-1
-  width 100%
+.tiers
+  margin-bottom 60px
+  +$below('sm')
+    width 100%
+
+.title-sponsor
   +$below('sm')
     $grid('column', , , 'center')
+    min-height 50%
     div
-      cell()
+      $cell()
       padding-bottom 60px
       img
-        width 80%
+        width 85%
+  +$above('sm')
+    $grid('row', , , 'center')
+    div
+      $cell(6)
+      img
+        width 100%
+
+.tier-1
+  +$below('sm')
+    $grid('column', , , 'center')
+    min-height 50%
+    div
+      $cell(1, , 20px)
+      padding-bottom 60px
+      img
+        width 75%
   +$above('sm')
     $grid('row', , , 'center')
     div
@@ -27,19 +48,16 @@
         width 90%
 
 .tier-2
-  width 100%
   +$below('sm')
     $grid('column', , , 'center')
-    padding-bottom 60px
+    min-height 100%
     div
-      $cell()
-      padding-bottom 40px
+      flex 1 0 0
+      margin-bottom 20px
       img
         width 70%
-  .reddit
-    margin-top -42px
   +$above('sm')
-    $grid('row', , , 'center')
+    $grid('row', 'bottom', , 'center')
     div
       $cell(3, , 60px)
       img
@@ -48,6 +66,7 @@
 .tier-3
   +$below('sm')
     $grid('row', , , 'around')
+    min-height 33%
     width 100%
     padding-bottom 60px
     div
@@ -85,8 +104,10 @@
   margin-bottom 0
 
 .supporters
+  margin-bottom 60px
   +$below('sm')
     $grid('row', , , 'around')
+    min-height 33%
     width 100%
     div
       $cell(5)
@@ -96,11 +117,13 @@
     .nyentek
       margin-top 30px
   +$above('sm')
-    $grid('row', , , 'between')
+    $grid('row', 'baseline', , 'between')
     width 60%
     div
-      $cell(5, , 60px)
+      $cell(4, , 60px)
       img
         width 60%
-    .nyentek
-      margin-top 57px
+    // .nyentek
+    //   margin-top 57px
+    // .techqueria
+    //   margin-top 20px

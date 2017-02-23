@@ -5,12 +5,22 @@ $nav-height-sm = 75px;
   min-height 100vh
   width 100%
   .title-sponsor
+    +$below('sm')
+      $center(100%)
+    +$above('sm')
+      $center(15%)
+    color white
     flex-grow 0.5
     max-height 15%
+    text-align center
+    img
+      margin-top 20px
+      max-width 150px
+      z-index 400
   .logo
-    $center(45vw)
-    max-width 450px
+    $center(450px)
     width 70%
+    flex 1 0 0
     img
       width 100%
   .date
@@ -26,7 +36,10 @@ $nav-height-sm = 75px;
     +$above('sm')
       font-size 2em
   .rwr-logo
-    $center(25vw)
+    +$below('sm')
+      $center(100%)
+    +$above('sm')
+      $center(25%)
     $grid('column')
     text-align center
     span

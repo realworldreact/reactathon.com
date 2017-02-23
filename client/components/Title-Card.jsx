@@ -6,22 +6,17 @@ import styles from './title-card.styl';
 const cx = classnames.bind(styles);
 const propTypes = {
   children: PropTypes.string,
-  id: PropTypes.string,
-  img: PropTypes.string
+  id: PropTypes.string
 };
 
 export default class TitleCard extends PureComponent {
   render() {
     const {
       children,
-      id,
-      img
+      id
     } = this.props;
     return (
-      <div
-        className={ cx('title-card') }
-        style={{ backgroundImage: `url(${img})` }}
-        >
+      <div className={ cx('title-card') }>
         <h1 id={ id }>{ children }</h1>
       </div>
     );

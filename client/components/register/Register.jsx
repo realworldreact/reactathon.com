@@ -1,4 +1,5 @@
-import React, { PureComponent } from 'react';
+import React, { PropTypes, PureComponent } from 'react';
+import { connect } from 'react-redux';
 import classnames from 'classnames/bind';
 
 import styles from './register.styl';
@@ -6,9 +7,9 @@ import styles from './register.styl';
 import TitleCard from '../Title-Card.jsx';
 import banner from '../../images/banner.png';
 import goToIcon from '../../images/goTo.png';
+import { trackEvent } from '../../redux/index.js';
 
 const cx = classnames.bind(styles);
-const propTypes = {};
 const events = [{
   event: 'All Workshops',
   link: 'https://realworldreact.eventbrite.com'
@@ -21,30 +22,47 @@ const events = [{
 }, {
   event: 'Hackathon',
   link: 'https://react-hackathon.eventbrite.com'
-}].map(({ event, link, isComingSoon }) => (
-  <div
-    className={ cx('row') }
-    key={ event }
-    >
-    <div>{ event }</div>
-    <div>
-      {
-        isComingSoon ?
-          'Coming Soon!' :
-          (
-            <a
-              href={ link }
-              target='_blank'
-              >
-              Go To Page<img alt='Go To Icon' src={ goToIcon } />
-            </a>
-          )
-      }
-    </div>
-  </div>
-));
+}];
 
-export default class Register extends PureComponent {
+const propTypes = events.reduce((propTypes, { event }) => {
+  propTypes[`clickOn${event}`] = PropTypes.func.isRequired;
+  return propTypes;
+}, {});
+
+function mapDispatchToProps(dispatch) {
+  const dispatchers = events.reduce((dispatchers, { event }) => {
+    dispatchers[`clickOn${event}`] = () => dispatch(trackEvent({
+      category: 'Navbar',
+      action: 'click',
+      label: `user clicks on ${event} registration link`
+    }));
+    return dispatchers;
+  }, {});
+
+  return () => dispatchers;
+}
+
+export class Register extends PureComponent {
+  renderEvents() {
+    return events.map(({ event, link }) => (
+      <div
+        className={ cx('row') }
+        key={ event }
+        >
+        <div>{ event }</div>
+        <div>
+          <a
+            href={ link }
+            onClick={ this.props[`clickOn${event}`] }
+            target='_blank'
+            >
+            Go To Page<img alt='Go To Icon' src={ goToIcon } />
+          </a>
+        </div>
+      </div>
+    ));
+  }
+
   render() {
     return (
       <div className={ cx('register') }>
@@ -68,7 +86,7 @@ export default class Register extends PureComponent {
                 <div>Event</div>
                 <div>Sign-up Link</div>
               </div>
-              { events }
+              { this.renderEvents() }
             </div>
           </div>
         </div>
@@ -76,5 +94,11 @@ export default class Register extends PureComponent {
     );
   }
 }
+
 Register.displayName = 'Register';
 Register.propTypes = propTypes;
+
+export default connect(
+  null,
+  mapDispatchToProps
+)(Register);
