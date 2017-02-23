@@ -23,7 +23,7 @@ import mike from '../../images/peeps/mike.png';
 import moose from '../../images/peeps/moose.png';
 import eventbriteWhite from '../../images/sponsors/eventbrite-white.png';
 import reddit from '../../images/sponsors/reddit.png';
-import pinterest from '../../images/sponsors/pinterest.png';
+import pinterest from '../../images/sponsors/pinterest-a.png';
 
 import esnext from './esnext.png';
 import introReact from './intro-react.png';
