@@ -8,7 +8,7 @@ import TitleCard from '../Title-Card.jsx';
 
 import { trackEvent } from '../../redux/index.js';
 
-import pinterest from '../../images/sponsors/pinterest.png';
+import pinterest from '../../images/sponsors/pinterest-a.png';
 import reddit from '../../images/sponsors/reddit.png';
 import netlify from '../../images/sponsors/netlify.png';
 import serverless from '../../images/sponsors/serverless.png';
