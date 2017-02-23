@@ -2,12 +2,13 @@ import { createElement } from 'react';
 import { render } from 'react-dom';
 import { applyMiddleware, createStore, compose } from 'redux';
 import { Provider } from 'react-redux';
-import { createEpicMiddleware } from 'redux-observable';
+import { combineEpics, createEpicMiddleware } from 'redux-observable';
 
 
 import App from './components/App.jsx';
 import createReducer from './create-reducer';
-import rootEpic from './redux/epic-analytics.js';
+import { rootEpic as appEpic } from './redux';
+import { rootEpic as headerEpic } from './components/header/redux';
 
 // protect against undefined when rendering static
 const win = typeof window !== 'undefined' ? window : {};
@@ -19,11 +20,15 @@ const epicDependencies = {
   document: doc,
   ga: win.ga
 };
+
 export const store = createStore(
   createReducer(),
   compose(
     applyMiddleware(createEpicMiddleware(
-      (actions, store) => rootEpic(actions, store, epicDependencies)
+      (actions, store) => combineEpics(
+        appEpic,
+        headerEpic
+      )(actions, store, epicDependencies)
     )),
     devTools
   )
