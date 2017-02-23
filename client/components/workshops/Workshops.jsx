@@ -23,6 +23,7 @@ import mike from '../../images/peeps/mike.png';
 import moose from '../../images/peeps/moose.png';
 import eventbriteWhite from '../../images/sponsors/eventbrite-white.png';
 import reddit from '../../images/sponsors/reddit.png';
+import pinterest from '../../images/sponsors/pinterest.png';
 
 import esnext from './esnext.png';
 import introReact from './intro-react.png';
@@ -150,12 +151,19 @@ export class Workshops extends PureComponent {
               src={ reddit }
             />
           </div>
+          <div className={ cx('pinterest') }>
+            <img
+              alt="Pinterest's logo"
+              src={ pinterest }
+            />
+          </div>
           <div className={ cx('eventbrite') }>
             <img
               alt="Eventbrite's logo"
               src={ eventbriteWhite }
             />
           </div>
+
         </div>
       </div>
     );

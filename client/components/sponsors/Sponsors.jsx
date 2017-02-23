@@ -102,19 +102,13 @@ export class Sponsors extends PureComponent {
                 src={ netlify }
               />
             </div>
-            <div>
-              <img
-                alt="Severless' logo"
-                src={ serverless }
-              />
-            </div>
-            <div>
+            <div className={ cx('nudge') }>
               <img
                 alt="EventBrite's logo"
                 src={ eventbrite }
               />
             </div>
-            <div>
+            <div className={ cx('nudge') }>
               <a
                 alt="Coursera's logo"
                 href='https://www.coursera.org/'
@@ -126,6 +120,12 @@ export class Sponsors extends PureComponent {
                   src={ coursera }
                 />
               </a>
+            </div>
+            <div>
+              <img
+                alt="Severless' logo"
+                src={ serverless }
+              />
             </div>
             <div>
               <img
