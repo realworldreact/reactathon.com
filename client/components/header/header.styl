@@ -8,18 +8,22 @@ $nav-height-sm = 75px;
     +$below('sm')
       $center(100%)
     +$above('sm')
-      $center(15%)
+      $center(100%)
     color white
     flex-grow 0.5
-    max-height 15%
+    max-height 20%
     text-align center
+    p
+      letter-spacing 1.7px
     img
       margin-top 20px
-      max-width 150px
+      max-width 300px
       z-index 400
+      +$below('sm')
+        max-width 200px
   .logo
-    $center(450px)
-    width 70%
+    $center(400px)
+    width 60%
     flex 1 0 0
     img
       width 100%
@@ -27,14 +31,14 @@ $nav-height-sm = 75px;
     $center(50vw)
     color white
     flex-grow .2
-    font-size 2em
+    font-size 1.5em
     text-align center
     h3
       margin 0
     +$below('sm')
-      font-size 1.5em
+      font-size 1.2em
     +$above('sm')
-      font-size 2em
+      font-size 1.5em
   .rwr-logo
     +$below('sm')
       $center(100%)
@@ -47,7 +51,9 @@ $nav-height-sm = 75px;
       color white
     img
       padding-bottom 40px
-      width 70px
+      width 60px
+      +$below('sm')
+        width 50px
 
 .register
   $center(100%)

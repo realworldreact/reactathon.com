@@ -10,7 +10,7 @@ import VideoBackground from './Video-Background.jsx';
 import ActionButton from '../Action-Button.jsx';
 
 import { trackEvent } from '../../redux/index.js';
-import openTable from '../../images/sponsors/opentable.png';
+import openTableWhite from '../../images/sponsors/opentable-white.png';
 
 const routes = [
   'Meetup',
@@ -76,7 +76,7 @@ export class Header extends Component {
         <div className={ cx('title-sponsor') }>
           <img
             alt="OpenTables's logo"
-            src={ openTable }
+            src={ openTableWhite }
           />
           <p>Presents</p>
         </div>
