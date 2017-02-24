@@ -23,6 +23,8 @@ import webpacking from './webpacking.png';
 import TitleCard from '../Title-Card.jsx';
 import ActionButton from '../Action-Button.jsx';
 
+import { trackEvent } from '../../redux/index.js';
+
 import ben from '../../images/peeps/ben.png';
 import berks from '../../images/peeps/berks.png';
 import brian from '../../images/peeps/brian.png';
@@ -55,14 +57,14 @@ const headers = {
   'Serverless Apps with AWS Lambda & React': serverlessWorkshop
 };
 const cx = classnames.bind(styles);
-const propTypes = {};
-workshopsInfo.forEach(({ name }) => {
+const propTypes = workshopsInfo.reduce((propTypes, { name }) => {
   propTypes[name] = PropTypes.shape({
     show: PropTypes.func.isRequired,
     hide: PropTypes.func.isRequired
   });
   propTypes[workshopUiName(name)] = PropTypes.bool;
-});
+  return propTypes;
+}, { clickOnBuy: PropTypes.func.isRequired });
 const mapStateToProps = workshopsSelector;
 
 function mapDispatchToProps(dispatch) {
@@ -77,6 +79,11 @@ function mapDispatchToProps(dispatch) {
     };
     return dispatchers;
   }, {});
+  dispatchers.clickOnBuy = () => dispatch(trackEvent({
+    category: 'Workshops',
+    action: 'click',
+    label: 'user clicks on Workshops Buy Button'
+  }));
   return () => dispatchers;
 }
 const seen = {};
@@ -146,6 +153,7 @@ export class Workshops extends PureComponent {
         <div className={ cx('action') }>
           <ActionButton
             href='https://realworldreact.eventbrite.com'
+            onClick={ this.props.clickOnBuy }
             target='_blank'
             >
             Buy Tickets
@@ -175,7 +183,6 @@ export class Workshops extends PureComponent {
               src={ eventbriteWhite }
             />
           </div>
-
         </div>
       </div>
     );
