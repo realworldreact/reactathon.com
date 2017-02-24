@@ -66,7 +66,7 @@ export default class Workshop extends PureComponent {
         </header>
         <div className={ cx('content-window') }>
           <div
-            className={ cx('content-container') }
+            className={ cx('content-container', { focused: showModal }) }
             tabIndex='0'
             >
             <section className={ cx('workshop-info') }>
