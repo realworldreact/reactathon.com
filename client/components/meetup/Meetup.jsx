@@ -1,4 +1,5 @@
-import React, { PureComponent } from 'react';
+import React, { PropTypes, PureComponent } from 'react';
+import { connect } from 'react-redux';
 import classnames from 'classnames/bind';
 
 import styles from './meetup.styl';
@@ -7,13 +8,28 @@ import pinterest from './pinterest.png';
 import ActionButton from '../Action-Button.jsx';
 import TitleCard from '../Title-Card.jsx';
 
+import { trackEvent } from '../../redux/index.js';
+
 import imad from '../../images/peeps/imad.png';
 import justin from '../../images/peeps/justin.png';
 import david from '../../images/peeps/david.png';
 import harry from '../../images/peeps/harry.png';
 
 const cx = classnames.bind(styles);
-const propTypes = {};
+const propTypes = {
+  clickOnRegister: PropTypes.func.isRequired
+};
+
+function mapDispatchToProps(dispatch) {
+  const dispatchers = {
+    clickOnRegister: () => dispatch(trackEvent({
+      category: 'Meetup',
+      action: 'click',
+      label: 'user clicks on Meetup register button'
+    }))
+  };
+  return () => dispatchers;
+}
 const speakers = [{
   name: 'Imad Elyafi',
   title: 'Front-end Engineer',
@@ -55,7 +71,7 @@ const speakers = [{
     </div>
   ));
 
-export default class Meetup extends PureComponent {
+export class Meetup extends PureComponent {
   render() {
     return (
       <div className={ cx('meetup') }>
@@ -82,7 +98,10 @@ export default class Meetup extends PureComponent {
           { speakers }
         </section>
         <section className={ cx('sponsor') }>
-          <ActionButton href='#Register'>
+          <ActionButton
+            href='#Register'
+            onClick={ this.props.clickOnRegister }
+            >
             Register Free
           </ActionButton>
           <div>Food & Drink Provided</div>
@@ -98,3 +117,8 @@ export default class Meetup extends PureComponent {
 }
 Meetup.displayName = 'Meetup';
 Meetup.propTypes = propTypes;
+
+export default connect(
+  null,
+  mapDispatchToProps
+)(Meetup);

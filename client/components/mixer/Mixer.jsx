@@ -1,7 +1,9 @@
-import React, { PureComponent } from 'react';
+import React, { PropTypes, PureComponent } from 'react';
+import { connect } from 'react-redux';
 import classnames from 'classnames/bind';
 
 import styles from './mixer.styl';
+import { trackEvent } from '../../redux/index.js';
 
 import TitleCard from '../Title-Card.jsx';
 import ActionButton from '../Action-Button.jsx';
@@ -10,9 +12,21 @@ import companiesTop from '../../images/sponsors/hiring-companies-top.png';
 import companiesBottom from '../../images/sponsors/hiring-companies-bottom.png';
 
 const cx = classnames.bind(styles);
-const propTypes = {};
+const propTypes = {
+  clickOnRegister: PropTypes.func.isRequired
+};
+function mapDispatchToProps(dispatch) {
+  const dispatchers = {
+    clickOnRegister: () => dispatch(trackEvent({
+      category: 'Mixer',
+      action: 'click',
+      label: 'user clicks on Mixer register button'
+    }))
+  };
+  return () => dispatchers;
+}
 
-export default class Mixer extends PureComponent {
+export class Mixer extends PureComponent {
   render() {
     return (
       <div className={ cx('mixer') }>
@@ -54,7 +68,10 @@ export default class Mixer extends PureComponent {
           </div>
           <div className={ cx('presented') }>
             <div>
-              <ActionButton href='#Register'>
+              <ActionButton
+                href='#Register'
+                onClick={ this.props.clickOnRegister }
+                >
                 Register Free
               </ActionButton>
             </div>
@@ -67,5 +84,11 @@ export default class Mixer extends PureComponent {
     );
   }
 }
+
 Mixer.displayName = 'Mixer';
 Mixer.propTypes = propTypes;
+
+export default connect(
+  null,
+  mapDispatchToProps
+)(Mixer);

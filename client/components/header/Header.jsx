@@ -25,6 +25,7 @@ const propTypes = routes.reduce((propTypes, route) => {
   propTypes[`clickOn${route}`] = PropTypes.func.isRequired;
   return propTypes;
 }, {});
+propTypes.clickOnRWR = PropTypes.func.isRequired;
 
 function mapDispatchToProps(dispatch) {
   const dispatchers = routes.reduce((dispatchers, route) => {
@@ -35,6 +36,12 @@ function mapDispatchToProps(dispatch) {
     }));
     return dispatchers;
   }, {});
+
+  dispatchers.clickOnRWR = () => dispatch(trackEvent({
+    category: 'Navbar',
+    action: 'click',
+    label: "user clicks on Real World React's logo header button"
+  }));
 
   return () => dispatchers;
 }
@@ -70,6 +77,9 @@ export class Header extends Component {
   }
 
   render() {
+    const {
+      clickOnRWR
+    } = this.props;
     return (
       <div className={ cx('header') }>
         <VideoBackground />
@@ -92,10 +102,16 @@ export class Header extends Component {
         <div className={ cx('rwr-logo') }>
           <span>Organized By</span>
           <div>
-            <img
-              alt="Real World React's logo"
-              src={ rwrLogo }
-            />
+            <a
+              href='https://www.realworldreact.com'
+              onClick={ clickOnRWR }
+              target='_blank'
+              >
+              <img
+                alt="Real World React's logo"
+                src={ rwrLogo }
+              />
+            </a>
           </div>
         </div>
         <nav className={ cx('nav') }>
