@@ -12,6 +12,14 @@ import {
   workshopsSelector
 } from './redux.js';
 
+import esnext from './esnext.png';
+import introReact from './intro-react.png';
+import reactNative from './react-native.png';
+import redux from './redux.png';
+import rxjs from './rxjs.png';
+import serverlessWorkshop from './serverless-workshop.png';
+import webpacking from './webpacking.png';
+
 import TitleCard from '../Title-Card.jsx';
 import ActionButton from '../Action-Button.jsx';
 
@@ -25,13 +33,9 @@ import eventbriteWhite from '../../images/sponsors/eventbrite-white.png';
 import reddit from '../../images/sponsors/reddit.png';
 import pinterest from '../../images/sponsors/pinterest-a.png';
 
-import esnext from './esnext.png';
-import introReact from './intro-react.png';
-import reactNative from './react-native.png';
-import redux from './redux.png';
-import rxjs from './rxjs.png';
-import serverlessWorkshop from './serverless-workshop.png';
-import webpacking from './webpacking.png'
+import {
+  makeActionCreatorEnterSpaceClickable
+} from '../../utils/aria-utils.js';
 
 const images = {
   ben,
@@ -46,7 +50,7 @@ const headers = {
   'React.js Fundamentals': introReact,
   'Integrate Redux into your React App': redux,
   'RxJS & Redux-Observable': rxjs,
-  'Webpacking': webpacking,
+  Webpacking: webpacking,
   'Going Native with React': reactNative,
   'Serverless Apps with AWS Lambda & React': serverlessWorkshop
 };
@@ -60,11 +64,16 @@ workshopsInfo.forEach(({ name }) => {
   propTypes[workshopUiName(name)] = PropTypes.bool;
 });
 const mapStateToProps = workshopsSelector;
+
 function mapDispatchToProps(dispatch) {
   const dispatchers = workshopsInfo.reduce((dispatchers, { name } = {}) => {
     dispatchers[name] = {
-      show: () => dispatch(showWorkshopModal(name)),
-      hide: () => dispatch(hideWorkshopModal(name))
+      show: makeActionCreatorEnterSpaceClickable(() => dispatch(
+        showWorkshopModal(name)
+      )),
+      hide: makeActionCreatorEnterSpaceClickable(() => dispatch(
+        hideWorkshopModal(name)
+      ))
     };
     return dispatchers;
   }, {});
@@ -85,7 +94,10 @@ const instructors = workshopsInfo
       className={ cx('instructor-container') }
       key={ instructor }
       >
-      <img src={ images[img] }/>
+      <img
+        alt={ `${instructor}'s pretty face` }
+        src={ images[img] }
+      />
       <h3 className={ cx('instructor') }>
         { instructor }
       </h3>

@@ -97,7 +97,10 @@ export class Hackathon extends PureComponent {
               Hosted by
             </h3>
             <div>
-              <img src={ github } />
+              <img
+                alt="GitHub's logo"
+                src={ github }
+              />
             </div>
           </div>
         </div>
