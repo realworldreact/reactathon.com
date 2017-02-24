@@ -1,3 +1,5 @@
+/* eslint-disable jsx-a11y/onclick-has-focus */
+/* eslint-disable jsx-a11y/no-static-element-interactions */
 import React, { PropTypes, PureComponent } from 'react';
 import Modal from 'react-modal';
 import classnames from 'classnames/bind';
@@ -63,7 +65,10 @@ export default class Workshop extends PureComponent {
           </h4>
         </header>
         <div className={ cx('content-window') }>
-          <div className={ cx('content-container') }>
+          <div
+            className={ cx('content-container') }
+            tabIndex='0'
+            >
             <section className={ cx('workshop-info') }>
               <h2 className={ cx('name') }>
                 { name }
@@ -87,7 +92,6 @@ export default class Workshop extends PureComponent {
                     onClick={ openModal }
                     onKeyDown={ openModal }
                     role='button'
-                    tabIndex='0'
                     >
                     See full description
                   </a>
@@ -99,7 +103,6 @@ export default class Workshop extends PureComponent {
                     onClick={ openModal }
                     onKeyDown={ openModal }
                     role='button'
-                    tabIndex='0'
                     >
                     See full bio
                   </a>
