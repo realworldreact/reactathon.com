@@ -4,7 +4,7 @@ import { createAction, handleActions } from 'redux-actions';
 import workshopsInfo from './workshops.json';
 import { createEventMeta } from '../../redux';
 
-const ns = 'workshops';
+export const ns = 'workshops';
 export const workshopUiName = name => `ui/${name}`;
 const initValue = {
   workshopsByName: workshopsInfo.reduce((workshops, { name }) => {
@@ -64,6 +64,6 @@ const reducer = handleActions({
     };
   }
 }, initValue);
-reducer.__namespace = ns;
 
+reducer.toString = () => ns;
 export default reducer;

@@ -9,6 +9,7 @@ const cx = classnames.bind(styles);
 const propTypes = {
   bio: PropTypes.string,
   brief: PropTypes.string,
+  closeModal: PropTypes.func.isRequired,
   company: PropTypes.string,
   date: PropTypes.string,
   description: PropTypes.string,
@@ -18,7 +19,6 @@ const propTypes = {
   length: PropTypes.number,
   name: PropTypes.string,
   openModal: PropTypes.func.isRequired,
-  closeModal: PropTypes.func.isRequired,
   showModal: PropTypes.bool,
   title: PropTypes.string
 };
@@ -51,6 +51,11 @@ export default class Workshop extends PureComponent {
     } = this.props;
     return (
       <div className={ cx('workshop-container') }>
+        <img
+          data-note='preload modal header image'
+          src={ header }
+          style={{ display: 'none' }}
+        />
         <header className={ cx('title-container') }>
           <h4 className={ cx('title') }>
             { difficulty }

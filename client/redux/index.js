@@ -1,10 +1,15 @@
 import { createAction } from 'redux-actions';
 import { createTypes } from 'redux-create-types';
 
+export {
+  default as rootEpic
+} from './epic-analytics.js';
 
+
+export const ns = 'app';
 const types = createTypes([
   'analytics'
-], 'app');
+], ns);
 
 const throwIfUndefined = () => {
   throw new TypeError('Argument must not be of  type `undefined`');
@@ -50,4 +55,7 @@ export const trackSocial = createAction(
   })
 );
 
-export default (state = {}) => state;
+const reducer = (state = {}) => state;
+reducer.toString = () => ns;
+
+export default reducer;
