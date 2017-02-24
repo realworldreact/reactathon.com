@@ -4,7 +4,7 @@
   "version": "0.0.1",
   "main": "server/server.js",
   "scripts": {
-    "lint": "eslint ext=jsx,js .",
+    "lint": "eslint --ext=jsx,js .",
     "start": "gulp",
     "posttest": "npm run lint",
     "clean": "rimraf public",
@@ -40,6 +40,7 @@
     "debug": "^2.2.0",
     "eslint": "^3.4.0",
     "eslint-plugin-import": "^1.14.0",
+    "eslint-plugin-jsx-a11y": "^4.0.0",
     "eslint-plugin-react": "^6.2.0",
     "extract-text-webpack-plugin": "^1.0.1",
     "file-loader": "^0.9.0",

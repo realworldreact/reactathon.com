@@ -5,7 +5,6 @@ import styles from './mixer.styl';
 
 import TitleCard from '../Title-Card.jsx';
 import ActionButton from '../Action-Button.jsx';
-import reddit from '../../images/sponsors/reddit.png';
 import plus from '../../images/sponsors/plus.png';
 import companiesTop from '../../images/sponsors/hiring-companies-top.png';
 import companiesBottom from '../../images/sponsors/hiring-companies-bottom.png';
@@ -28,19 +27,30 @@ export default class Mixer extends PureComponent {
             <h3>6:30PM - 9:30PM</h3>
           </div>
           <div className={ cx('logos')}>
-            <img src={ companiesTop } />
+            <img
+              alt='The logos of Reddit, Coursera, OpenTable, and EventBrite'
+              src={ companiesTop }
+            />
           </div>
           <div className={ cx('you') }>
             <div>
               <h2>San Francisco's Hottest Companies</h2>
             </div>
-            <div><img src={ plus } /></div>
+            <div>
+              <img
+                alt='plus symbol'
+                src={ plus }
+              />
+            </div>
             <div>
               <h2>You</h2>
             </div>
           </div>
           <div className={ cx('logos')}>
-            <img src={ companiesBottom } />
+            <img
+              alt='The logo of Serverless, Netlify, and Pinterest'
+              src={ companiesBottom }
+            />
           </div>
           <div className={ cx('presented') }>
             <div>

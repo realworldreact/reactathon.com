@@ -44,7 +44,10 @@ const speakers = [{
       className={ cx('speaker-container') }
         key={ name }
         >
-      <img src={ image }/>
+        <img
+          alt={ `${name}'s pretty face` }
+          src={ image }
+        />
       <h3>{ name }</h3>
       <h4>{ title }</h4>
       <h4>{ company }</h4>
@@ -84,7 +87,10 @@ export default class Meetup extends PureComponent {
           </ActionButton>
           <div>Food & Drink Provided</div>
           <div>Presented By</div>
-          <img src={ pinterest }/>
+          <img
+            alt="Pinterest's logo"
+            src={ pinterest }
+          />
         </section>
       </div>
     );

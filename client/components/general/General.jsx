@@ -13,7 +13,12 @@ export default class General extends PureComponent {
       <div className={ cx('general') }>
         <div className={ cx('quote') }>
           <h2>
-            <span>“</span><em>React has fundamentally changed the way we think about and build user interfaces.</em><span>”</span>
+            <span>“</span>
+            <em>
+              React has fundamentally changed the way we think about and
+              build user interfaces.
+            </em>
+            <span>”</span>
           </h2>
           <h3>
             -Tom Occhino, Manager of the React Team at Facebook
@@ -34,23 +39,38 @@ export default class General extends PureComponent {
           <h2>GOALS</h2>
           <ul>
             <li>
-              <img src={ checkMark }/>
+              <img
+                alt='checkmark'
+                src={ checkMark }
+              />
               Build Community
             </li>
             <li>
-              <img src={ checkMark }/>
+              <img
+                alt='checkmark'
+                src={ checkMark }
+              />
               Educate Newcomers
             </li>
             <li>
-              <img src={ checkMark }/>
+              <img
+                alt='checkmark'
+                src={ checkMark }
+              />
               Showcase the Experts
             </li>
             <li>
-              <img src={ checkMark }/>
+              <img
+                alt='checkmark'
+                src={ checkMark }
+              />
               Further Empower the Advanced
             </li>
             <li>
-              <img src={ checkMark }/>
+              <img
+                alt='checkmark'
+                src={ checkMark }
+              />
               Fun!
             </li>
           </ul>

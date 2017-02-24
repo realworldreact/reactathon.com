@@ -52,6 +52,7 @@ export default class Workshop extends PureComponent {
     return (
       <div className={ cx('workshop-container') }>
         <img
+          alt={ `${name}'s workshop header` }
           data-note='preload modal header image'
           src={ header }
           style={{ display: 'none' }}
@@ -82,14 +83,24 @@ export default class Workshop extends PureComponent {
                 <div className={ cx('brief') }>
                   { brief }
                   <br />
-                  <a onClick={ openModal }>
+                  <a
+                    onClick={ openModal }
+                    onKeyDown={ openModal }
+                    role='button'
+                    tabIndex='0'
+                    >
                     See full description
                   </a>
                 </div>
                 <div className={ cx('bio') }>
                   { getBrief(bio) }
                   <br />
-                  <a onClick={ openModal }>
+                  <a
+                    onClick={ openModal }
+                    onKeyDown={ openModal }
+                    role='button'
+                    tabIndex='0'
+                    >
                     See full bio
                   </a>
                 </div>
@@ -104,7 +115,11 @@ export default class Workshop extends PureComponent {
             overlayClassName={ cx('overlay') }
             >
             <div className={ cx('header') }>
-              <img src={ header } />
+              <img
+                alt={ `${name}'s workshop header` }
+                data-note='preload modal header image'
+                src={ header }
+              />
             </div>
             <div className={ cx('brief') }>
               { description }

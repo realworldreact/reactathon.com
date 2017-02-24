@@ -1,3 +1,4 @@
+/* eslint-disable jsx-a11y/href-no-hash */
 import React, { PropTypes, PureComponent } from 'react';
 import classnames from 'classnames/bind';
 import { connect } from 'react-redux';
@@ -173,6 +174,7 @@ export class Footer extends PureComponent {
         <div className={ cx('rwr') }>
           <div>
             <a
+              aria-label='go back to the top of the page'
               href='#'
               onClick={ clickOnRwr }
               >
@@ -182,7 +184,14 @@ export class Footer extends PureComponent {
               />
             </a>
           </div>
-          <div>© 2017 Real World React</div>
+          <div>
+            <span
+              aria-label='copyright'
+              role='img'
+              >
+              ©
+            </span> 2017 Real World React
+          </div>
         </div>
       </footer>
     );

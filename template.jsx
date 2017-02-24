@@ -22,80 +22,128 @@ export default function HTML({
           name='viewport'
         />
         <link
-          rel='canonical'
           href='https://www.reactathon.com'
+          rel='canonical'
         />
         <meta
+          content={
+            `react,
+            reactjs,
+            react.js,
+            react conf,
+            workshop,
+            netlify,
+            serverless,
+            rxjs,
+            webpack,
+            redux,
+            aws lambda,
+            learn to code,
+            learn to program,
+            learn react,
+            san francisco,
+            reactathon,
+            learn programming,
+            learn javascript,
+            learn coding,
+            code,
+            coding,
+            programming,
+            software engineer,
+            software developer,
+            mean stack,
+            web development,
+            development,
+            engineering,
+            coding bootcamp,
+            javascript,
+            open source`
+          }
           name='keywords'
-          content='react, reactjs, react.js, react conf, workshop, netlify, serverless, rxjs, webpack, redux, aws lambda, learn to code, learn to program, learn react, san francisco, reactathon, learn programming, learn javascript, learn coding, code, coding, programming, software engineer, software developer, mean stack, web development, development, engineering, coding bootcamp, javascript, open source'
         />
         <meta
-          property='og:title'
           content='Celebrating the React Ecosystem'
+          property='og:title'
         />
         <meta
-          property='og:site_name'
           content='Reactathon'
+          property='og:site_name'
         />
         <meta
-          name='twitter:widgets:csp'
           content='on'
+          name='twitter:widgets:csp'
         />
         <meta
+          content='https://www.reactathon.com'
           property='og:url'
-          content='https://www.reactathon.com'
         />
         <meta
+          content={
+            `One week of community-run events leading up to Facebooks
+            React Conf in March 2017.
+            Including a meetup, workshops, hiring mixer, hackathon.`
+          }
           property='og:description'
-          content='One week of community-run events leading up to Facebooks React Conf in March 2017. Including a meetup, workshops, hiring mixer, hackathon.'
         />
         <meta
+          content={
+            'https://s3-us-west-1.amazonaws.com/' +
+            'reactathon/reactathon-og-image.png'
+          }
           property='og:image'
-          content='https://s3-us-west-1.amazonaws.com/reactathon/reactathon-og-image.png'
         />
         <meta
-          property='og:type'
           content='article'
+          property='og:type'
         />
         <meta
-          property='article:publisher'
           content='https://www.facebook.com/realworldreact'
+          property='article:publisher'
         />
         <meta
-          property='article:section'
           content='Responsive'
+          property='article:section'
         />
         <meta
+          content={
+            `One week of community-run events leading up to Facebook's
+            React Conf in March 2017. Including a meetup, 7 workshops,
+            hiring mixer, hackathon.`
+          }
           name='description'
-          content='One week of community-run events leading up to Facebooks React Conf in March 2017. Including a meetup, 7 workshops, hiring mixer, hackathon.'
         />
         <meta
+          content='@reactathon'
           name='twitter:creator'
-          content='@reactathon'
         />
         <meta
-          name='twitter:url'
           content='https://www.reactathon.com'
+          name='twitter:url'
         />
         <meta
-          name='twitter:site'
           content='@reactathon'
+          name='twitter:site'
         />
         <meta
-          name='twitter:card'
           content='summary_large_image'
+          name='twitter:card'
         />
         <meta
+          content={
+            'https://s3-us-west-1.amazonaws.com/' +
+            'reactathon/reactathon-twitter-card.png'
+          }
           name='twitter:image:src'
-          content='https://s3-us-west-1.amazonaws.com/reactathon/reactathon-twitter-card.png'
         />
         <meta
-          name='twitter:title'
           content='Reactathon: March 7-12, 2017'
+          name='twitter:title'
         />
         <meta
+          content={
+            'Workshops, Meetup, Hiring Mixer, & Hackathon Celebrating React'
+          }
           name='twitter:description'
-          content='Workshops, Meetup, Hiring Mixer, & Hackathon Celebrating React'
         />
         { stylesheet ?
           <link

@@ -163,32 +163,38 @@ export class Sponsors extends PureComponent {
           <div className={ cx('supporters', 'tiers') }>
             <div>
               <a
-                alt="Accelebrate's logo"
                 href='https://www.accelebrate.com/training/react'
                 onClick={ clickOnAccelebrate }
                 target='_blank'
                 >
-                <img src={ accelebrate } />
+                <img
+                  alt="Accelebrate's logo"
+                  src={ accelebrate }
+                />
               </a>
             </div>
             <div className={ cx('nyentek') }>
               <a
-                alt="Nyentek's logo"
                 href='http://nyentek.com'
                 onClick={ clickOnNyentek }
                 target='_blank'
                 >
-                <img src={ nyentek } />
+                <img
+                  alt="Nyentek's logo"
+                  src={ nyentek }
+                />
               </a>
             </div>
             <div className={ cx('techqueria') }>
               <a
-                alt="Techqueria's logo"
                 href='https://techqueria.org/'
                 onClick={ clickOnTechqueria }
                 target='_blank'
                 >
-                <img src={ techqueria } />
+                <img
+                  alt="Techqueria's logo"
+                  src={ techqueria }
+                />
               </a>
             </div>
           </div>

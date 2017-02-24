@@ -81,19 +81,24 @@ export class Header extends Component {
           <p>Presents</p>
         </div>
         <div className={ cx('logo') }>
-          <img src={ reactathonLogo } />
+          <img
+            alt="Reactathon's logo"
+            src={ reactathonLogo }
+          />
         </div>
         <div className={ cx('date') }>
           <h3>March 7 - 12</h3>
         </div>
         <div className={ cx('rwr-logo') }>
           <span>Organized By</span>
-          <div><img src={ rwrLogo } /></div>
+          <div>
+            <img
+              alt="Real World React's logo"
+              src={ rwrLogo }
+            />
+          </div>
         </div>
-        <nav
-          className={ cx('nav') }
-          role='navigation'
-          >
+        <nav className={ cx('nav') }>
           <ul>
             { this.renderLinks() }
           </ul>
