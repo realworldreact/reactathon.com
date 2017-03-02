@@ -11,11 +11,17 @@
   padding 20px
 
 .tiers
-  margin-bottom 60px
+  margin-bottom 30px
   +$below('sm')
     width 100%
 
+  .lyft
+    img
+      max-width 150px
+      margin-top -15px
+
 .title-sponsor
+  margin-bottom 60px
   +$below('sm')
     $grid('column', , , 'center')
     min-height 50%

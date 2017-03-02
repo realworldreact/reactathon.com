@@ -21,6 +21,9 @@ import eventbrite from '../../images/sponsors/eventbrite.png';
 import nerdwallet from '../../images/sponsors/nerdwallet.png';
 import techqueria from '../../images/sponsors/techqueria.png';
 import github from '../../images/sponsors/github-sponsor.png';
+import roost from '../../images/sponsors/roost.jpg';
+import makeSchool from '../../images/sponsors/make-school.png';
+import lyft from '../../images/sponsors/lyft.png';
 
 const cx = classnames.bind(styles);
 
@@ -94,6 +97,12 @@ export class Sponsors extends PureComponent {
                 src={ github }
               />
             </div>
+            <div className={ cx('lyft') }>
+              <img
+                alt="Lyft's logo"
+                src={ lyft }
+              />
+            </div>
           </div>
           <div className={ cx('tier-2', 'tiers') }>
             <div>
@@ -138,6 +147,30 @@ export class Sponsors extends PureComponent {
                 alt="Reddit's logo"
                 src={ reddit }
               />
+            </div>
+            <div>
+              <a
+                alt='The Make School logo'
+                href='https://www.makeschool.com/'
+                target='_blank'
+                >
+                <img
+                  alt='The Make School logo'
+                  src={ makeSchool }
+                />
+              </a>
+            </div>
+            <div>
+              <a
+                alt='The Roost logo'
+                href='https://www.therooststand.com/'
+                target='_blank'
+                >
+                <img
+                  alt='The Roost logo'
+                  src={ roost }
+                />
+              </a>
             </div>
           </div>
           <div className={ cx('tier-4', 'tiers') }>
