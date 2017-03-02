@@ -9,8 +9,8 @@ import TitleCard from '../Title-Card.jsx';
 import ActionButton from '../Action-Button.jsx';
 import plus from '../../images/sponsors/plus.png';
 import lyft from '../../images/sponsors/lyft.png';
-import companiesTop from '../../images/sponsors/hiring-companies-top-a.png';
-import companiesBottom from '../../images/sponsors/hiring-companies-bottom-a.png';
+import companiesTop from './hiring-companies-top-a.png';
+import companiesBottom from './hiring-companies-bottom-a.png';
 
 const cx = classnames.bind(styles);
 const propTypes = {
