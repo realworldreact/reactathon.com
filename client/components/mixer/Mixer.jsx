@@ -8,8 +8,9 @@ import { trackEvent } from '../../redux/index.js';
 import TitleCard from '../Title-Card.jsx';
 import ActionButton from '../Action-Button.jsx';
 import plus from '../../images/sponsors/plus.png';
-import companiesTop from '../../images/sponsors/hiring-companies-top.png';
-import companiesBottom from '../../images/sponsors/hiring-companies-bottom.png';
+import lyft from '../../images/sponsors/lyft.png';
+import companiesTop from '../../images/sponsors/hiring-companies-top-a.png';
+import companiesBottom from '../../images/sponsors/hiring-companies-bottom-a.png';
 
 const cx = classnames.bind(styles);
 const propTypes = {
@@ -78,6 +79,15 @@ export class Mixer extends PureComponent {
             <p>
               Food & Drink Provided
             </p>
+            <h3>
+              Hosted by
+            </h3>
+            <div className={ cx('lyft')}>
+              <img
+                alt="Lyft's logo"
+                src={ lyft }
+              />
+            </div>
           </div>
         </div>
       </div>
