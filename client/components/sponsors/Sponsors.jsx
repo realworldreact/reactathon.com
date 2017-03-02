@@ -150,24 +150,24 @@ export class Sponsors extends PureComponent {
             </div>
             <div>
               <a
-                alt="The Make School logo"
+                alt='The Make School logo'
                 href='https://www.makeschool.com/'
                 target='_blank'
                 >
                 <img
-                  alt="The Make School logo"
+                  alt='The Make School logo'
                   src={ makeSchool }
                 />
               </a>
             </div>
             <div>
               <a
-                alt="The Roost logo"
+                alt='The Roost logo'
                 href='https://www.therooststand.com/'
                 target='_blank'
                 >
                 <img
-                  alt="The Roost logo"
+                  alt='The Roost logo'
                   src={ roost }
                 />
               </a>
