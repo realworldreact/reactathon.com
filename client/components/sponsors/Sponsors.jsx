@@ -88,18 +88,21 @@ export class Sponsors extends PureComponent {
             <div>
               <img
                 alt="Pinterest's logo"
+                className={ cx('pinterest') }
                 src={ pinterest }
               />
             </div>
             <div>
               <img
                 alt="Github's logo"
+                className={ cx('github') }
                 src={ github }
               />
             </div>
-            <div className={ cx('lyft') }>
+            <div >
               <img
                 alt="Lyft's logo"
+                className={ cx('lyft') }
                 src={ lyft }
               />
             </div>
@@ -108,24 +111,26 @@ export class Sponsors extends PureComponent {
             <div>
               <img
                 alt="Netlify's logo"
+                className={ cx('netlify') }
                 src={ netlify }
               />
             </div>
-            <div className={ cx('nudge') }>
+            <div>
               <img
                 alt="EventBrite's logo"
+                className={ cx('eventbrite') }
                 src={ eventbrite }
               />
             </div>
-            <div className={ cx('nudge') }>
+            <div>
               <a
-                alt="Coursera's logo"
                 href='https://www.coursera.org/'
                 onClick={ clickOnCoursera }
                 target='_blank'
                 >
                 <img
                   alt="Coursera's logo"
+                  className={ cx('coursera') }
                   src={ coursera }
                 />
               </a>
@@ -133,41 +138,44 @@ export class Sponsors extends PureComponent {
             <div>
               <img
                 alt="Severless' logo"
+                className={ cx('serverless') }
                 src={ serverless }
               />
             </div>
             <div>
               <img
                 alt="Nerdwallet's logo"
+                className={ cx('nerdwallet') }
                 src={ nerdwallet }
               />
             </div>
             <div>
               <img
                 alt="Reddit's logo"
+                className={ cx('reddit') }
                 src={ reddit }
               />
             </div>
             <div>
               <a
-                alt='The Make School logo'
                 href='https://www.makeschool.com/'
                 target='_blank'
                 >
                 <img
                   alt='The Make School logo'
+                  className={ cx('makeschool') }
                   src={ makeSchool }
                 />
               </a>
             </div>
             <div>
               <a
-                alt='The Roost logo'
                 href='https://www.therooststand.com/'
                 target='_blank'
                 >
                 <img
                   alt='The Roost logo'
+                  className={ cx('roost') }
                   src={ roost }
                 />
               </a>
@@ -176,13 +184,13 @@ export class Sponsors extends PureComponent {
           <div className={ cx('tier-4', 'tiers') }>
             <div>
               <a
-                alt="NPR's logo"
                 href='https://npr.codes'
                 onClick={ clickOnNPR }
                 target='_blank'
                 >
                 <img
                   alt="NPR's logo"
+                  className={ cx('npr') }
                   src={ npr }
                 />
               </a>
@@ -202,11 +210,12 @@ export class Sponsors extends PureComponent {
                 >
                 <img
                   alt="Accelebrate's logo"
+                  className={ cx('accelebrate') }
                   src={ accelebrate }
                 />
               </a>
             </div>
-            <div className={ cx('nyentek') }>
+            <div>
               <a
                 href='http://nyentek.com'
                 onClick={ clickOnNyentek }
@@ -214,11 +223,12 @@ export class Sponsors extends PureComponent {
                 >
                 <img
                   alt="Nyentek's logo"
+                  className={ cx('nyentek') }
                   src={ nyentek }
                 />
               </a>
             </div>
-            <div className={ cx('techqueria') }>
+            <div>
               <a
                 href='https://techqueria.org/'
                 onClick={ clickOnTechqueria }
@@ -226,6 +236,7 @@ export class Sponsors extends PureComponent {
                 >
                 <img
                   alt="Techqueria's logo"
+                  className={ cx('techqueria') }
                   src={ techqueria }
                 />
               </a>

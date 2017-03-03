@@ -41,56 +41,107 @@
       $cell(1, , 20px)
       padding-bottom 60px
       img
-        width 75%
+        height 100px
+        width 200px
+    .pinterest
+      padding-top 22px
+    .github
+      padding-top 30px
+    .lyft
+      padding-top 27px
   +$above('sm')
     $grid('row', , , 'center')
+    $center(1440px)
     div
       $cell(3, , 60px)
       img
-        width 90%
+        height 100px
+        width 130px
+    .pinterest
+      padding-bottom 1px
+      padding-top 32px
+    .github
+      padding-bottom 10px
+      padding-top 37px
     .lyft
-      img
-        max-width 150px
-        margin-top -15px
+      padding-top 30px
 
 .tier-2
-  .nudge
-    padding-bottom 20
-    +$below('sm')
-      padding-bottom 0
   +$below('sm')
     $grid('column', , , 'center')
     min-height 100%
     div
       flex 1 0 0
       margin-bottom 20px
+      width 100%
       img
-        width 70%
+        height 90px
+        width 180px
+    .netlify
+      padding-top 20px
+    .eventbrite
+      padding-top 30px
+    .coursera
+      padding-top 35px
+    .serverless
+      padding-top 23px
+    .nerdwallet
+      padding-top 40px
+    .reddit
+      padding-top 27px
+    .makeschool
+      padding-top 30px
+    .roost
+      padding-top 30px
   +$above('sm')
     $grid('row', 'bottom', , 'center')
     div
       $cell(3, , 60px)
       img
-        width 80%
+        height 100px
+        width 130px
+    .netlify
+      padding-top 36px
+    .eventbrite
+      padding-bottom 23px
+      padding-top 20px
+    .coursera
+      padding-bottom 21px
+      padding-top 27px
+    .serverless
+      padding-bottom 23px
+      padding-top 20px
+    .nerdwallet
+      padding-bottom 14px
+      padding-top 27px
+    .reddit
+      padding-bottom 20px
+      padding-top 27px
+    .makeschool
+      padding-bottom 24px
+      padding-top 36px
+    .roost
+      apdding-bottom 27px
+      padding-top 30px
 
-.tier-3
-  +$below('sm')
-    $grid('row', , , 'around')
-    min-height 33%
-    width 100%
-    padding-bottom 60px
-    div
-      $cell(5)
-      width 50%
-      img
-        width 100%
-  +$above('sm')
-    $grid('row', , , 'center')
-    width 60%
-    div
-      $cell(5, , 60px)
-      img
-        width 80%
+// .tier-3
+//   +$below('sm')
+//     $grid('row', , , 'around')
+//     min-height 33%
+//     width 100%
+//     padding-bottom 60px
+//     div
+//       $cell(5)
+//       width 50%
+//       img
+//         width 100%
+//   +$above('sm')
+//     $grid('row', , , 'center')
+//     width 60%
+//     div
+//       $cell(5, , 60px)
+//       img
+//         width 80%
 
 .tier-4
   +$below('sm')
@@ -123,17 +174,27 @@
       $cell(5)
       width 40%
       img
-        width 100%
+        height 40px
+        width 90px
+    .accelebrate
+      padding-bottom 2px
     .nyentek
-      margin-top 30px
+      padding-top 14px
+    .techqueria
+      padding-bottom 2px
+      padding-top 5px
   +$above('sm')
     $grid('row', 'baseline', , 'between')
     width 60%
     div
       $cell(4, , 60px)
       img
-        width 60%
-    // .nyentek
-    //   margin-top 57px
-    // .techqueria
-    //   margin-top 20px
+        height 55px
+        width 130px
+    .accelebrate
+      padding-top 20px
+    .nyentek
+      padding-top 28px
+    .techqueria
+      padding-bottom 2px
+      padding-top 5px
