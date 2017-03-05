@@ -24,6 +24,8 @@ import github from '../../images/sponsors/github-sponsor.png';
 import roost from '../../images/sponsors/roost.jpg';
 import makeSchool from '../../images/sponsors/make-school.png';
 import lyft from '../../images/sponsors/lyft.png';
+import amplitude from '../../images/sponsors/amplitude.png';
+import microsoft from '../../images/sponsors/microsoft.png';
 
 const cx = classnames.bind(styles);
 
@@ -85,42 +87,67 @@ export class Sponsors extends PureComponent {
             </div>
           </div>
           <div className={ cx('tier-1', 'tiers') }>
-            <div>
+          <div>
+            <a
+              href='https://careers.pinterest.com'
+              target='_blank'
+              >
               <img
-                alt="Pinterest's logo"
+                alt='The Pinterest logo'
                 className={ cx('pinterest') }
                 src={ pinterest }
               />
+            </a>
+          </div>
+            <div>
+              <a
+                href='https://github.com/about/careers'
+                target='_blank'
+                >
+                <img
+                  alt='The Github logo'
+                  className={ cx('github') }
+                  src={ github }
+                />
+              </a>
             </div>
             <div>
-              <img
-                alt="Github's logo"
-                className={ cx('github') }
-                src={ github }
-              />
-            </div>
-            <div >
-              <img
-                alt="Lyft's logo"
-                className={ cx('lyft') }
-                src={ lyft }
-              />
+              <a
+                href='https://www.lyft.com/jobs'
+                target='_blank'
+                >
+                <img
+                  alt='The Lyft logo'
+                  className={ cx('lyft') }
+                  src={ lyft }
+                />
+              </a>
             </div>
           </div>
           <div className={ cx('tier-2', 'tiers') }>
             <div>
-              <img
-                alt="Netlify's logo"
-                className={ cx('netlify') }
-                src={ netlify }
-              />
+              <a
+                href='https://www.netlify.com/careers/front-end-dev/'
+                target='_blank'
+                >
+                <img
+                  alt='The Netlify logo'
+                  className={ cx('netlify') }
+                  src={ netlify }
+                />
+              </a>
             </div>
             <div>
-              <img
-                alt="EventBrite's logo"
-                className={ cx('eventbrite') }
-                src={ eventbrite }
-              />
+              <a
+                href='https://www.eventbrite.com/careers'
+                target='_blank'
+                >
+                <img
+                  alt='The Eventbrite logo'
+                  className={ cx('eventbrite') }
+                  src={ eventbrite }
+                />
+              </a>
             </div>
             <div>
               <a
@@ -136,25 +163,40 @@ export class Sponsors extends PureComponent {
               </a>
             </div>
             <div>
-              <img
-                alt="Severless' logo"
-                className={ cx('serverless') }
-                src={ serverless }
-              />
+              <a
+                href='https://serverless.com/company/jobs/'
+                target='_blank'
+                >
+                <img
+                  alt='The Serverless logo'
+                  className={ cx('serverless') }
+                  src={ serverless }
+                />
+              </a>
             </div>
             <div>
-              <img
-                alt="Nerdwallet's logo"
-                className={ cx('nerdwallet') }
-                src={ nerdwallet }
-              />
+              <a
+                href='https://www.nerdwallet.com/careers'
+                target='_blank'
+                >
+                <img
+                  alt='The Nerdwallet logo'
+                  className={ cx('nerdwallet') }
+                  src={ nerdwallet }
+                />
+              </a>
             </div>
             <div>
-              <img
-                alt="Reddit's logo"
-                className={ cx('reddit') }
-                src={ reddit }
-              />
+              <a
+                href='https://www.reddit.com/jobs'
+                target='_blank'
+                >
+                <img
+                  alt='The Reddit logo'
+                  className={ cx('reddit') }
+                  src={ reddit }
+                />
+              </a>
             </div>
             <div>
               <a
@@ -177,6 +219,30 @@ export class Sponsors extends PureComponent {
                   alt='The Roost logo'
                   className={ cx('roost') }
                   src={ roost }
+                />
+              </a>
+            </div>
+            <div>
+              <a
+                href='https://www.amplitude.com/'
+                target='_blank'
+                >
+                <img
+                  alt='The Amplitude logo'
+                  className={ cx('amplitude') }
+                  src={ amplitude }
+                />
+              </a>
+            </div>
+            <div>
+              <a
+                href='https://careers.microsoft.com/'
+                target='_blank'
+                >
+                <img
+                  alt='The Microsoft logo'
+                  className={ cx('microsoft') }
+                  src={ microsoft }
                 />
               </a>
             </div>
