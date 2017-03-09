@@ -34,7 +34,7 @@ import moose from '../../images/peeps/moose.png';
 import eventbriteWhite from '../../images/sponsors/eventbrite-white.png';
 import reddit from '../../images/sponsors/reddit.png';
 import pinterest from '../../images/sponsors/pinterest-a.png';
-import makeSchool from '../../images/sponsors/make-school.png';
+import makeSchoola from './make-schoola.png';
 
 import {
   makeActionCreatorEnterSpaceClickable
@@ -184,10 +184,10 @@ export class Workshops extends PureComponent {
               src={ eventbriteWhite }
             />
           </div>
-          <div className={ cx('eventbrite') }>
+          <div className={ cx('make-school') }>
             <img
               alt="Make School's logo"
-              src={ makeSchool }
+              src={ makeSchoola }
             />
           </div>
         </div>

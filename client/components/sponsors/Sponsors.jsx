@@ -26,6 +26,8 @@ import makeSchool from '../../images/sponsors/make-school.png';
 import lyft from '../../images/sponsors/lyft.png';
 import amplitude from '../../images/sponsors/amplitude.png';
 import microsoft from '../../images/sponsors/microsoft.png';
+import medidata from '../../images/sponsors/medidata.png';
+import callstack from '../../images/sponsors/callstack.png';
 
 const cx = classnames.bind(styles);
 
@@ -243,6 +245,30 @@ export class Sponsors extends PureComponent {
                   alt='The Microsoft logo'
                   className={ cx('microsoft') }
                   src={ microsoft }
+                />
+              </a>
+            </div>
+            <div>
+              <a
+                href='https://www.mdsol.com/en/careers'
+                target='_blank'
+                >
+                <img
+                  alt='The Medidata logo'
+                  className={ cx('medidata') }
+                  src={ medidata }
+                />
+              </a>
+            </div>
+            <div>
+              <a
+                href='https://callstack.io/'
+                target='_blank'
+                >
+                <img
+                  alt='The Callstack logo'
+                  className={ cx('callstack') }
+                  src={ callstack }
                 />
               </a>
             </div>
