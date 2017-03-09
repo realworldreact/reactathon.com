@@ -6,12 +6,13 @@
   "scripts": {
     "lint": "eslint --ext=jsx,js .",
     "start": "gulp",
-    "posttest": "npm run lint",
+    "pretest": "npm run lint",
+    "test": "echo 'BerkeleyTrue, you need to write some tests!'",
     "clean": "rimraf public",
-    "build": "npm run clean && NODE_ENV=production webpack",
-    "predeploy": "npm run build && npm run cname",
-    "deploy": "node gh-pages",
-    "cname": "[[ -e CNAME ]] && cp CNAME public/CNAME || echo 'no CNAME found'"
+    "prebuild": "npm run clean",
+    "build": "NODE_ENV=production webpack",
+    "postbuild": "npm run copy-redirects",
+    "copy-redirects": "[[ -e _redirects ]] && cp _redirects public/_redirects || echo 'no redirects found'"
   },
   "config": {
     "ghooks": {
