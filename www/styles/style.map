@@ -1,0 +1,14 @@
+{
+	"version": 3,
+	"file": "../../source/style.css",
+	"sources": [
+		"../../source/style.scss",
+		"../../source/partials/_global.scss"
+	],
+	"sourcesContent": [
+		"@import \"partials/global\";",
+		""
+	],
+	"mappings": "",
+	"names": []
+}
