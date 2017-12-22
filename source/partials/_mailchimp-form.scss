@@ -1,0 +1,59 @@
+.splash-form {
+	text-align: left;
+	margin-bottom: 2ex;
+	input {
+		font-family: $font-stack;
+		border: none;
+		-webkit-appearance: none;
+		padding: 0.67ex 0.67em;
+		border-radius: 0.11rem;
+	}
+
+	div.response {
+		margin: 1em 0;
+		padding: 1em .5em .5em 0;
+		font-weight: bold;
+		float: left;
+		top: -1.5em;
+		z-index: 1;
+		width: 80%;
+	}
+
+	#mce-error-response {
+		display: none;
+	}
+
+	#mce-success-response {
+		color: $brand-primary-alt;
+		display: none;
+	}
+
+	label.error {
+		display: block;
+		float: none;
+		width: auto;
+		margin-left: 1.05em;
+		text-align: left;
+		padding: .5em 0;
+	}
+}
+
+.splash-form-label {
+	@extend .copy;
+	display: block;
+	margin-bottom: 1ex;
+}
+
+.splash-form-button {
+	border: none;
+	color: $text-primary;
+	background-color: $brand-primary-alt;
+	cursor: pointer;
+	text-align: center;
+	text-decoration: none;
+	white-space: nowrap;
+	transition: all 0.23s ease-in-out;
+	&:hover {
+		background-color: $brand-primary;
+	}
+}

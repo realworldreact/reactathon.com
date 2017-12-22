@@ -1,0 +1,18 @@
+.about-items {
+	@include flexbox(row, wrap, baseline, space-between, space-between);
+	margin-bottom: -6ex;
+}
+
+.about-item {
+	list-style-type: none;
+	text-align: center;
+	padding: 3.33ex 0 6.66ex;
+	@media (min-width: $phablet-min) {
+		max-width: 48%;
+	}
+}
+
+.about-image {
+	max-width: 66.67%;
+	margin: auto;
+}

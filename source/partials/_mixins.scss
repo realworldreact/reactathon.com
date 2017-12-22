@@ -1,0 +1,79 @@
+@mixin flexbox(
+	$direction:     row,
+	$wrap:          nowrap,
+	$align-items:   baseline,
+	$align-content: flex-start,
+	$justify:       flex-start
+) {
+	display: -webkit-box;
+	display: -moz-box;
+	display: -ms-flexbox;
+	display: -webkit-flex;
+	display: flex;
+
+	-webkit-flex-flow: $direction $wrap;
+	flex-flow: $direction $wrap;
+
+	-ms-flex-direction: $direction;
+	-ms-flex-wrap: $wrap;
+
+	-webkit-align-items: $align-items;
+	-ms-flex-align: $align-items;
+	align-items: $align-items;
+
+	-webkit-align-content: $align-content;
+	align-content: $align-content;
+
+	-webkit-justify-content: $justify;
+	-ms-flex-pack: $justify;
+	justify-content: $justify;
+}
+
+@mixin background-image(
+	$src,
+	$x-pos: center,
+	$y-pos: center,
+	$color: $brand-secondary
+) {
+	background-repeat: no-repeat;
+	background-size: cover;
+	background-position: $x-pos $y-pos;
+	background-color: $color;
+	background-image: url('#{$img-path}/#{$src}');
+	position: relative;
+	z-index: 1;
+	&:after {
+		@extend %overlay;
+		background: transparentize($brand-secondary, 0.33);
+		z-index: 2;
+		mix-blend-mode: multiply;
+		-webkit-backdrop-filter: blur(4px);
+	}
+}
+
+@mixin box-shadow(
+	$distance: 2px,
+	$blur: 4px,
+	$opacity: $opacity-low
+) {
+	-webkit-box-shadow: 0 $distance $blur rgba(0, 0, 0, $opacity);
+	-moz-box-shadow: 0 $distance $blur rgba(0, 0, 0, $opacity);
+	box-shadow: 0 $distance $blur rgba(0, 0, 0, $opacity);
+}
+
+@mixin drop-shadow (
+	$distance: 2px,
+	$blur: 4px,
+	$opacity: $opacity-low
+) {
+	-webkit-filter: drop-shadow(0 $distance $blur rgba(0, 0, 0, $opacity));
+	filter: drop-shadow(0 $distance $blur rgba(0, 0, 0, $opacity));
+}
+
+@mixin no-shadow {
+	-webkit-box-shadow: none;
+	-moz-box-shadow: none;
+	box-shadow: none;
+	-webkit-filter: none;
+	filter: none;
+}

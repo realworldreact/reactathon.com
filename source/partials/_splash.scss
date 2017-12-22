@@ -1,0 +1,61 @@
+.splash {
+	@include background-image("photos/conference-2.jpg");
+	@include flexbox(column, nowrap, center, space-around, space-around);
+	@extend %container;
+	text-align: center;
+	padding-top: 0;
+	* {
+		position: relative;
+		z-index: 3;
+	}
+	@each $device, $min-height, $bottom-padding in (
+					($mobile, 100vh, 3ex),
+					($phablet, 33vh, 4ex),
+					($tablet, 50vh, 5ex),
+					($laptop, 66.67vh, 6ex),
+					($desktop, 75vh, 7ex)
+	) {
+		@media #{$device} {
+			min-height: calc(#{$min-height} - #{$nav-height});
+			padding-bottom: $bottom-padding;
+		}
+	}
+}
+
+.splash-logo {
+	margin: 0 auto;
+	object-fit: contain;
+	height: auto;
+	@each $device, $max-width in (
+			$mobile: 100%,
+			$phablet: 75%,
+			$tablet: 66.67%,
+			$laptop: 50%,
+			$desktop: 33.33%
+	) {
+		@media #{$device} {
+			max-width: $max-width;
+		}
+	}
+}
+
+.splash-headline {
+	text-shadow: 0 1px 2px $text-tertiary-inverse;
+	@extend .headline;
+	color: $text-secondary;
+	margin: 0 auto 2ex;
+}
+
+.splash-cta {
+	@extend .caption;
+	margin: 2ex 0;
+	* {
+		display: inline;
+	}
+	a {
+		color: $text-secondary;
+		&:hover {
+			color: $text-primary;
+		}
+	}
+}

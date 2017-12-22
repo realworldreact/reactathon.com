@@ -1,0 +1,83 @@
+.site-footer {
+	@extend %container;
+	background: $text-tertiary-inverse;
+}
+
+.footer-content {
+	@include flexbox(row, wrap, center, center, space-between);
+	@media (max-width: $tablet-max) {
+		@include flexbox(column,nowrap, center, center);
+	}
+}
+
+.footer-logo {
+	flex-shrink: 0.5;
+	@media (min-width: $laptop-min) {
+		margin-left: -40px;
+	}
+}
+
+.text-routes {
+	@include flexbox(row, nowrap, baseline, flex-end, flex-end);
+	list-style-type: none;
+	flex-grow: 3;
+	@media (min-width: $laptop-min) {
+		order: 2;
+	}
+}
+
+.text-route {
+	text-decoration: none;
+	padding: 1ex 1em;
+	&:last-of-type {
+		@media (min-width: $laptop-min) {
+			padding-right: 0;
+		}
+	}
+}
+
+.icon-links {
+	@include flexbox(row, nowrap, baseline, center, space-between);
+	list-style-type: none;
+}
+
+.icon-link {
+	padding: 0.5em;
+	&:hover {
+		@include drop-shadow;
+	}
+}
+
+.icon-link-icon {
+	max-width: 3em;
+}
+
+.footer-end {
+	@include flexbox(row, wrap, baseline, center, space-between);
+	margin-top: 4ex;
+	@media (max-width: $tablet-max) {
+		@include flexbox(column, nowrap, center, center, space-around);
+	}
+}
+
+.copyright {
+	flex-grow: 12;
+}
+
+.copyright-link {
+	text-decoration: none;
+	margin-right: 1em;
+	&:hover {
+		@include drop-shadow;
+	}
+}
+
+.copyright-logo {
+	vertical-align: middle;
+	max-height: 6ex;
+}
+
+.copyright-text {
+	@extend .caption;
+	color: $brand-secondary-alt;
+}

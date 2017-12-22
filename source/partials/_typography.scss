@@ -1,0 +1,67 @@
+@import url('https://fonts.googleapis.com/css?family=Mada:400,600,700');
+$font-stack: 'Mada', sans-serif;
+:root {
+	font-family: $font-stack;
+	line-height: 1.4142;
+	@each $device, $font-size in (
+			$mobile:    12pt,
+			$phablet:   13pt,
+			$tablet:    14pt,
+			$laptop:    15pt,
+			$desktop:   16pt,
+	) {
+		@media #{$device} {
+			font-size: $font-size;
+		}
+	}
+}
+
+.headline {
+	font-size: 2.22rem;
+	font-weight: 400;
+	letter-spacing: 0.025em;
+	@media #{$mobile} {
+		font-size: 1.67rem;
+	}
+}
+
+.heading {
+	font-size: 1.67rem;
+	font-weight: 600;
+	letter-spacing: 0.02em;
+	@media #{$mobile} {
+		font-size: 1.5rem;
+	}
+}
+
+.subheading {
+	font-size: 1.33rem;
+	font-weight: 600;
+	letter-spacing: 0.01em;
+	color: $text-secondary;
+}
+
+.copy {
+	font-weight: 400;
+	font-size: 1rem;
+	letter-spacing: 0.01em;
+	color: $text-primary;
+}
+
+.outset {
+	font-size: 1.11rem;
+	letter-spacing: 0.02em;
+	color: $text-secondary;
+}
+
+.button-text {
+	font-size: 1.11rem;
+	letter-spacing: 0.015em;
+	font-weight: 600;
+}
+
+.caption {
+	font-size: 0.88em;
+	letter-spacing: 0.005em;
+	font-weight: 400;
+}

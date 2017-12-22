@@ -1,0 +1,32 @@
+.navigation {
+	@extend %container;
+	background: $text-tertiary-inverse;
+	padding-top: 0;
+	padding-bottom: 0;
+	min-height: $nav-height;
+}
+
+.navigation-list {
+	@include flexbox(row, wrap, baseline, center, space-between);
+	list-style-type: none;
+	margin: auto;
+	padding: 2ex 0;
+}
+
+.navigation-option {
+	text-decoration: none;
+	padding: 1ex 1em;
+	display: block;
+	background: transparent;
+	border-radius: 0;
+	font-weight: 600;
+	&:hover {
+		@include box-shadow(4px, 8px, $opacity-third);
+		background: $brand-secondary-alt;
+		border-radius: 0.33rem;
+		color: $text-secondary;
+	}
+	&:active {
+		@include box-shadow;
+	}
+}

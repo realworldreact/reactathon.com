@@ -1,3 +1,10 @@
-@import "partials/reboot";
+@import "partials/normalize";
+@import "partials/values";
+@import "partials/mixins";
 @import "partials/global";
 @import "partials/typography";
+@import "partials/splash";
+@import "partials/navigation";
+@import "partials/mailchimp-form";
+@import "partials/about";
+@import "partials/footer";

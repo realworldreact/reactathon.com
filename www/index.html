@@ -2,6 +2,21 @@
 <html lang="en">
 <head>
 	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover, shrink-to-fit=no">
+	<meta property="og:title"
+	      content="Reactathon 2018 San Francisco">
+	<meta property="og:type"
+	      content="website">
+	<meta property="og:image"
+	      content="images/photos/hackathon-5.jpg">
+	<meta property="og:url"
+	      content="http://reactathon.com">
+	<meta property="og:description"
+	      content="The premier educational conference for learning React">
+	<meta name="twitter:card"
+	      content="summary">
+	<meta name="twitter:creator"
+	      content="@reactathon">
 	<link rel="apple-touch-icon" sizes="180x180" href="images/favicons/apple-touch-icon.png">
 	<link rel="icon" type="image/png" sizes="32x32" href="images/favicons/favicon-32x32.png">
 	<link rel="icon" type="image/png" sizes="16x16" href="images/favicons/favicon-16x16.png">
@@ -12,11 +27,197 @@
 	<meta name="application-name" content="Reactathon">
 	<meta name="msapplication-config" content="images/favicons/browserconfig.xml">
 	<meta name="theme-color" content="#fafafa">
+	<style>
+		:root {
+			font-family: sans-serif;
+			background: #022136;
+			color: white;
+		}
+
+		input[type="submit"] {
+			background: #00e5ff;
+			color: white;
+			cursor: pointer;
+		}
+
+		img {
+			max-width: 100%;
+		}
+
+		a {
+			color: #00e5ff;
+		}
+	</style>
 	<link rel="stylesheet" href="styles/style.css">
-	<title>Reactathon 2018</title>
+	<title>Reactathon 2018 San Francisco</title>
 </head>
 <body>
-	<header></header>
-	<footer></footer>
+<div class="main-content">
+	<section class="splash">
+		<img class="splash-logo" src="images/logos/brand/combination-mark.png" alt="Reactathon Logo">
+		<h1 class="splash-headline">The premier educational conference for learning React</h1>
+		<div class="splash-form" id="mc_embed_signup">
+			<form action="https://nyentek.us11.list-manage.com/subscribe/post?u=01737da55d58a85374755d8a3&id=9e5276df2f"
+			      method="post" id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form" class="validate"
+			      target="_blank" novalidate>
+				<label class="splash-form-label" for="mce-EMAIL">Get notified when tickets go on sale</label>
+				<input type="email" value="" name="EMAIL" class="splash-form-input email" id="mce-EMAIL"
+				       placeholder="Email Address"
+				       required>
+				<!-- real people should not fill this in and expect good things - do not remove this or risk form bot signups-->
+				<div style="position: absolute; left: -5000px;" aria-hidden="true">
+					<input type="text" name="b_01737da55d58a85374755d8a3_9e5276df2f" tabindex="-1" value="">
+				</div>
+				<input type="submit" value="Subscribe" name="subscribe" id="mc-embedded-subscribe"
+				       class="splash-form-button">
+			</form>
+		</div>
+		<span class="splash-cta">
+			<p>Call for Papers:</p>
+			<a href="#call-for-papers">Apply to speak or lead a workshop</a>
+		</span>
+	</section>
+	<nav class="navigation">
+		<ul class="navigation-list">
+			<li class="navigation-item">
+				<a class="navigation-option" href="#conference">Conference</a>
+			</li>
+			<li class="navigation-item">
+				<a class="navigation-option" href="#workshops">Workshops</a>
+			</li>
+			<li class="navigation-item">
+				<a class="navigation-option" href="#hiring-mixer">Hiring Mixer</a>
+			</li>
+			<li class="navigation-item">
+				<a class="navigation-option" href="#hackathon">Hackathon</a>
+			</li>
+		</ul>
+	</nav>
+	<section class="content-section" id="about">
+		<header class="section-header">
+			<h2 class="heading">About</h2>
+			<p class="outset">Reactathon is a week of events to educate and inspire newcomers to the React
+				ecosystem.</p>
+		</header>
+		<ul class="about-items">
+			<li class="about-item" id="conference">
+				<img class="about-image" src="images/graphics/conference.png"
+				     alt="Illustration of a group of five people">
+				<h3 class="subheading">Conference</h3>
+				<p>A full day educational conference designed to introduce you to the React ecosystem. Learn from the
+					experts as they present case studies, best practices, and and lessons learned from years of working
+					with React.</p>
+			</li>
+			<li class="about-item" id="workshops">
+				<img class="about-image" src="images/graphics/workshops.png"
+				     alt="Illustration of an open laptop computer with a cursor on its screen">
+				<h3 class="subheading">Workshops</h3>
+				<p>Taught by industry-leaders and core contributors, we offer a full week of workshops catering to
+					beginners and advanced alike.</p>
+			</li>
+			<li class="about-item" id="hiring-mixer">
+				<img class="about-image" src="images/graphics/hiring-mixer.png"
+				     alt="Illustration of a person standing in front of a bulletin board with dollar sign at the bottom corner">
+				<h3 class="subheading">Hiring Mixer</h3>
+				<p>Meet the <abbr title="San Francisco">SF</abbr> Bay’s top companies who use React for their front-end
+					or are looking to make the switch,
+					and find your next job.</p>
+			</li>
+			<li class="about-item" id="hackathon">
+				<img class="about-image" src="images/graphics/hackathon.png"
+				     alt="Illustration of a computer window with '</>' displayed within">
+				<h3 class="subheading">Hackathon</h3>
+				<p>Put into practice the skills you’ve learned throughout the week in a 2-day hackathon. Compete for
+					prizes and glory or code along with mentors and sponsors on guided projects. </p>
+			</li>
+		</ul>
+	</section>
+	<section class="content-section" id="call-for-papers">
+		<header class="section-header">
+			<h2 class="heading">Call for Papers</h2>
+		</header>
+		<div class="card">
+			<p class="outset">If you’re interested in giving a talk at the conference, submit your proposal <a
+					href="mailto:info@reactathon.com?subject=Presentation Inquiry">here</a>.</p>
+			<p class="outset">If you’re interested in leading a workshop, submit your proposal <a
+					href="mailto:info@reactathon.com?subject=Workshop Inquiry">here</a>.</p>
+		</div>
+	</section>
+	<section class="content-section" id="sponsors">
+		<header class="section-header">
+			<h2 class="heading">Sponsors</h2>
+		</header>
+		<p>There are many ways to sponsor Reactathon. You can sponsor by providing your venue for a workshop, a table at
+			the hiring mixer, getting your <abbr title="Application Programming Interface">API</abbr> in front of over
+			200 developers at the hackathon, or more. Send an email to <a
+					href="mailto:sponsors@reactathon.com?subject=Sponsor Inquiry">sponsors@reactathon.com</a> to request
+			our full sponsorship guide.
+		</p>
+	</section>
+</div><!-- Main Content -->
+<footer class="site-footer">
+	<div class="footer-content">
+		<img class="footer-logo" src="images/logos/brand/lettermark.png" alt="Reactathon Logo">
+		<ul class="icon-links">
+			<li class="icon-link-item">
+				<a class="icon-link" href="https://www.facebook.com/RealWorldReact/"
+				   title="Reactathon on Facebook" target="_blank">
+					<img class="icon-link-icon" src="images/logos/social/facebook.png" alt="Facebook Icon">
+				</a>
+			</li>
+			<li class="icon-link-item">
+				<a class="icon-link" href="https://twitter.com/reactathon"
+				   title="Reactathon on Twitter" target="_blank">
+					<img class="icon-link-icon" src="images/logos/social/twitter.png" alt="Twitter Icon">
+				</a>
+			</li>
+			<li class="icon-link-item">
+				<a class="icon-link" href="https://www.meetup.com/real-world-react/"
+				   title="Reactathon on Meetup" target="_blank">
+					<img class="icon-link-icon" src="images/logos/social/meetup.png" alt="Meetup Icon">
+				</a>
+			</li>
+			<li class="icon-link-item">
+				<a class="icon-link" href="mailto:info@reactathon.com?subject=General Inquiry"
+				   title="Email Reactathon" target="_blank">
+					<img class="icon-link-icon" src="images/logos/social/mail.png" alt="Email Icon">
+				</a>
+			</li>
+			<li class="icon-link-item">
+				<a class="icon-link" href="https://www.youtube.com/channel/UCgL3tdpvoARHuX-_3eLWEgg"
+				   title="Reactathon on YouTube" target="_blank">
+					<img class="icon-link-icon" src="images/logos/social/youtube.png" alt="YouTube Icon">
+				</a>
+			</li>
+		</ul>
+	</div>
+	<div class="footer-end">
+		<ul class="text-routes">
+			<li class="text-route-item">
+				<a class="text-route" href="/code-of-conduct">Code of Conduct</a>
+			</li>
+			<li class="text-route-item">
+				<a class="text-route" href="mailto:info@reactathon.com?subject=Volunteer Inquiry">Volunteers</a>
+			</li>
+			<li class="text-route-item">
+				<a class="text-route" href="mailto:info@reactathon.com?subject=Sponsor Inquiry">Sponsors</a>
+			</li>
+		</ul>
+		<div class="copyright">
+			<a class="copyright-link" href="https://www.realworldreact.com/" target="_blank" title="Real World React">
+				<img class="copyright-logo" src="images/logos/brand/rwr-logo.png" alt="Real World React Logo">
+			</a>
+			<small class="copyright-text">©
+				<script>new Date().getFullYear() > 2010 && document.write(new Date().getFullYear());</script>
+				Real World React, LLC
+			</small>
+		</div>
+	</div>
+</footer>
+<script src="scripts/smooth-scroll.min.js"></script>
+<script src="scripts/main.js"></script>
+<script>
+	let scroll = new SmoothScroll('a[href*="#"]');
+</script>
 </body>
 </html>
