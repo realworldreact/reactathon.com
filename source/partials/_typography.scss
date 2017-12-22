@@ -4,11 +4,11 @@ $font-stack: 'Mada', sans-serif;
 	font-family: $font-stack;
 	line-height: 1.4142;
 	@each $device, $font-size in (
-			$mobile:    12pt,
-			$phablet:   13pt,
-			$tablet:    14pt,
-			$laptop:    15pt,
-			$desktop:   16pt,
+			$mobile:    10pt,
+			$phablet:   11pt,
+			$tablet:    12pt,
+			$laptop:    13pt,
+			$desktop:   14pt,
 	) {
 		@media #{$device} {
 			font-size: $font-size;

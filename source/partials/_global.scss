@@ -14,9 +14,9 @@ img {
 
 a {
 	transition: $transition-default;
-	color: $brand-primary;
+	color: $brand-primary-alt;
 	&:hover {
-		color: $brand-primary-alt;
+		color: $brand-primary;
 	}
 }
 
@@ -68,13 +68,4 @@ abbr {
 	background: #ebeef0;
 	padding: 1ex 1.5em 1.5ex;
 	border-radius: 0.11rem;
-	p {
-		color: $text-primary-inverse;
-	}
-	a {
-		color: $brand-primary-alt;
-		&:hover {
-			color: $brand-primary;
-		}
-	}
 }

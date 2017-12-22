@@ -4,15 +4,15 @@ $brand-secondary:       #003458;
 $brand-secondary-alt:   #2187d9;
 $brand-accent:          #000000;
 
-$window-background: $brand-secondary;
+$window-background: #f9f9f9;
 
-$text-primary-inverse:      rgba(0, 1, 2, 0.87);
-$text-secondary-inverse:    rgba(0, 1, 2, 0.54);
-$text-tertiary-inverse:     rgba(0, 1, 2, 0.38);
+$text-primary:      rgba(0, 1, 2, 0.87);
+$text-secondary:    rgba(0, 1, 2, 0.54);
+$text-tertiary:     rgba(0, 1, 2, 0.38);
 
-$text-primary:      rgba(253, 254, 255, 1);
-$text-secondary:    rgba(253, 254, 255, 0.7);
-$text-tertiary:     rgba(253, 254, 255, 0.5);
+$text-primary-inverse:      rgba(253, 254, 255, 1);
+$text-secondary-inverse:    rgba(253, 254, 255, 0.7);
+$text-tertiary-inverse:     rgba(253, 254, 255, 0.5);
 
 $transparent-light: rgba(255, 255, 255, 0);
 $transparent-dark:  rgba(0, 0, 0, 0);
@@ -22,7 +22,7 @@ $divider-light: rgba(253, 254, 255, 0.13);
 
 $img-path: "../images";
 
-$nav-height: 88px;
+$nav-height: 84px;
 
 $mobile-max:    420px;
 $phablet-min:   $mobile-max + 1px;

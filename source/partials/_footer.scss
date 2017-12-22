@@ -1,6 +1,6 @@
 .site-footer {
 	@extend %container;
-	background: $text-tertiary-inverse;
+	background: #3F4953;
 }
 
 .footer-content {
@@ -12,8 +12,9 @@
 
 .footer-logo {
 	flex-shrink: 0.5;
+	width: 240px;
 	@media (min-width: $laptop-min) {
-		margin-left: -40px;
+		margin-left: -18px;
 	}
 }
 
@@ -29,6 +30,10 @@
 .text-route {
 	text-decoration: none;
 	padding: 1ex 1em;
+	color: $text-primary-inverse;
+	&:hover {
+		color: $brand-primary;
+	}
 	&:last-of-type {
 		@media (min-width: $laptop-min) {
 			padding-right: 0;
@@ -49,7 +54,7 @@
 }
 
 .icon-link-icon {
-	max-width: 3em;
+	max-width: 2em;
 }
 
 .footer-end {
@@ -74,10 +79,10 @@
 
 .copyright-logo {
 	vertical-align: middle;
-	max-height: 6ex;
+	max-height: 5ex;
 }
 
 .copyright-text {
 	@extend .caption;
-	color: $brand-secondary-alt;
+	color: $text-primary-inverse;
 }

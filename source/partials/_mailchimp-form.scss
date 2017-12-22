@@ -40,13 +40,14 @@
 
 .splash-form-label {
 	@extend .copy;
+	color: $text-primary-inverse;
 	display: block;
 	margin-bottom: 1ex;
 }
 
-.splash-form-button {
+.splash-form-button[type="submit"] {
 	border: none;
-	color: $text-primary;
+	color: $text-primary-inverse;
 	background-color: $brand-primary-alt;
 	cursor: pointer;
 	text-align: center;

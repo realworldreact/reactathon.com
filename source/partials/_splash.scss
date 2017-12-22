@@ -1,5 +1,5 @@
 .splash {
-	@include background-image("photos/conference-2.jpg");
+	@include background-image("photos/splash-background.jpg");
 	@include flexbox(column, nowrap, center, space-around, space-around);
 	@extend %container;
 	text-align: center;
@@ -16,7 +16,7 @@
 					($desktop, 75vh, 7ex)
 	) {
 		@media #{$device} {
-			min-height: calc(#{$min-height} - #{$nav-height});
+			min-height: $min-height;
 			padding-bottom: $bottom-padding;
 		}
 	}
@@ -40,9 +40,9 @@
 }
 
 .splash-headline {
-	text-shadow: 0 1px 2px $text-tertiary-inverse;
+	text-shadow: 0 1px 2px $text-tertiary;
 	@extend .headline;
-	color: $text-secondary;
+	color: $text-secondary-inverse;
 	margin: 0 auto 2ex;
 }
 
@@ -52,10 +52,13 @@
 	* {
 		display: inline;
 	}
+	p {
+		color: $text-primary-inverse;
+	}
 	a {
-		color: $text-secondary;
+		color: $text-secondary-inverse;
 		&:hover {
-			color: $text-primary;
+			color: $text-primary-inverse;
 		}
 	}
 }

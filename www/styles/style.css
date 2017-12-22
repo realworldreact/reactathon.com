@@ -478,8 +478,8 @@ template {
 
 /* line 1, /Volumes/DATA/DEV/reactathon.com/source/partials/_global.scss */
 body {
-  background: #003458;
-  color: #fdfeff;
+  background: #f9f9f9;
+  color: rgba(0, 1, 2, 0.87);
 }
 
 /* line 6, /Volumes/DATA/DEV/reactathon.com/source/partials/_global.scss */
@@ -496,12 +496,12 @@ img {
 /* line 15, /Volumes/DATA/DEV/reactathon.com/source/partials/_global.scss */
 a {
   transition: all 333ms ease-in-out;
-  color: #00e5ff;
+  color: #00bcd4;
 }
 
 /* line 18, /Volumes/DATA/DEV/reactathon.com/source/partials/_global.scss */
 a:hover {
-  color: #00bcd4;
+  color: #00e5ff;
 }
 
 /* line 23, /Volumes/DATA/DEV/reactathon.com/source/partials/_global.scss */
@@ -575,21 +575,6 @@ abbr {
   border-radius: 0.11rem;
 }
 
-/* line 71, /Volumes/DATA/DEV/reactathon.com/source/partials/_global.scss */
-.card p {
-  color: rgba(0, 1, 2, 0.87);
-}
-
-/* line 74, /Volumes/DATA/DEV/reactathon.com/source/partials/_global.scss */
-.card a {
-  color: #00bcd4;
-}
-
-/* line 76, /Volumes/DATA/DEV/reactathon.com/source/partials/_global.scss */
-.card a:hover {
-  color: #00e5ff;
-}
-
 /* line 3, /Volumes/DATA/DEV/reactathon.com/source/partials/_typography.scss */
 :root {
   font-family: "Mada", sans-serif;
@@ -599,35 +584,35 @@ abbr {
 @media (max-width: 420px) {
   /* line 3, /Volumes/DATA/DEV/reactathon.com/source/partials/_typography.scss */
   :root {
-    font-size: 12pt;
+    font-size: 10pt;
   }
 }
 
 @media (min-width: 421px) and (max-width: 640px) {
   /* line 3, /Volumes/DATA/DEV/reactathon.com/source/partials/_typography.scss */
   :root {
-    font-size: 13pt;
+    font-size: 11pt;
   }
 }
 
 @media (min-width: 641px) and (max-width: 960px) {
   /* line 3, /Volumes/DATA/DEV/reactathon.com/source/partials/_typography.scss */
   :root {
-    font-size: 14pt;
+    font-size: 12pt;
   }
 }
 
 @media (min-width: 961px) and (max-width: 1440px) {
   /* line 3, /Volumes/DATA/DEV/reactathon.com/source/partials/_typography.scss */
   :root {
-    font-size: 15pt;
+    font-size: 13pt;
   }
 }
 
 @media (min-width: 1441px) {
   /* line 3, /Volumes/DATA/DEV/reactathon.com/source/partials/_typography.scss */
   :root {
-    font-size: 16pt;
+    font-size: 14pt;
   }
 }
 
@@ -664,7 +649,7 @@ abbr {
   font-size: 1.33rem;
   font-weight: 600;
   letter-spacing: 0.01em;
-  color: rgba(253, 254, 255, 0.7);
+  color: rgba(0, 1, 2, 0.54);
 }
 
 /* line 44, /Volumes/DATA/DEV/reactathon.com/source/partials/_typography.scss */
@@ -672,14 +657,14 @@ abbr {
   font-weight: 400;
   font-size: 1rem;
   letter-spacing: 0.01em;
-  color: #fdfeff;
+  color: rgba(0, 1, 2, 0.87);
 }
 
 /* line 51, /Volumes/DATA/DEV/reactathon.com/source/partials/_typography.scss */
 .outset {
   font-size: 1.11rem;
   letter-spacing: 0.02em;
-  color: rgba(253, 254, 255, 0.7);
+  color: rgba(0, 1, 2, 0.54);
 }
 
 /* line 57, /Volumes/DATA/DEV/reactathon.com/source/partials/_typography.scss */
@@ -702,7 +687,7 @@ abbr {
   background-size: cover;
   background-position: center center;
   background-color: #003458;
-  background-image: url("../images/photos/conference-2.jpg");
+  background-image: url("../images/photos/splash-background.jpg");
   position: relative;
   z-index: 1;
   display: -webkit-box;
@@ -743,7 +728,7 @@ abbr {
 @media (max-width: 420px) {
   /* line 1, /Volumes/DATA/DEV/reactathon.com/source/partials/_splash.scss */
   .splash {
-    min-height: calc(100vh - 88px);
+    min-height: 100vh;
     padding-bottom: 3ex;
   }
 }
@@ -751,7 +736,7 @@ abbr {
 @media (min-width: 421px) and (max-width: 640px) {
   /* line 1, /Volumes/DATA/DEV/reactathon.com/source/partials/_splash.scss */
   .splash {
-    min-height: calc(33vh - 88px);
+    min-height: 33vh;
     padding-bottom: 4ex;
   }
 }
@@ -759,7 +744,7 @@ abbr {
 @media (min-width: 641px) and (max-width: 960px) {
   /* line 1, /Volumes/DATA/DEV/reactathon.com/source/partials/_splash.scss */
   .splash {
-    min-height: calc(50vh - 88px);
+    min-height: 50vh;
     padding-bottom: 5ex;
   }
 }
@@ -767,7 +752,7 @@ abbr {
 @media (min-width: 961px) and (max-width: 1440px) {
   /* line 1, /Volumes/DATA/DEV/reactathon.com/source/partials/_splash.scss */
   .splash {
-    min-height: calc(66.67vh - 88px);
+    min-height: 66.67vh;
     padding-bottom: 6ex;
   }
 }
@@ -775,7 +760,7 @@ abbr {
 @media (min-width: 1441px) {
   /* line 1, /Volumes/DATA/DEV/reactathon.com/source/partials/_splash.scss */
   .splash {
-    min-height: calc(75vh - 88px);
+    min-height: 75vh;
     padding-bottom: 7ex;
   }
 }
@@ -840,24 +825,28 @@ abbr {
 }
 
 /* line 55, /Volumes/DATA/DEV/reactathon.com/source/partials/_splash.scss */
+.splash-cta p {
+  color: #fdfeff;
+}
+
+/* line 58, /Volumes/DATA/DEV/reactathon.com/source/partials/_splash.scss */
 .splash-cta a {
   color: rgba(253, 254, 255, 0.7);
 }
 
-/* line 57, /Volumes/DATA/DEV/reactathon.com/source/partials/_splash.scss */
+/* line 60, /Volumes/DATA/DEV/reactathon.com/source/partials/_splash.scss */
 .splash-cta a:hover {
   color: #fdfeff;
 }
 
 /* line 1, /Volumes/DATA/DEV/reactathon.com/source/partials/_navigation.scss */
 .navigation {
-  background: rgba(0, 1, 2, 0.38);
+  background: #DCE4F0;
   padding-top: 0;
   padding-bottom: 0;
-  min-height: 88px;
 }
 
-/* line 9, /Volumes/DATA/DEV/reactathon.com/source/partials/_navigation.scss */
+/* line 8, /Volumes/DATA/DEV/reactathon.com/source/partials/_navigation.scss */
 .navigation-list {
   display: -webkit-box;
   display: -moz-box;
@@ -878,30 +867,34 @@ abbr {
   justify-content: space-between;
   list-style-type: none;
   margin: auto;
-  padding: 2ex 0;
+  padding: 2ex 0 2.5ex;
 }
 
-/* line 16, /Volumes/DATA/DEV/reactathon.com/source/partials/_navigation.scss */
+/* line 15, /Volumes/DATA/DEV/reactathon.com/source/partials/_navigation.scss */
 .navigation-option {
+  color: rgba(0, 1, 2, 0.54);
   text-decoration: none;
-  padding: 1ex 1em;
+  padding: 0.5ex 0.5em;
+  margin: 0.5ex 0.5em;
   display: block;
   background: transparent;
   border-radius: 0;
   font-weight: 600;
 }
 
-/* line 23, /Volumes/DATA/DEV/reactathon.com/source/partials/_navigation.scss */
+/* line 24, /Volumes/DATA/DEV/reactathon.com/source/partials/_navigation.scss */
 .navigation-option:hover {
   -webkit-box-shadow: 0 4px 8px rgba(0, 0, 0, 0.38);
   -moz-box-shadow: 0 4px 8px rgba(0, 0, 0, 0.38);
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.38);
+  padding: 1ex 1em;
+  margin: 0;
   background: #2187d9;
   border-radius: 0.33rem;
   color: rgba(253, 254, 255, 0.7);
 }
 
-/* line 29, /Volumes/DATA/DEV/reactathon.com/source/partials/_navigation.scss */
+/* line 32, /Volumes/DATA/DEV/reactathon.com/source/partials/_navigation.scss */
 .navigation-option:active {
   -webkit-box-shadow: 0 2px 4px rgba(0, 0, 0, 0.23);
   -moz-box-shadow: 0 2px 4px rgba(0, 0, 0, 0.23);
@@ -957,12 +950,13 @@ abbr {
 
 /* line 41, /Volumes/DATA/DEV/reactathon.com/source/partials/_mailchimp-form.scss */
 .splash-form-label {
+  color: #fdfeff;
   display: block;
   margin-bottom: 1ex;
 }
 
-/* line 47, /Volumes/DATA/DEV/reactathon.com/source/partials/_mailchimp-form.scss */
-.splash-form-button {
+/* line 48, /Volumes/DATA/DEV/reactathon.com/source/partials/_mailchimp-form.scss */
+.splash-form-button[type="submit"] {
   border: none;
   color: #fdfeff;
   background-color: #00bcd4;
@@ -973,8 +967,8 @@ abbr {
   transition: all 0.23s ease-in-out;
 }
 
-/* line 56, /Volumes/DATA/DEV/reactathon.com/source/partials/_mailchimp-form.scss */
-.splash-form-button:hover {
+/* line 57, /Volumes/DATA/DEV/reactathon.com/source/partials/_mailchimp-form.scss */
+.splash-form-button[type="submit"]:hover {
   background-color: #00e5ff;
 }
 
@@ -1022,7 +1016,7 @@ abbr {
 
 /* line 1, /Volumes/DATA/DEV/reactathon.com/source/partials/_footer.scss */
 .site-footer {
-  background: rgba(0, 1, 2, 0.38);
+  background: #3F4953;
 }
 
 /* line 6, /Volumes/DATA/DEV/reactathon.com/source/partials/_footer.scss */
@@ -1072,16 +1066,17 @@ abbr {
 /* line 13, /Volumes/DATA/DEV/reactathon.com/source/partials/_footer.scss */
 .footer-logo {
   flex-shrink: 0.5;
+  width: 240px;
 }
 
 @media (min-width: 961px) {
   /* line 13, /Volumes/DATA/DEV/reactathon.com/source/partials/_footer.scss */
   .footer-logo {
-    margin-left: -40px;
+    margin-left: -18px;
   }
 }
 
-/* line 20, /Volumes/DATA/DEV/reactathon.com/source/partials/_footer.scss */
+/* line 21, /Volumes/DATA/DEV/reactathon.com/source/partials/_footer.scss */
 .text-routes {
   display: -webkit-box;
   display: -moz-box;
@@ -1105,26 +1100,32 @@ abbr {
 }
 
 @media (min-width: 961px) {
-  /* line 20, /Volumes/DATA/DEV/reactathon.com/source/partials/_footer.scss */
+  /* line 21, /Volumes/DATA/DEV/reactathon.com/source/partials/_footer.scss */
   .text-routes {
     order: 2;
   }
 }
 
-/* line 29, /Volumes/DATA/DEV/reactathon.com/source/partials/_footer.scss */
+/* line 30, /Volumes/DATA/DEV/reactathon.com/source/partials/_footer.scss */
 .text-route {
   text-decoration: none;
   padding: 1ex 1em;
+  color: #fdfeff;
+}
+
+/* line 34, /Volumes/DATA/DEV/reactathon.com/source/partials/_footer.scss */
+.text-route:hover {
+  color: #00e5ff;
 }
 
 @media (min-width: 961px) {
-  /* line 32, /Volumes/DATA/DEV/reactathon.com/source/partials/_footer.scss */
+  /* line 37, /Volumes/DATA/DEV/reactathon.com/source/partials/_footer.scss */
   .text-route:last-of-type {
     padding-right: 0;
   }
 }
 
-/* line 39, /Volumes/DATA/DEV/reactathon.com/source/partials/_footer.scss */
+/* line 44, /Volumes/DATA/DEV/reactathon.com/source/partials/_footer.scss */
 .icon-links {
   display: -webkit-box;
   display: -moz-box;
@@ -1146,23 +1147,23 @@ abbr {
   list-style-type: none;
 }
 
-/* line 44, /Volumes/DATA/DEV/reactathon.com/source/partials/_footer.scss */
+/* line 49, /Volumes/DATA/DEV/reactathon.com/source/partials/_footer.scss */
 .icon-link {
   padding: 0.5em;
 }
 
-/* line 46, /Volumes/DATA/DEV/reactathon.com/source/partials/_footer.scss */
+/* line 51, /Volumes/DATA/DEV/reactathon.com/source/partials/_footer.scss */
 .icon-link:hover {
   -webkit-filter: drop-shadow(0 2px 4px rgba(0, 0, 0, 0.23));
   filter: drop-shadow(0 2px 4px rgba(0, 0, 0, 0.23));
 }
 
-/* line 51, /Volumes/DATA/DEV/reactathon.com/source/partials/_footer.scss */
+/* line 56, /Volumes/DATA/DEV/reactathon.com/source/partials/_footer.scss */
 .icon-link-icon {
-  max-width: 3em;
+  max-width: 2em;
 }
 
-/* line 55, /Volumes/DATA/DEV/reactathon.com/source/partials/_footer.scss */
+/* line 60, /Volumes/DATA/DEV/reactathon.com/source/partials/_footer.scss */
 .footer-end {
   display: -webkit-box;
   display: -moz-box;
@@ -1185,7 +1186,7 @@ abbr {
 }
 
 @media (max-width: 960px) {
-  /* line 55, /Volumes/DATA/DEV/reactathon.com/source/partials/_footer.scss */
+  /* line 60, /Volumes/DATA/DEV/reactathon.com/source/partials/_footer.scss */
   .footer-end {
     display: -webkit-box;
     display: -moz-box;
@@ -1207,32 +1208,32 @@ abbr {
   }
 }
 
-/* line 63, /Volumes/DATA/DEV/reactathon.com/source/partials/_footer.scss */
+/* line 68, /Volumes/DATA/DEV/reactathon.com/source/partials/_footer.scss */
 .copyright {
   flex-grow: 12;
 }
 
-/* line 67, /Volumes/DATA/DEV/reactathon.com/source/partials/_footer.scss */
+/* line 72, /Volumes/DATA/DEV/reactathon.com/source/partials/_footer.scss */
 .copyright-link {
   text-decoration: none;
   margin-right: 1em;
 }
 
-/* line 70, /Volumes/DATA/DEV/reactathon.com/source/partials/_footer.scss */
+/* line 75, /Volumes/DATA/DEV/reactathon.com/source/partials/_footer.scss */
 .copyright-link:hover {
   -webkit-filter: drop-shadow(0 2px 4px rgba(0, 0, 0, 0.23));
   filter: drop-shadow(0 2px 4px rgba(0, 0, 0, 0.23));
 }
 
-/* line 75, /Volumes/DATA/DEV/reactathon.com/source/partials/_footer.scss */
+/* line 80, /Volumes/DATA/DEV/reactathon.com/source/partials/_footer.scss */
 .copyright-logo {
   vertical-align: middle;
-  max-height: 6ex;
+  max-height: 5ex;
 }
 
-/* line 80, /Volumes/DATA/DEV/reactathon.com/source/partials/_footer.scss */
+/* line 85, /Volumes/DATA/DEV/reactathon.com/source/partials/_footer.scss */
 .copyright-text {
-  color: #2187d9;
+  color: #fdfeff;
 }
 
 /*# sourceMappingURL=../www/styles/style.map */
