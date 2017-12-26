@@ -19,14 +19,14 @@
 	margin: 0.5ex 0.5em;
 	display: block;
 	background: transparent;
-	border-radius: 0;
+	border-radius: 2rem;
 	font-weight: 600;
 	&:hover {
 		@include box-shadow(4px, 8px, $opacity-third);
 		padding: 1ex 1em;
 		margin: 0;
 		background: $brand-secondary-alt;
-		border-radius: 0.33rem;
+		border-radius: 0.11rem;
 		color: $text-secondary-inverse;
 	}
 	&:active {

@@ -9,7 +9,7 @@
 		z-index: 3;
 	}
 	@each $device, $min-height, $bottom-padding in (
-					($mobile, 100vh, 3ex),
+					($mobile, 50vh, 3ex),
 					($phablet, 33vh, 4ex),
 					($tablet, 50vh, 5ex),
 					($laptop, 66.67vh, 6ex),
@@ -27,11 +27,11 @@
 	object-fit: contain;
 	height: auto;
 	@each $device, $max-width in (
-			$mobile: 100%,
-			$phablet: 75%,
-			$tablet: 66.67%,
-			$laptop: 50%,
-			$desktop: 33.33%
+			$mobile: 75%,
+			$phablet: 66.67%,
+			$tablet: 50%,
+			$laptop: 33.33%,
+			$desktop: 25%
 	) {
 		@media #{$device} {
 			max-width: $max-width;

@@ -6,13 +6,13 @@
 .footer-content {
 	@include flexbox(row, wrap, center, center, space-between);
 	@media (max-width: $tablet-max) {
-		@include flexbox(column,nowrap, center, center);
+		@include flexbox(column, nowrap, center, center);
 	}
 }
 
 .footer-logo {
 	flex-shrink: 0.5;
-	width: 240px;
+	width: 256px;
 	@media (min-width: $laptop-min) {
 		margin-left: -18px;
 	}

@@ -584,35 +584,35 @@ abbr {
 @media (max-width: 420px) {
   /* line 3, /Volumes/DATA/DEV/reactathon.com/source/partials/_typography.scss */
   :root {
-    font-size: 10pt;
+    font-size: 12pt;
   }
 }
 
 @media (min-width: 421px) and (max-width: 640px) {
   /* line 3, /Volumes/DATA/DEV/reactathon.com/source/partials/_typography.scss */
   :root {
-    font-size: 11pt;
+    font-size: 13pt;
   }
 }
 
 @media (min-width: 641px) and (max-width: 960px) {
   /* line 3, /Volumes/DATA/DEV/reactathon.com/source/partials/_typography.scss */
   :root {
-    font-size: 12pt;
+    font-size: 14pt;
   }
 }
 
 @media (min-width: 961px) and (max-width: 1440px) {
   /* line 3, /Volumes/DATA/DEV/reactathon.com/source/partials/_typography.scss */
   :root {
-    font-size: 13pt;
+    font-size: 15pt;
   }
 }
 
 @media (min-width: 1441px) {
   /* line 3, /Volumes/DATA/DEV/reactathon.com/source/partials/_typography.scss */
   :root {
-    font-size: 14pt;
+    font-size: 16pt;
   }
 }
 
@@ -635,6 +635,7 @@ abbr {
   font-size: 1.67rem;
   font-weight: 600;
   letter-spacing: 0.02em;
+  color: rgba(0, 1, 2, 0.38);
 }
 
 @media (max-width: 420px) {
@@ -644,7 +645,7 @@ abbr {
   }
 }
 
-/* line 37, /Volumes/DATA/DEV/reactathon.com/source/partials/_typography.scss */
+/* line 38, /Volumes/DATA/DEV/reactathon.com/source/partials/_typography.scss */
 .subheading {
   font-size: 1.33rem;
   font-weight: 600;
@@ -652,7 +653,7 @@ abbr {
   color: rgba(0, 1, 2, 0.54);
 }
 
-/* line 44, /Volumes/DATA/DEV/reactathon.com/source/partials/_typography.scss */
+/* line 45, /Volumes/DATA/DEV/reactathon.com/source/partials/_typography.scss */
 .copy, .splash-form-label {
   font-weight: 400;
   font-size: 1rem;
@@ -660,21 +661,21 @@ abbr {
   color: rgba(0, 1, 2, 0.87);
 }
 
-/* line 51, /Volumes/DATA/DEV/reactathon.com/source/partials/_typography.scss */
+/* line 52, /Volumes/DATA/DEV/reactathon.com/source/partials/_typography.scss */
 .outset {
   font-size: 1.11rem;
   letter-spacing: 0.02em;
   color: rgba(0, 1, 2, 0.54);
 }
 
-/* line 57, /Volumes/DATA/DEV/reactathon.com/source/partials/_typography.scss */
+/* line 58, /Volumes/DATA/DEV/reactathon.com/source/partials/_typography.scss */
 .button-text {
   font-size: 1.11rem;
   letter-spacing: 0.015em;
   font-weight: 600;
 }
 
-/* line 63, /Volumes/DATA/DEV/reactathon.com/source/partials/_typography.scss */
+/* line 64, /Volumes/DATA/DEV/reactathon.com/source/partials/_typography.scss */
 .caption, .splash-cta, .copyright-text {
   font-size: 0.88em;
   letter-spacing: 0.005em;
@@ -728,7 +729,7 @@ abbr {
 @media (max-width: 420px) {
   /* line 1, /Volumes/DATA/DEV/reactathon.com/source/partials/_splash.scss */
   .splash {
-    min-height: 100vh;
+    min-height: 50vh;
     padding-bottom: 3ex;
   }
 }
@@ -775,35 +776,35 @@ abbr {
 @media (max-width: 420px) {
   /* line 25, /Volumes/DATA/DEV/reactathon.com/source/partials/_splash.scss */
   .splash-logo {
-    max-width: 100%;
+    max-width: 75%;
   }
 }
 
 @media (min-width: 421px) and (max-width: 640px) {
   /* line 25, /Volumes/DATA/DEV/reactathon.com/source/partials/_splash.scss */
   .splash-logo {
-    max-width: 75%;
+    max-width: 66.67%;
   }
 }
 
 @media (min-width: 641px) and (max-width: 960px) {
   /* line 25, /Volumes/DATA/DEV/reactathon.com/source/partials/_splash.scss */
   .splash-logo {
-    max-width: 66.67%;
+    max-width: 50%;
   }
 }
 
 @media (min-width: 961px) and (max-width: 1440px) {
   /* line 25, /Volumes/DATA/DEV/reactathon.com/source/partials/_splash.scss */
   .splash-logo {
-    max-width: 50%;
+    max-width: 33.33%;
   }
 }
 
 @media (min-width: 1441px) {
   /* line 25, /Volumes/DATA/DEV/reactathon.com/source/partials/_splash.scss */
   .splash-logo {
-    max-width: 33.33%;
+    max-width: 25%;
   }
 }
 
@@ -878,7 +879,7 @@ abbr {
   margin: 0.5ex 0.5em;
   display: block;
   background: transparent;
-  border-radius: 0;
+  border-radius: 2rem;
   font-weight: 600;
 }
 
@@ -890,7 +891,7 @@ abbr {
   padding: 1ex 1em;
   margin: 0;
   background: #2187d9;
-  border-radius: 0.33rem;
+  border-radius: 0.11rem;
   color: rgba(253, 254, 255, 0.7);
 }
 
@@ -1010,8 +1011,42 @@ abbr {
 
 /* line 15, /Volumes/DATA/DEV/reactathon.com/source/partials/_about.scss */
 .about-image {
-  max-width: 66.67%;
   margin: auto;
+}
+
+@media (max-width: 420px) {
+  /* line 15, /Volumes/DATA/DEV/reactathon.com/source/partials/_about.scss */
+  .about-image {
+    max-width: 50%;
+  }
+}
+
+@media (min-width: 421px) and (max-width: 640px) {
+  /* line 15, /Volumes/DATA/DEV/reactathon.com/source/partials/_about.scss */
+  .about-image {
+    max-width: 66.67%;
+  }
+}
+
+@media (min-width: 641px) and (max-width: 960px) {
+  /* line 15, /Volumes/DATA/DEV/reactathon.com/source/partials/_about.scss */
+  .about-image {
+    max-width: 33.33%;
+  }
+}
+
+@media (min-width: 961px) and (max-width: 1440px) {
+  /* line 15, /Volumes/DATA/DEV/reactathon.com/source/partials/_about.scss */
+  .about-image {
+    max-width: 50%;
+  }
+}
+
+@media (min-width: 1441px) {
+  /* line 15, /Volumes/DATA/DEV/reactathon.com/source/partials/_about.scss */
+  .about-image {
+    max-width: 33.33%;
+  }
 }
 
 /* line 1, /Volumes/DATA/DEV/reactathon.com/source/partials/_footer.scss */
@@ -1066,7 +1101,7 @@ abbr {
 /* line 13, /Volumes/DATA/DEV/reactathon.com/source/partials/_footer.scss */
 .footer-logo {
   flex-shrink: 0.5;
-  width: 240px;
+  width: 256px;
 }
 
 @media (min-width: 961px) {

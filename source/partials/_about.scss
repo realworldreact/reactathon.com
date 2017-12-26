@@ -13,6 +13,16 @@
 }
 
 .about-image {
-	max-width: 66.67%;
 	margin: auto;
+	@each $device, $max-width in (
+			$mobile: 50%,
+			$phablet: 66.67%,
+			$tablet: 33.33%,
+			$laptop: 50%,
+			$desktop: 33.33%
+	) {
+		@media #{$device} {
+			max-width: $max-width;
+		}
+	}
 }
