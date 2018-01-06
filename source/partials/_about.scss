@@ -11,6 +11,7 @@
 		text-align: center;
 	}
 	.subheading {
+		margin-top: 1ex;
 		@media (max-width: $mobile-max) {
 			margin-top: 0.2ex;
 		}

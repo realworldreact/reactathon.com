@@ -1009,6 +1009,11 @@ abbr {
   }
 }
 
+/* line 13, /Volumes/DATA/work/reactathon/source/partials/_about.scss */
+.about-item .subheading {
+  margin-top: 1ex;
+}
+
 @media (max-width: 420px) {
   /* line 13, /Volumes/DATA/work/reactathon/source/partials/_about.scss */
   .about-item .subheading {
@@ -1016,41 +1021,41 @@ abbr {
   }
 }
 
-/* line 20, /Volumes/DATA/work/reactathon/source/partials/_about.scss */
+/* line 21, /Volumes/DATA/work/reactathon/source/partials/_about.scss */
 .about-image {
   margin: auto;
 }
 
 @media (min-width: 421px) and (max-width: 640px) {
-  /* line 20, /Volumes/DATA/work/reactathon/source/partials/_about.scss */
+  /* line 21, /Volumes/DATA/work/reactathon/source/partials/_about.scss */
   .about-image {
     max-width: 33.33%;
   }
 }
 
 @media (min-width: 641px) and (max-width: 960px) {
-  /* line 20, /Volumes/DATA/work/reactathon/source/partials/_about.scss */
+  /* line 21, /Volumes/DATA/work/reactathon/source/partials/_about.scss */
   .about-image {
     max-width: 25%;
   }
 }
 
 @media (min-width: 961px) and (max-width: 1440px) {
-  /* line 20, /Volumes/DATA/work/reactathon/source/partials/_about.scss */
+  /* line 21, /Volumes/DATA/work/reactathon/source/partials/_about.scss */
   .about-image {
     max-width: 17.5%;
   }
 }
 
 @media (min-width: 1441px) {
-  /* line 20, /Volumes/DATA/work/reactathon/source/partials/_about.scss */
+  /* line 21, /Volumes/DATA/work/reactathon/source/partials/_about.scss */
   .about-image {
     max-width: 15%;
   }
 }
 
 @media (max-width: 420px) {
-  /* line 20, /Volumes/DATA/work/reactathon/source/partials/_about.scss */
+  /* line 21, /Volumes/DATA/work/reactathon/source/partials/_about.scss */
   .about-image {
     width: 2em;
     float: left;
