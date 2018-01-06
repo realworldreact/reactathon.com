@@ -5,24 +5,33 @@
 
 .about-item {
 	list-style-type: none;
-	text-align: center;
 	padding: 3.33ex 0 6.66ex;
 	@media (min-width: $phablet-min) {
 		max-width: 48%;
+		text-align: center;
+	}
+	.subheading {
+		@media (max-width: $mobile-max) {
+			margin-top: 0.2ex;
+		}
 	}
 }
 
 .about-image {
 	margin: auto;
 	@each $device, $max-width in (
-			$mobile: 50%,
-			$phablet: 66.67%,
-			$tablet: 33.33%,
-			$laptop: 50%,
-			$desktop: 33.33%
+			$phablet: 33.33%,
+			$tablet: 25%,
+			$laptop: 17.5%,
+			$desktop: 15%
 	) {
 		@media #{$device} {
 			max-width: $max-width;
 		}
+	}
+	@media #{$mobile} {
+		width: 2em;
+		float: left;
+		margin-right: 1em;
 	}
 }
